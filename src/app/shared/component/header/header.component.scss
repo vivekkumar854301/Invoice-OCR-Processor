@@ -1,0 +1,31 @@
+.header {
+  margin-left: 1rem;
+}
+.header h3 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.badge {
+  padding: .125rem .625rem;
+  font-size: .75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+
+.badge-high {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge-medium {
+  background-color: #fef3c7;
+  color: #92400e;
+}

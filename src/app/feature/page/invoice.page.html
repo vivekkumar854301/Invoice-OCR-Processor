@@ -1,0 +1,41 @@
+<div class="invoice-grid">
+    <div class="header-container">
+        <div class="title-section">
+          <h1 class="title">Invoice OCR Processor</h1>
+          <p class="subtitle">Upload an invoice image or PDF to extract and edit structured data</p>
+        </div>
+        <div class="action-buttons">
+         <ngce-button (handleClick)="viewImage()"><ngce-icon name="eye-1" size="15px" class="btn"></ngce-icon> View Image</ngce-button>
+         <ngce-button><ngce-icon name="arrows-cw" size="15px" class="btn"></ngce-icon> Re-run OCR</ngce-button>
+        </div>
+      </div>
+   
+  <IOP-invoice-details [invoiceDetailsData]="invoiceData()"></IOP-invoice-details>
+  <IOP-supplier-information [SupplierData]="invoiceData()"></IOP-supplier-information>
+  <IOP-purchase-transport-details [PurchaseTransportDetails]="invoiceData()"></IOP-purchase-transport-details>
+  <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
+   <IOP-bank-details [bankDetailsData]="invoiceData()"></IOP-bank-details>
+  <IOP-totals-summary [summaryData]="invoiceData()"></IOP-totals-summary>
+</div>
+
+<ng-template #dialogHeader>
+  <div class="dialog-header">
+    <h3>Original Invoice</h3>
+    <h6>{{invoiceData().invoice.invoice_number}} - {{invoiceData().supplier.suplier_name}}</h6>
+  </div>
+</ng-template>
+
+<ng-template #dialogContent>
+  <div class="dialog-content">
+    <div class="btn-group">
+      <ngce-button [customStyles]="ngcebutton" (handleClick)="zoomIn()"><ngce-icon name="zoom-in" color="black" size="17px"></ngce-icon></ngce-button>
+      <ngce-button [customStyles]="ngcebutton" (handleClick)="zoomOut()"><ngce-icon name="zoom-out" color="black" size="17px"></ngce-icon></ngce-button>
+      <ngce-button [customStyles]="ngcebutton" (handleClick)="resetZoom()">Reset</ngce-button>
+    </div>
+    <div class="image-container">
+      <img #zoomableImage src="assets/Image.png" alt="Zoomable Image" class="zoomable-image">
+  </div>
+  </div>
+</ng-template>
+
+

@@ -1,0 +1,7 @@
+<ngce-card [customStyles]="invoiceDetails">
+    <IOP-header [data]="title"></IOP-header>
+    <ngce-grid [config]="initializeGridBlock()"></ngce-grid>
+  </ngce-card>
+<ng-template #totalPrice let-row="row">
+  <span>{{ row.total | currency:'INR':'symbol-narrow' }}</span>
+</ng-template>

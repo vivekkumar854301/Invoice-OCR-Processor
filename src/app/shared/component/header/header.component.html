@@ -1,0 +1,16 @@
+<div class="header">
+    <h3>
+      <ngce-icon name="doc-text" color="rgba(59,130,246,1)" size="15px"></ngce-icon>
+      {{ title() }}
+      
+      @if (status()) {
+        <div class="badge" [ngClass]="{
+          'badge-high': status() === 'high',
+          'badge-medium': status() === 'medium'
+        }">
+          {{ status() | titlecase}}
+    </div>
+      }
+    </h3>
+  </div>
+  
