@@ -43,10 +43,11 @@ export class PurchaseTransportDetailsComponent {
           
         },
         {
-          type: 'text',
+          type: 'date',
           name: 'order_date',
           label: 'Order Date',
-          value: this.data().purchase.order_date,
+          value: new Date(this.data().purchase.order_date),
+          format: 'yyyy-MM-dd',
         },
         {
           type: 'text',

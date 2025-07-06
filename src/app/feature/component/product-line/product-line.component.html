@@ -1,7 +1,30 @@
 <ngce-card [customStyles]="invoiceDetails">
     <IOP-header [data]="title"></IOP-header>
-    <ngce-grid [config]="initializeGridBlock()"></ngce-grid>
+    <ngce-grid [config]="gridConfig()"></ngce-grid>
   </ngce-card>
-<ng-template #totalPrice let-row="row">
-  <span>{{ row.total | currency:'INR':'symbol-narrow' }}</span>
+<ng-template #rateTemplate let-row="row">
+  <span>{{ row.rate | currency:'INR':'symbol-narrow' }}</span>
+</ng-template>
+<ng-template #mrpRateTemplate let-row="row">
+  <span>{{ row.MRP_rate | currency:'INR':'symbol-narrow' }}</span>
+</ng-template>
+<ng-template #taxamountTemplate let-row="row">
+  <span>{{ row.tax_amount | currency:'INR':'symbol-narrow' }}</span>
+</ng-template>
+
+<ng-template #editDialogTemplate>
+  <ngce-dynamic-form-template #editSideDrawer="ngceDynamicFormTemplate" [config]="formConfig"
+      (formSubmit)="onFormSubmit($event, false)"></ngce-dynamic-form-template>
+</ng-template>
+
+<ng-template #deleteTemplate let-row="row">
+  <div class="delete-template">
+      <p>
+          Are you sure you want to delete this record?
+      </p>
+      <div class="delete-popup-buttons">
+          <ngce-button (handleClick)="onDeleteConfirmed(row)">Yes</ngce-button>
+          <ngce-button [variant]="'outline'">No</ngce-button>
+      </div>
+  </div>
 </ng-template>

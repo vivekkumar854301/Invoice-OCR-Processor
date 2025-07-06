@@ -4,4 +4,9 @@
 
 :root{
     font-family: 'Arial';
+    
 }
+::ng-deep ngce-form-field   ngce-form-field-label{
+    font-size: x-small !important;
+}
+

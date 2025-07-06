@@ -9,6 +9,7 @@ import { NgceComponentsModule, DialogService, DialogConfig } from '@clarium/ngce
 import { ProductLineComponent } from '../component/product-line/product-line.component';
 import { BankDetailsComponent } from '../component/bank-details/bank-details.component';
 import { PurchaseTransportDetailsComponent } from '../component/purchase-transport-details/purchase-transport-details.component';
+import { DIALOGBOX_STYLES } from '../../shared/commonCss/common.style';
 
 @Component({
   selector: 'IOP-invoice',
@@ -39,30 +40,16 @@ export class InvoiceComponent {
     const dialogConfig: DialogConfig = {
       header: this.dialogHeaderTemplate(),
       content: this.dialogcontentTemplate()!,
-      dialogType:'sideDrawer',
+      dialogType:'classic',
       closeOnBackdropClick: false,
       accessibility: true,
-      draggable: false,
+      draggable: true,
       closeButton: true,
-      styles:this.DIALOGBOX_STYLES
+      styles:DIALOGBOX_STYLES,
+      resizable: true,
     };
     this.dialogService.openDialog(dialogConfig);
   }
-  DIALOGBOX_STYLES = {
-  dialog: {
-    padding: '0',
-    width: '55vw !important',
-  },
-  header: {
-    backgroundColor: 'rgba(217, 225, 236, 0.5)',
-    padding: '0.5rem',
-  },
-  body: {
-    padding: '1.5rem',
-    backgroundColor: 'white',
-    width: '55vw',
-  },
-};
   ngcebutton={
     'background-color':'#ffffffe6',
      color:'black',

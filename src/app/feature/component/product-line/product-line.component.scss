@@ -1,0 +1,12 @@
+.delete-template {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 35vw;
+    padding: 0.5rem;
+  }
+  .delete-popup-buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap:0.3rem;
+  }

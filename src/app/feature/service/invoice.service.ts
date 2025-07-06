@@ -68,25 +68,6 @@ export class InvoiceService {
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
-                "size": "0",
-                "color": "",
-                "UOM": "",
-                "pieces": "",
-                "quantity": "3",
-                "rate": "2650",
-                "MRP_rate": "4640",
-                "item_discount_percentage": "",
-                "item_discount_amount": "",
-                "product_valued": "",
-                "HSN": "610310",
-                "tax_percentage": "12.00",
-                "tax_amount": "10890.00"
-            },
-            {
-                "s_no": 1,
-                "category": "",
-                "description": "CS-4077-CS/3PC",
-                "design_code": "CS-4077-CS/3PC",
                 "size": "1",
                 "color": "",
                 "UOM": "",
@@ -102,7 +83,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 2,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -121,7 +102,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 3,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -140,7 +121,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 4,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -159,7 +140,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 5,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -178,7 +159,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 6,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -197,7 +178,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 7,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -216,7 +197,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 8,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -235,7 +216,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 9,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -254,7 +235,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 10,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -273,7 +254,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 11,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -292,7 +273,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 12,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -311,7 +292,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 13,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -330,7 +311,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 14,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -349,7 +330,7 @@ export class InvoiceService {
                 "tax_amount": "10890.00"
             },
             {
-                "s_no": 1,
+                "s_no": 15,
                 "category": "",
                 "description": "CS-4077-CS/3PC",
                 "design_code": "CS-4077-CS/3PC",
@@ -370,8 +351,8 @@ export class InvoiceService {
             {
                 "s_no": 1,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "0",
                 "color": "",
                 "UOM": "",
@@ -387,10 +368,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 2,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "1",
                 "color": "",
                 "UOM": "",
@@ -406,10 +387,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 3,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "2",
                 "color": "",
                 "UOM": "",
@@ -425,10 +406,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 4,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "3",
                 "color": "",
                 "UOM": "",
@@ -444,10 +425,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 5,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "4",
                 "color": "",
                 "UOM": "",
@@ -463,10 +444,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 6,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "5",
                 "color": "",
                 "UOM": "",
@@ -482,10 +463,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 7,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "6",
                 "color": "",
                 "UOM": "",
@@ -501,10 +482,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 8,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "8",
                 "color": "",
                 "UOM": "",
@@ -520,10 +501,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 9,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "10",
                 "color": "",
                 "UOM": "",
@@ -539,10 +520,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 10,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "12",
                 "color": "",
                 "UOM": "",
@@ -558,10 +539,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 11,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "14",
                 "color": "",
                 "UOM": "",
@@ -577,10 +558,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 12,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "16",
                 "color": "",
                 "UOM": "",
@@ -596,10 +577,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 13,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "7",
                 "color": "",
                 "UOM": "",
@@ -615,10 +596,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 14,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "9",
                 "color": "",
                 "UOM": "",
@@ -634,10 +615,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 15,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "11",
                 "color": "",
                 "UOM": "",
@@ -653,10 +634,10 @@ export class InvoiceService {
                 "tax_amount": "90750.00"
             },
             {
-                "s_no": 1,
+                "s_no": 16,
                 "category": "",
-                "description": "",
-                "design_code": "",
+                "description": "CS-4078-CS/3PC",
+                "design_code": "CS-4078-CS/3PC",
                 "size": "00",
                 "color": "",
                 "UOM": "",
