@@ -384,7 +384,7 @@ export class ProductLineComponent implements OnInit {
       delete: (row)=> {
           const data = this.productLineSignal().filter(r => r.s_no !== row.s_no);
           this.productLineSignal.set(data);
-          this.snackbarService.show("Deleted Successfully",'danger',{vertical: 'top', horizontal: 'right'},2000, 'X');
+          this.snackbarService.show("Deleted Successfully",'success',{vertical: 'top', horizontal: 'right'},2000, 'X');
 
       },
     }
