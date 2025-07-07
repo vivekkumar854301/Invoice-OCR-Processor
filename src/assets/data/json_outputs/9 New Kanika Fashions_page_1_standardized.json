@@ -1,0 +1,153 @@
+{
+  "invoice": {
+    "invoice_number": "S/24251381",
+    "invoice_date": "11/03/2025",
+    "irn_number": "9e4e736565573bc40c6caea7037ff6600154bf4a525b1153b0f050ed3710c21b",
+    "acknowledgement_no": "142516888125670",
+    "acknowledgement_date": "11-Mar-2025",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "New Kanika Fashions",
+    "supplier_address": "C-87-B, Sector-8, Noida, U.P.-201301",
+    "supplier_gst_no": "09AAGPK3666C1ZR",
+    "msme_no": "DL-01-0008095",
+    "pan_no": "AAFCR4024B"
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": 47940.0,
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": "124758.06",
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": "RMKV SILKS PVT.LTD.",
+    "bank_name": "YES Bank",
+    "bank_branch": "Atta Noida 201301",
+    "account_name": "",
+    "account_no": "008563300010853",
+    "IFSC_code": "YESB0000085"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": 1,
+        "category": "",
+        "description": "",
+        "design_code": "M-2802 G",
+        "size": {
+          "size": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38"
+          ],
+          "color": "MAJINTA",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": [
+            "3495",
+            "3695",
+            "3895",
+            "4095",
+            "4295",
+            "4495"
+          ],
+          "MRP_rate": [
+            "5940",
+            "6280",
+            "6620",
+            "6960",
+            "7300",
+            "7640"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 47940.0,
+          "HSN": "620422",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 2,
+        "category": "",
+        "description": "",
+        "design_code": "M-2825",
+        "size": {
+          "size": [
+            "12",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26"
+          ],
+          "color": "LIME",
+          "UOM": "",
+          "pieces": 15,
+          "quantity": 15,
+          "rate": [
+            "995",
+            "1045",
+            "1095",
+            "1145",
+            "1195",
+            "1245",
+            "1295",
+            "1345"
+          ],
+          "MRP_rate": [
+            "1650",
+            "1775",
+            "1860",
+            "1945",
+            "2030",
+            "2115",
+            "2200",
+            "2285"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 17375.0,
+          "HSN": "621142",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

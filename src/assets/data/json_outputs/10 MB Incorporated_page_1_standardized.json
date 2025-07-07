@@ -1,0 +1,325 @@
+{
+  "invoice": {
+    "invoice_number": "1913",
+    "invoice_date": "25-Feb-25",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": "531778352157"
+  },
+  "supplier": {
+    "supplier_name": "MB INCORPORATED",
+    "supplier_address": "220/1, Kumaragiripet, Kuttiparadu, NR-TO Salem-636015",
+    "supplier_gst_no": "33AAQFM8646L2ZJ",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "8715, 1 box, boys",
+    "order_date": "",
+    "transport_name": "SEB",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": 28211.2,
+    "CGST_amount": 705.28,
+    "SGST_amount": 705.28,
+    "IGST_amount": "",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": -17052.8,
+    "discount_amount": -17052.8
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": 0.24,
+    "invoice_amount": 29622.0,
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": "MB INCORPORATED",
+    "bank_name": "KOTAK-MB-CA.NO : 26710",
+    "bank_branch": "5-ROADS & KBKB0000521",
+    "account_name": "",
+    "account_no": "4044110226710",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": 1,
+        "category": "105GT- 0 - Malar + Ashai + Towel + Gift",
+        "description": "105GT- 0 - Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 510.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2040.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 2,
+        "category": "105GT-01- Malar + Ashai + Towel + Gift",
+        "description": "105GT-01- Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 510.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2040.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 3,
+        "category": "105GT-02- Malar + Ashai + Towel + Gift",
+        "description": "105GT-02- Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 525.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2100.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 4,
+        "category": "105GT-03- Malar + Ashai + Towel + Gift",
+        "description": "105GT-03- Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 555.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2220.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 5,
+        "category": "105GT-04- Malar + Ashai + Towel + Gift",
+        "description": "105GT-04- Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 580.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2320.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 6,
+        "category": "105GT-05- Malar + Ashai + Towel + Gift",
+        "description": "105GT-05- Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 640.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2560.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 7,
+        "category": "105GT-06- Malar + Ashai + Towel + Gift",
+        "description": "105GT-06- Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 685.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2740.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 8,
+        "category": "105GT-08- Malar + Ashai + Towel + Gift",
+        "description": "105GT-08- Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 815.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 3260.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 9,
+        "category": "105GT10 - Malar + Ashai + Towel + Gift",
+        "description": "105GT10 - Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 999.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 3996.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 10,
+        "category": "105GT12 - Malar + Ashai + Towel + Gift",
+        "description": "105GT12 - Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 999.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 3996.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 11,
+        "category": "105GT14 - Malar + Ashai + Towel + Gift",
+        "description": "105GT14 - Malar + Ashai + Towel + Gift",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 999.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 3996.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 12,
+        "category": "121-12-Lining Shirt+Silver Jari Veshti",
+        "description": "121-12-Lining Shirt+Silver Jari Veshti",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": 4,
+          "quantity": 4,
+          "rate": 999.0,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 3996.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

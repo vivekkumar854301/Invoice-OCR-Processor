@@ -1,0 +1,147 @@
+{
+  "invoice": {
+    "invoice_number": "291",
+    "invoice_date": "01/05/25",
+    "irn_number": "f5eaba8ba61e2dcb566111065b655f147705e35e47289454bef3878eebb8ebe4e",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": "201953632779"
+  },
+  "supplier": {
+    "supplier_name": "ZEAL APPAREL",
+    "supplier_address": "234, ASHISH INDUSTRIAL ESTATE, GOKHALE ROAD (SOUTH), DADAR(WEST), MUMBAI MAHARASHTRA(27)",
+    "supplier_gst_no": "27AALPI1722H1ZM",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "00097",
+    "order_date": "",
+    "transport_name": "TAMILNADU SUPER SERV",
+    "agent_name": "PAREKH ASSOCIATES",
+    "LR_no": "PAREKH ASSOCIATES",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": "10890.00",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "5%",
+    "discount_amount": "5%"
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": {
+      "total_qty": "30",
+      "total_taxable_amount": "90750.00",
+      "total_gst": "10890.00",
+      "net_amount": "101640.00",
+      "amount_in_words": "Rupees One Lacs One Thousand Six Hundred Forty Only"
+    },
+    "amount_in_words": "Rupees One Lacs One Thousand Six Hundred Forty Only"
+  },
+  "billing": {
+    "billed_to": {
+      "name": "M/s. RmKV SILKS PRIVATE LIMITED (CH",
+      "address": "87/88, KODAMBAKKAM HIGH ROAD, T-NAGAR, CHENNAI, CHENNAI -600017, TAMILNADU,INDIA",
+      "distance_level": "1340",
+      "phone": "9553484918",
+      "state_code": "TAMILNADU (23)",
+      "gstin": "33AAPCR4024B1Z1"
+    },
+    "bank_name": "THE FEDERAL BANK LTD",
+    "bank_branch": "DADAR EAST",
+    "account_name": "",
+    "account_no": "11995500001126",
+    "IFSC_code": "FDRL0001199"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "",
+        "category": "",
+        "description": "CS-4077-CS/3PC",
+        "design_code": "CS-4077-CS/3PC",
+        "size": {
+          "size": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "12",
+            "14",
+            "16",
+            "7",
+            "9",
+            "11",
+            "00"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "30",
+          "quantity": "30",
+          "rate": [
+            "2650",
+            "2700",
+            "2750",
+            "2800",
+            "2850",
+            "2900",
+            "2250",
+            "3350",
+            "3450",
+            "3550",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "MRP_rate": [
+            "4640",
+            "4725",
+            "4815",
+            "4900",
+            "4990",
+            "5075",
+            "5690",
+            "5865",
+            "6040",
+            "6215",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "",
+          "HSN": "610310",
+          "tax_percentage": "",
+          "tax_amount": "90750.00"
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

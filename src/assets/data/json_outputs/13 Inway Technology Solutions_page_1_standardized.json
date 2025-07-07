@@ -1,0 +1,83 @@
+{
+  "invoice": {
+    "invoice_number": "K0108",
+    "invoice_date": "13-May-25",
+    "irn_number": "3a8460f9556b9c699c4814f825d0ce56218a7f0ad7348a-6fa72a1df7af928b64",
+    "acknowledgement_no": "152521682255824",
+    "acknowledgement_date": "14-May-25",
+    "e_way_bill_no": "531818164432"
+  },
+  "supplier": {
+    "supplier_name": "INWAY TECHNOLOGY SOLUTIONS PVT LTD",
+    "supplier_address": "2/17 Q Irugur Road, Chinniyampalayam, Coimbatore",
+    "supplier_gst_no": "33AACCI9586J1Z3",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": 77933.88,
+    "CGST_amount": 4676.03,
+    "SGST_amount": "",
+    "IGST_amount": "",
+    "total_tax_amount": 9352.06
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": 0.06,
+    "invoice_amount": 87286.0,
+    "amount_in_words": "INR Eighty Seven Thousand Two Hundred Eighty Six Only"
+  },
+  "billing": {
+    "billed_to": "INWAY TECHNOLOGY SOLUTIONS PVT LTD",
+    "bank_name": "",
+    "bank_branch": "",
+    "account_name": "",
+    "account_no": "",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": 1,
+        "category": "Girls Pattupavadai Set (GST @12%)",
+        "description": "Girls Pattupavadai Set (GST @12%)",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "27 Nos",
+          "quantity": "27 Nos",
+          "rate": 2886.44,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 77933.88,
+          "HSN": "62105000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

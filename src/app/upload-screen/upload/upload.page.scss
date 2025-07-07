@@ -1,0 +1,42 @@
+.main-container {
+  background-color: rgb(224 231 255 / 40%);
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  align-items: center;
+  //   width: 100vw;
+  min-height: 100vh;
+  padding-top: 1rem;
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    color: grey;
+  }
+  .upload-container {
+    background-color: white;
+    width: 55vw;
+    // height: 0vh;
+    margin: 2.5rem;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+  }
+  .image-container {
+    background-color: white;
+    width: 60vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    img {
+      width: 45vw;
+    }
+    border-radius: 1rem;
+  }
+}
+
+ngce-icon {
+  cursor: pointer;
+}

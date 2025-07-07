@@ -2,11 +2,13 @@
 @import "../node_modules/@clarium/ngce-components/styles/styles.scss";
 @import "../node_modules/@clarium/ngce-icon/src/assets/ngce-icons/css/ngce-icon.css";
 
-:root{
-    font-family: 'Arial';
-    
+:root {
+  font-family: "Arial";
 }
-::ng-deep ngce-form-field   ngce-form-field-label{
-    font-size: x-small !important;
+::ng-deep ngce-form-field ngce-form-field-label {
+  font-size: x-small !important;
 }
 
+.heading {
+  color: #1a237e;
+}

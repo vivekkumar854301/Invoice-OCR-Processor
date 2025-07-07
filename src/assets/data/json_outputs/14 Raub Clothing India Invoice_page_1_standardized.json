@@ -1,0 +1,619 @@
+{
+  "invoice": {
+    "invoice_number": "RB/25-26/51",
+    "invoice_date": "28-04-2025",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "Raub Clothing India Pvt. Ltd.",
+    "supplier_address": "219, Readymade Complex, Pardeshipura, Indore (M.P.)",
+    "supplier_gst_no": "23AALCR9184N1ZK",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "C2/2526/00017",
+    "order_date": "",
+    "transport_name": "",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": "",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": "",
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "name": "RMKV SILKS PVT. LTD.",
+      "address": "87-88, Kodambakkam High Road, T. Nagar Chennai",
+      "city": "CHENNAI",
+      "state": "TAMILNADU",
+      "gstin": "33AAFCR4024B1Z1",
+      "contact_no": "28144445",
+      "state_code": "33"
+    },
+    "bank_name": "",
+    "bank_branch": "",
+    "account_name": "",
+    "account_no": "",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1236",
+        "size": {
+          "size": "",
+          "color": "Brown",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2059.2,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2059.2"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1071",
+        "size": {
+          "size": "",
+          "color": "Green",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2059.2,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2059.2"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1270",
+        "size": {
+          "size": "",
+          "color": "Grey",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2059.2,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2059.2"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1247",
+        "size": {
+          "size": "",
+          "color": "Grey",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2059.2,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2059.2"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1236",
+        "size": {
+          "size": "",
+          "color": "Blue",
+          "UOM": "",
+          "pieces": 5,
+          "quantity": 5,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 1716.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "1716.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1235",
+        "size": {
+          "size": "",
+          "color": "White",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2059.2,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2059.2"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1057",
+        "size": {
+          "size": "",
+          "color": "Grey",
+          "UOM": "",
+          "pieces": 5,
+          "quantity": 5,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 1716.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "1716.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1057",
+        "size": {
+          "size": "",
+          "color": "Blue",
+          "UOM": "",
+          "pieces": 5,
+          "quantity": 5,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 1716.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "1716.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1069",
+        "size": {
+          "size": "",
+          "color": "Black",
+          "UOM": "",
+          "pieces": 5,
+          "quantity": 5,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 1716.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "1716.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1025",
+        "size": {
+          "size": "",
+          "color": "Coffee",
+          "UOM": "",
+          "pieces": 5,
+          "quantity": 5,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 1716.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "1716.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1055",
+        "size": {
+          "size": "",
+          "color": "Coffee",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2059.2,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2059.2"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J225",
+        "size": {
+          "size": "",
+          "color": "Black",
+          "UOM": "",
+          "pieces": 5,
+          "quantity": 5,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 1716.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "1716.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J150",
+        "size": {
+          "size": "",
+          "color": "Yellow",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2059.2,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2059.2"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J669",
+        "size": {
+          "size": "",
+          "color": "Blue",
+          "UOM": "",
+          "pieces": 5,
+          "quantity": 5,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 1716.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "1716.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "J1023",
+        "size": {
+          "size": "",
+          "color": "Blue",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 390.0,
+          "MRP_rate": 649.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2059.2,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2059.2"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "JP104",
+        "size": {
+          "size": "",
+          "color": "White",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 480.0,
+          "MRP_rate": 799.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2534.4,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2534.4"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "JP103",
+        "size": {
+          "size": "",
+          "color": "Wine",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": 480.0,
+          "MRP_rate": 799.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 5068.8,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "5068.8"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "Bushirt",
+        "design_code": "JP103",
+        "size": {
+          "size": "",
+          "color": "Mint",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 480.0,
+          "MRP_rate": 799.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2534.4,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2534.4"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "His Shirt",
+        "design_code": "KHS22",
+        "size": {
+          "size": "",
+          "color": "White",
+          "UOM": "",
+          "pieces": 10,
+          "quantity": 10,
+          "rate": 300.0,
+          "MRP_rate": 499.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2640.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2640.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "His Shirt",
+        "design_code": "KHS20",
+        "size": {
+          "size": "",
+          "color": "White",
+          "UOM": "",
+          "pieces": 10,
+          "quantity": 10,
+          "rate": 300.0,
+          "MRP_rate": 499.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2640.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2640.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "His Shirt",
+        "design_code": "KHS22",
+        "size": {
+          "size": "",
+          "color": "Green",
+          "UOM": "",
+          "pieces": 10,
+          "quantity": 10,
+          "rate": 300.0,
+          "MRP_rate": 499.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2640.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2640.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "His Shirt",
+        "design_code": "KHS01",
+        "size": {
+          "size": "",
+          "color": "Blue",
+          "UOM": "",
+          "pieces": 10,
+          "quantity": 10,
+          "rate": 300.0,
+          "MRP_rate": 499.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2640.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2640.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "His Shirt",
+        "design_code": "KHS13",
+        "size": {
+          "size": "",
+          "color": "Blue",
+          "UOM": "",
+          "pieces": 10,
+          "quantity": 10,
+          "rate": 300.0,
+          "MRP_rate": 499.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2640.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2640.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "His Shirt",
+        "design_code": "KHS13",
+        "size": {
+          "size": "",
+          "color": "Sky Blue",
+          "UOM": "",
+          "pieces": 10,
+          "quantity": 10,
+          "rate": 300.0,
+          "MRP_rate": 499.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2640.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2640.0"
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "His Shirt",
+        "design_code": "KHS07",
+        "size": {
+          "size": "",
+          "color": "Grey",
+          "UOM": "",
+          "pieces": 10,
+          "quantity": 10,
+          "rate": 300.0,
+          "MRP_rate": 499.0,
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 2640.0,
+          "HSN": "62052000",
+          "tax_percentage": "",
+          "tax_amount": "2640.0"
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

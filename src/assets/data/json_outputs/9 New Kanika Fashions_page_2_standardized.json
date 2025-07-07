@@ -1,0 +1,196 @@
+{
+  "invoice": {
+    "invoice_number": "S/24251381",
+    "invoice_date": "11/03/2025",
+    "irn_number": "9e4e736565573bc40e6caea7037ff6600154bf4a525b1153b00f50ed3710c21b",
+    "acknowledgement_no": "142516888125670",
+    "acknowledgement_date": "11-Mar-2025",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "New Kanika Fashions",
+    "supplier_address": "C-87-B, Sector-8, Noida, U.P.-201301",
+    "supplier_gst_no": "09AAGPK3666C1ZR",
+    "msme_no": "DL-01-0008095",
+    "pan_no": "AAFCR4024B"
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": 112303.5,
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": 12454.56,
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": 12311.5
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": 124758.0,
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": "RMKV SILKS PVT.LTD.",
+    "bank_name": "YES Bank",
+    "bank_branch": "Atta Noida 201301",
+    "account_name": "",
+    "account_no": "0085G330001085",
+    "IFSC_code": "YESB0000085"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "",
+        "category": "MUSTARD",
+        "description": "MUSTARD",
+        "design_code": "M-2483",
+        "size": {
+          "size": [
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": [
+            "1695",
+            "1795",
+            "1895",
+            "1995",
+            "2095",
+            "2195"
+          ],
+          "MRP_rate": [
+            "2880",
+            "3050",
+            "3220",
+            "3390",
+            "3560",
+            "3730"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 23340.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "WINE",
+        "description": "WINE",
+        "design_code": "M-2853 G",
+        "size": {
+          "size": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": [
+            "895",
+            "945",
+            "995",
+            "1045",
+            "1095",
+            "1145"
+          ],
+          "MRP_rate": [
+            "1520",
+            "1605",
+            "1690",
+            "1775",
+            "1860",
+            "1945"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 12240.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "GAJERI",
+        "description": "GAJERI",
+        "design_code": "M-2220",
+        "size": {
+          "size": [
+            "12",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": 16,
+          "quantity": 16,
+          "rate": [
+            "1195",
+            "1245",
+            "1295",
+            "1345",
+            "1395",
+            "1445",
+            "1545",
+            "1645"
+          ],
+          "MRP_rate": [
+            "2030",
+            "2115",
+            "2200",
+            "2285",
+            "2370",
+            "2455",
+            "2625",
+            "2795"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 22220.0,
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

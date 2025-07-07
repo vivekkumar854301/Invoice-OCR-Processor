@@ -1,0 +1,25 @@
+<div class="display-invoices-main-container">
+    <div>
+        <h3 class="heading">Uploaded Invoice Images</h3>
+
+    </div>
+    <div class="top-container">
+        <div class="searchbar">
+            <ngce-text-input [suffix]="searchIcon" [inputSize]="'medium'"
+                [placeholder]="'search for invoice'"></ngce-text-input>
+
+        </div>
+    </div>
+    <div class="invoices-container">
+        @for((image of apiResponse); track $index){
+        <div class="invoice-card" (click)="onInvoiceClick(image.invoice.invoice_number)">
+            <img src="image.image_binary_data" class="image">
+            <p>{{image.invoice.invoice_number}}</p>
+        </div>
+        }
+    </div>
+</div>
+
+<ng-template #searchIcon>
+    <ngce-icon class="ngce-search-1"></ngce-icon>
+</ng-template>

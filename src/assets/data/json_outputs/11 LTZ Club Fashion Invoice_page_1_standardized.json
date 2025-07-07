@@ -1,0 +1,699 @@
+{
+  "invoice": {
+    "invoice_number": "LTZ8/15025-26",
+    "invoice_date": "",
+    "irn_number": "11cf1a4725e56a7cd9084e736dd381c1653da5d-63efc0d41a2b368d8d0e1dc09",
+    "acknowledgement_no": "182518857184947",
+    "acknowledgement_date": "16-Apr-25",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "Ltz Club Fashion Pvt. Ltd.",
+    "supplier_address": "21, Muktaram BabuStreet, 1st Floor, Kolkata-700007",
+    "supplier_gst_no": "19AADCL4382J1ZF",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": "",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": "",
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": "Ltz Club Fashion Pvt. Ltd.",
+    "bank_name": "",
+    "bank_branch": "",
+    "account_name": "",
+    "account_no": "",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": 1,
+        "category": "BOYS BERMUDA",
+        "description": "BOYS BERMUDA",
+        "design_code": "BS 1103/1341 20/24",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "9.00 PCS",
+          "quantity": "9.00 PCS",
+          "rate": "",
+          "MRP_rate": "319.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1464.21,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 2,
+        "category": "BOYS BERMUDA",
+        "description": "BOYS BERMUDA",
+        "design_code": "BS 1103/1341 26/30",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "9.00 PCS",
+          "quantity": "9.00 PCS",
+          "rate": "",
+          "MRP_rate": "349.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1601.91,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 3,
+        "category": "BOYS BERMUDA",
+        "description": "BOYS BERMUDA",
+        "design_code": "BS 1103/1341 32/36",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "9.00 PCS",
+          "quantity": "9.00 PCS",
+          "rate": "",
+          "MRP_rate": "379.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1739.61,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 4,
+        "category": "BOYS BERMUDA 20-24",
+        "description": "BOYS BERMUDA 20-24",
+        "design_code": "BB 1724/1964",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "299.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 914.94,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 5,
+        "category": "BOYS BERMUDA 26-30",
+        "description": "BOYS BERMUDA 26-30",
+        "design_code": "BB 1724/1964",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1006.74,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 6,
+        "category": "BOYS BERMUDA 32-36",
+        "description": "BOYS BERMUDA 32-36",
+        "design_code": "BB 1724/1964",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "359.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1098.54,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 7,
+        "category": "BOYS BERMUDA 20-24",
+        "description": "BOYS BERMUDA 20-24",
+        "design_code": "BB 1721/1965",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "299.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 914.94,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 8,
+        "category": "BOYS BERMUDA 26-30",
+        "description": "BOYS BERMUDA 26-30",
+        "design_code": "BB 1721/1965",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1006.74,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 9,
+        "category": "BOYS BERMUDA 32-36",
+        "description": "BOYS BERMUDA 32-36",
+        "design_code": "BB 1721/1965",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "359.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1098.54,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 10,
+        "category": "BOYS T SHIRT 24-36",
+        "description": "BOYS T SHIRT 24-36",
+        "design_code": "BT 1443/1978",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "21.00 PCS",
+          "quantity": "21.00 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 3523.59,
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 11,
+        "category": "BOYS TENCIL T-SHIRT 20-32",
+        "description": "BOYS TENCIL T-SHIRT 20-32",
+        "design_code": "BT 1405/1759",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "42.00 PCS",
+          "quantity": "42.00 PCS",
+          "rate": "",
+          "MRP_rate": "365.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 7818.3,
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 12,
+        "category": "BOYS LYCRA T SHIRT 24-36",
+        "description": "BOYS LYCRA T SHIRT 24-36",
+        "design_code": "BL 1435/1848",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "14.28 PCS",
+          "quantity": "14.28 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 3134.46,
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 13,
+        "category": "BOYS BERMUNDA 20-24",
+        "description": "BOYS BERMUNDA 20-24",
+        "design_code": "BB 1301/1678",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "299.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 914.94,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 14,
+        "category": "BOYS BERMUNDA 26-30",
+        "description": "BOYS BERMUNDA 26-30",
+        "design_code": "BB 1301/1678",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1006.74,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 15,
+        "category": "BOYS T SHIRT 24-36",
+        "description": "BOYS T SHIRT 24-36",
+        "design_code": "BT 1444/1978",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "21.00 PCS",
+          "quantity": "21.00 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 3523.59,
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 16,
+        "category": "BOYS T-Shirt 26/30",
+        "description": "BOYS T-Shirt 26/30",
+        "design_code": "BT 1464/1962",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "18.00 PCS",
+          "quantity": "18.00 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 3020.22,
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 17,
+        "category": "BOYS T-Shirt 32/36",
+        "description": "BOYS T-Shirt 32/36",
+        "design_code": "BT 1464/1962",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "18.00 PCS",
+          "quantity": "18.00 PCS",
+          "rate": "",
+          "MRP_rate": "359.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 3295.62,
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 18,
+        "category": "20-24 BOYS BERMUDA",
+        "description": "20-24 BOYS BERMUDA",
+        "design_code": "BB 1719/1918",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "9.00 PCS",
+          "quantity": "9.00 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1693.71,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 19,
+        "category": "26-30 BOYS BERMUDA",
+        "description": "26-30 BOYS BERMUDA",
+        "design_code": "BB 1719/1918",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "9.00 PCS",
+          "quantity": "9.00 PCS",
+          "rate": "",
+          "MRP_rate": "369.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1831.41,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 20,
+        "category": "32-36 BOYS BERMUDA",
+        "description": "32-36 BOYS BERMUDA",
+        "design_code": "BB 1719/1918",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "9.00 PCS",
+          "quantity": "9.00 PCS",
+          "rate": "",
+          "MRP_rate": "429.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1969.11,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 21,
+        "category": "BOYS BERMUDA 20-24",
+        "description": "BOYS BERMUDA 20-24",
+        "design_code": "BB 1727/1936",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "299.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 914.94,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 22,
+        "category": "BOYS BERMUDA 26-30",
+        "description": "BOYS BERMUDA 26-30",
+        "design_code": "BB 1727/1936",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "329.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1006.74,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 23,
+        "category": "BOYS BERMUDA 32-36",
+        "description": "BOYS BERMUDA 32-36",
+        "design_code": "BB 1727/1936",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "359.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 1098.54,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 24,
+        "category": "BOYS BERMUDA 20/24",
+        "description": "BOYS BERMUDA 20/24",
+        "design_code": "BB-1702/1812",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "259.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 792.54,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 25,
+        "category": "BOYS BERMUDA 26/30",
+        "description": "BOYS BERMUDA 26/30",
+        "design_code": "BB-1702/1812",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "279.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 853.74,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 26,
+        "category": "BOYS BERMUDA 32/36",
+        "description": "BOYS BERMUDA 32/36",
+        "design_code": "BB-1702/1812",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "299.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 914.94,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 27,
+        "category": "BOYS BERMUDA 20/24",
+        "description": "BOYS BERMUDA 20/24",
+        "design_code": "BB 1703/1810",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "259.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 792.54,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 28,
+        "category": "BOYS BERMUDA 26/30",
+        "description": "BOYS BERMUDA 26/30",
+        "design_code": "BB 1703/1810",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "279.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 853.74,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 29,
+        "category": "BOYS BERMUDA 32/36",
+        "description": "BOYS BERMUDA 32/36",
+        "design_code": "BB 1703/1810",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "299.00/PCS",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "49%",
+          "product_valued": 914.94,
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

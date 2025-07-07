@@ -1,0 +1,418 @@
+{
+  "invoice": {
+    "invoice_number": "3282/24-25",
+    "invoice_date": "15/02/25",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": "291912491431"
+  },
+  "supplier": {
+    "supplier_name": "ANSHIKA NX",
+    "supplier_address": "412, 413, ESSGEE OPTIONS ONE, NR. CONGRESS BHAVAN, SENAPATI BAPAT MARG, DADAR(WEST)-MUMBAI-400028 MAHARASHTRA(27)",
+    "supplier_gst_no": "27AAAHS4493R1ZA",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "TAMILNADU CARRIER SERV",
+    "agent_name": "PAREKH AGENCY",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": "27730.60",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": "258819.00",
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "name": "RMKV SILKS PVT .LTS",
+      "address": "87/88, KODAMBAKKAM HIGH ROAD,T. NAGAR CHENNAI, CHENNAI -600017, TAMIL NADU,INDIA",
+      "state_code": "TAMIL NADU (33)",
+      "gstin": "33AAFCR4024B1Z1"
+    },
+    "bank_name": "ICICI BANK",
+    "bank_branch": "KHAR LINKING ROAD",
+    "account_name": "",
+    "account_no": "124005000836",
+    "IFSC_code": "ICIC0001240"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "1",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 38",
+          "color": "MUSTERD",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "3095.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "21788.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "2",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 38",
+          "color": "RAMA",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "2595.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "18268.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "3",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 36",
+          "color": "RANI",
+          "UOM": "",
+          "pieces": "7",
+          "quantity": "7",
+          "rate": "2595.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "15985.20",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "4",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 38",
+          "color": "M. GREEN",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "1595.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "11228.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "5",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 38",
+          "color": "MULTI",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "3095.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "21788.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "6",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 40",
+          "color": "BLACK-ML",
+          "UOM": "",
+          "pieces": "9",
+          "quantity": "9",
+          "rate": "1895.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "15008.40",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "7",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "32 x 38",
+          "color": "RANI",
+          "UOM": "",
+          "pieces": "4",
+          "quantity": "4",
+          "rate": "3045.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "10718.40",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "8",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 40",
+          "color": "BLACK",
+          "UOM": "",
+          "pieces": "9",
+          "quantity": "9",
+          "rate": "2095.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "16592.40",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "9",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 38",
+          "color": "RANI",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "1895.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "13340.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "10",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "32 x 40",
+          "color": "FONE",
+          "UOM": "",
+          "pieces": "5",
+          "quantity": "5",
+          "rate": "2545.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "11198.00",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "11",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "16 x 22",
+          "color": "CREEM",
+          "UOM": "",
+          "pieces": "4",
+          "quantity": "4",
+          "rate": "1595.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "5614.40",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "12",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "32 x 38",
+          "color": "FIROZI",
+          "UOM": "",
+          "pieces": "4",
+          "quantity": "4",
+          "rate": "2495.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "8782.40",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "13",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "32 x 38",
+          "color": "ORANGE",
+          "UOM": "",
+          "pieces": "4",
+          "quantity": "4",
+          "rate": "2495.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "8782.40",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "14",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 38",
+          "color": "MUSTERD",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "2295.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "16156.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "15",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 38",
+          "color": "RAMA",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "2295.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "16156.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "16",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "24 x 38",
+          "color": "RED",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "2795.00",
+          "MRP_rate": "",
+          "GST": "12.00%",
+          "discount_percentage": "",
+          "discount_amount": "12.00",
+          "product_valued": "19676.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}
