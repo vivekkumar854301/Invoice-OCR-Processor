@@ -150,32 +150,4 @@ export class InvoiceComponent implements OnInit {
   }
 
 
-
-  // demo
-  users = [
-    { id: 1, name: 'Alice', email: 'alice@mail.com' },
-    { id: 2, name: 'Bob', email: 'bob@mail.com' }
-  ];
-
-  gridConfig: GridConfig = {
-    data: this.users,
-    columns: [
-      { key: 'id', label: 'ID', disabled: true },
-      { key: 'name', label: 'Name' },
-      { key: 'email', label: 'Email' }
-    ],
-    rowActions: {
-      // edit: (row) => console.log('Edit:', row),
-      save: (updatedRow) => {
-        const index = this.users.findIndex(u => u.id === updatedRow.id);
-        if (index !== -1) this.users[index] = updatedRow;
-        console.log('Saved:', updatedRow);
-      },
-      // cancel: () => console.log('Cancelled'),
-      delete: (row) => {
-        this.users = this.users.filter(u => u.id !== row.id);
-        console.log('Deleted:', row);
-      }
-    }
-  };
 }
