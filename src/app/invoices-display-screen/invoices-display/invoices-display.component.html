@@ -13,7 +13,7 @@
     <div class="invoices-container">
         @for((image of apiResponse); track $index){
         <div class="invoice-card" (click)="onInvoiceClick(image.invoice.invoice_number)">
-            <img src="image.image_binary_data" class="image">
+            <img [src]="image.image_binary_data" class="image">
             <p>{{image.invoice.invoice_number}}</p>
         </div>
         }

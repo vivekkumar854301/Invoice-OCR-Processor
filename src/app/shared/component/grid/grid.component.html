@@ -10,7 +10,7 @@
         <tbody>
           <tr *ngFor="let row of config.data">
             <ng-container *ngIf="!isEditing(row); else editMode">
-              <td *ngFor="let col of config.columns" (dblclick)="onCellDblClick(row, col.key)">
+              <td *ngFor="let col of config.columns" (click)="onCellDblClick(row, col.key)">
                 <ng-container *ngIf="!col.customTemplate; else customTemplate">
                     {{ row[col.key] }}
                   </ng-container>

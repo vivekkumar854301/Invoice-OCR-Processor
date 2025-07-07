@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { InvoiceData } from '../model/invoice.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -660,5 +661,11 @@ export class InvoiceService {
 
   getMockData():Observable<InvoiceData>{
     return of(this.mockData);
+  }
+
+  private readonly http = inject(HttpClient);
+
+  getInvoiceData(invoiceNumber : string):Observable<any>{
+    return this.http.get<any>(`http://10.3.0.49:8000/invoices/number/${invoiceNumber}`);
   }
 }

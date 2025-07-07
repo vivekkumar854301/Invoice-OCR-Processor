@@ -48,49 +48,29 @@ export class UploadComponent {
       });
       return;
     }
-    const base64Files: string[] = [];
-    let filesProcessed = 0;
-
-    this.files.forEach((file) => {
-      const reader = new FileReader();
-
-      reader.onload = () => {
-        base64Files.push(reader.result as string);
-        filesProcessed++;
-
-        if (filesProcessed === this.files.length) {
-          // All files converted
-          console.log(base64Files);
-
-          this.fileManagmentService.onUploadInvoice(base64Files).subscribe({
-            next: (data) => {
-              console.log(data);
-              this.snackbarService.show(
-                'File uploaded successfully',
-                'success',
-                {
-                  vertical: 'top',
-                  horizontal: 'right',
-                }
-              );
-              this.router.navigate(['invoices']);
-            },
-            error: (err) => {
-              this.snackbarService.show('File upload failed', 'danger', {
-                vertical: 'top',
-                horizontal: 'right',
-              });
-              console.error('Upload failed:', err);
-            },
-          });
-        }
-      };
-
-      reader.onerror = (err) => {
-        console.error('File conversion failed:', err);
-      };
-
-      reader.readAsDataURL(file);
+  
+    const formData = new FormData();
+    this.files.forEach((file, index) => {
+      formData.append('files', file); // Change 'files' to expected backend field name
+    });
+  
+    this.fileManagmentService.onUploadInvoice(formData).subscribe({
+      next: (data) => {
+        console.log(data);
+        this.snackbarService.show('File uploaded successfully', 'success', {
+          vertical: 'top',
+          horizontal: 'right',
+        });
+        this.router.navigate(['invoices']);
+      },
+      error: (err) => {
+        this.snackbarService.show('File upload failed', 'danger', {
+          vertical: 'top',
+          horizontal: 'right',
+        });
+        console.error('Upload failed:', err);
+      },
     });
   }
+  
 }

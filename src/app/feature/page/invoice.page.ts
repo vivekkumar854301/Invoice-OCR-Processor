@@ -29,6 +29,7 @@ import { PaymentComponent } from '../component/payment/payment.component';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FileManagementService } from '../../upload-screen/service/file-management.service';
+import { InvoiceService } from '../service/invoice.service';
 
 @Component({
   selector: 'IOP-invoice',
@@ -46,14 +47,75 @@ import { FileManagementService } from '../../upload-screen/service/file-manageme
   styleUrl: './invoice.page.scss',
 })
 export class InvoiceComponent implements OnInit {
-  private readonly invoiceStore = inject(InvoiceStoreService);
+  // private readonly invoiceStore = inject(InvoiceStoreService);
+  private readonly invoiceService = inject(InvoiceService)
   private readonly dialogService = inject(DialogService);
   private readonly route = inject(ActivatedRoute);
   private readonly http = inject(HttpClient);
   private readonly fileManagementService = inject(FileManagementService);
 
+  EMPTY_INVOICE_DATA: InvoiceData = {
+    invoice: {
+      invoice_number: "",
+      invoice_date: "",
+      irn_number: "",
+      acknowledgement_no: "",
+      acknowledgement_data: "",
+      e_way_bill_no: ""
+    },
+    supplier: {
+      suplier_name: "",
+      supplier_address: "",
+      supplier_gst_no: "",
+      msme_no: "",
+      pan_no: ""
+    },
+    purchase: {
+      order_no: "",
+      order_date: "",
+      transport_name: "",
+      agent_name: "",
+      LR_no: "",
+      LR_date: "",
+      merchandiser_name: ""
+    },
+    taxes: {
+      taxable_value: "",
+      CGST_amount: "",
+      SGST_amount: "",
+      IGST_amount: "",
+      total_tax_amount: ""
+    },
+    discount: {
+      discount_percentage: "",
+      discount_amount: ""
+    },
+    charges: {
+      other_deductions: "",
+      freight_charges: "",
+      other_charges: ""
+    },
+    amount: {
+      round_off_amount: "",
+      invoice_amount: "",
+      amount_in_words: ""
+    },
+    billing: {
+      billed_to: "",
+      bank_name: "",
+      bank_branch: "",
+      account_name: "",
+      account_no: "",
+      IFSC_code: ""
+    },
+    product_details: {
+      items: [],
+      total_quantity: 0,
+      total_net_Amount: 0
+    }
+  };
   readonly invoiceData = signal<InvoiceData>(
-    this.invoiceStore.invoiceDataStore()
+    this.EMPTY_INVOICE_DATA
   );
 
   invoiceId: string = '';
@@ -64,12 +126,20 @@ export class InvoiceComponent implements OnInit {
     this.route.queryParamMap.subscribe((params) => {
       const invoiceNumber = params.get('invoiceNumber');
       console.log(invoiceNumber);
-      this.fileManagementService.getInvoiceDetails(invoiceNumber!).subscribe({
-        next: (res) => {
+      // this.fileManagementService.getInvoiceDetails(invoiceNumber!).subscribe({
+      //   next: (res) => {
+      //     console.log(res);
+      //     // this.invoiceData.set(res)
+      //     this.invoiceInfo = res;
+      //   },
+      // });
+      this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
+        next: (res)=>{
           console.log(res);
-          this.invoiceInfo = res;
-        },
-      });
+          
+          this.invoiceData.set(res)
+        }
+      })
     });
   }
 
