@@ -1,11 +1,11 @@
-.display-invoices-main-container {
+.invoices-main-container {
   display: flex;
   flex-direction: column;
   padding: 2rem;
   row-gap: 2rem;
   text-align: center;
   background-color: rgb(224 231 255 / 40%);
-  min-height: 100vh;
+  min-height: 90vh;
   h3 {
     font-size: 1.5rem;
   }

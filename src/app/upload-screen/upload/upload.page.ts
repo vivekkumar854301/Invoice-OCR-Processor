@@ -5,50 +5,49 @@ import {
   RouterLink,
   RouterLinkActive,
 } from '@angular/router';
-import { NgceComponentsModule } from '@clarium/ngce-components';
+import {
+  NgceComponentsModule,
+  SnackbarService,
+} from '@clarium/ngce-components';
 
 import { NgceIconModule } from '@clarium/ngce-icon';
 import { FileManagementService } from '../service/file-management.service';
 import { InvoiceSystemHeaderComponent } from '../../feature/component/invoice-system-header/invoice-system-header.component';
 @Component({
   selector: 'IOP-upload',
-  imports: [NgceComponentsModule, NgceIconModule, InvoiceSystemHeaderComponent],
+  imports: [NgceComponentsModule, NgceIconModule],
   providers: [FileManagementService],
   templateUrl: './upload.page.html',
   styleUrl: './upload.page.scss',
 })
-export class UploadComponent implements OnInit {
+export class UploadComponent {
   private readonly router = inject(Router);
   private readonly fileManagmentService = inject(FileManagementService);
+  private readonly snackbarService = inject(SnackbarService);
+
   customStyles = {
     width: '48.5vw',
   };
-  isFileUploaded: boolean = true;
-  fileName: string = '';
 
   files: File[] = [];
 
   selectedFileCustomStyles = {
-    width: '48.5vw',
+    width: 'inherit',
   };
 
-  ngOnInit(): void {
-    this.isFileUploaded = false;
-  }
   OnFileSelect(event: File[]) {
     console.log(event);
-    this.isFileUploaded = true;
-    this.fileName = event[0].name;
     this.files = event;
   }
-  // onUpload() {
-  //   this.convertFileToBase64(this.files)
-  //   this.fileManagmentService.onUploadInvoice(this.files).subscribe({
-  //     next: (data) => {},
-  //   });
-  //   this.router.navigate(['display-invoices']);
-  // }
+
   onUpload(): void {
+    if (this.files.length === 0) {
+      this.snackbarService.show('Please add files to upload', 'danger', {
+        vertical: 'top',
+        horizontal: 'right',
+      });
+      return;
+    }
     const base64Files: string[] = [];
     let filesProcessed = 0;
 
@@ -66,9 +65,21 @@ export class UploadComponent implements OnInit {
           this.fileManagmentService.onUploadInvoice(base64Files).subscribe({
             next: (data) => {
               console.log(data);
-              this.router.navigate(['display-invoices']);
+              this.snackbarService.show(
+                'File uploaded successfully',
+                'success',
+                {
+                  vertical: 'top',
+                  horizontal: 'right',
+                }
+              );
+              this.router.navigate(['invoices']);
             },
             error: (err) => {
+              this.snackbarService.show('File upload failed', 'danger', {
+                vertical: 'top',
+                horizontal: 'right',
+              });
               console.error('Upload failed:', err);
             },
           });
@@ -81,10 +92,5 @@ export class UploadComponent implements OnInit {
 
       reader.readAsDataURL(file);
     });
-  }
-
-  onDelete() {
-    this.isFileUploaded = false;
-    console.log(this.isFileUploaded);
   }
 }

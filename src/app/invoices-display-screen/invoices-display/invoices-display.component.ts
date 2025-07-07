@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { NgceComponentsModule } from '@clarium/ngce-components';
+// import{}
 
 import { NgceIconModule } from '@clarium/ngce-icon';
 import { FileManagementService } from '../../upload-screen/service/file-management.service';
@@ -22,14 +23,22 @@ export class InvoicesDisplayComponent implements OnInit {
     height: '10rem',
     border: '1px solid grey',
   };
+  isLoading = false;
 
   ngOnInit(): void {
-    console.log('init');
+    this.isLoading = true;
+    console.log(this.isLoading);
 
     this.fileManangementService.getAllInvoices().subscribe({
       next: (data) => {
+        // this.isLoading = true;
+        console.log(this.isLoading);
         this.apiResponse = data;
         console.log(this.apiResponse);
+        this.isLoading = false;
+      },
+      error: () => {
+        this.isLoading = false;
       },
     });
   }
@@ -41,6 +50,7 @@ export class InvoicesDisplayComponent implements OnInit {
       queryParams: { invoiceNumber },
     });
   }
+
   onUpload() {
     this.router.navigate(['./upload']);
   }

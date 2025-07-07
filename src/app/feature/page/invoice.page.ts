@@ -62,21 +62,14 @@ export class InvoiceComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((params) => {
-      const invoiceId = params.get('invoiceNumber'); // e.g., 'item-1'
-      console.log(invoiceId);
-      this.fileManagementService.getInvoiceDetails(invoiceId!).subscribe({
+      const invoiceNumber = params.get('invoiceNumber');
+      console.log(invoiceNumber);
+      this.fileManagementService.getInvoiceDetails(invoiceNumber!).subscribe({
         next: (res) => {
           console.log(res);
           this.invoiceInfo = res;
         },
       });
-
-      if (invoiceId) {
-        this.invoiceId = invoiceId;
-        // this.loadData(invoiceId);
-        this.imageUrl = `assets/images/${invoiceId}.jpg`;
-        console.log(this.imageUrl);
-      }
     });
   }
 

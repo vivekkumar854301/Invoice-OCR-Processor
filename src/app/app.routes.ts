@@ -6,6 +6,6 @@ import { InvoiceComponent } from './feature/page/invoice.page';
 export const routes: Routes = [
   { path: 'upload', component: UploadComponent },
   { path: '', redirectTo: 'upload', pathMatch: 'full' },
-  { path: 'display-invoices', component: InvoicesDisplayComponent },
+  { path: 'invoices', component: InvoicesDisplayComponent },
   { path: 'invoice-details', component: InvoiceComponent },
 ];
