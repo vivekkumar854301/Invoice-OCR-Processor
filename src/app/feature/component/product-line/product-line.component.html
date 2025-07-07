@@ -2,6 +2,11 @@
     <IOP-header [data]="title"></IOP-header>
     <ngce-grid [config]="gridConfig()"></ngce-grid>
   </ngce-card>
+
+  <ng-template #invoiceDetailsTemplate>
+    <ngce-grid [config]="gridConfig()"></ngce-grid>
+  </ng-template>
+  
 <ng-template #rateTemplate let-row="row">
   <span>{{ row.rate | currency:'INR':'symbol-narrow' }}</span>
 </ng-template>
@@ -17,6 +22,7 @@
       (formSubmit)="onFormSubmit($event, false)"></ngce-dynamic-form-template>
 </ng-template>
 
+
 <ng-template #deleteTemplate let-row="row">
   <div class="delete-template">
       <p>
@@ -26,5 +32,11 @@
           <ngce-button (handleClick)="onDeleteConfirmed(row)">Yes</ngce-button>
           <ngce-button [variant]="'outline'">No</ngce-button>
       </div>
+  </div>
+</ng-template>
+
+<ng-template #actionsTemplate let-row="row">
+  <div >
+    <ngce-button variant="text" [customStyles]="{'color':'red'}" (handleClick)="viewdetails(row)">View Details</ngce-button>
   </div>
 </ng-template>

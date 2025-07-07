@@ -40,10 +40,12 @@ export class ProductLineComponent implements OnInit {
 
   editSideDrawer = viewChild<any>(DynamicFormTemplateComponent);
   editDialogTemplate = viewChild<TemplateRef<any>>('editDialogTemplate');
+  invoiceDetailsTemplate = viewChild<TemplateRef<any>>('invoiceDetailsTemplate');
   rateTemplate = viewChild<TemplateRef<any>>('rateTemplate');
   amountTemplate = viewChild<TemplateRef<any>>('mrpRateTemplate');
   taxamountTemplate = viewChild<TemplateRef<any>>('taxamountTemplate');
   deleteTemplate = viewChild<TemplateRef<any>>('deleteTemplate');
+  actionsTemplate= viewChild<TemplateRef<any>>('actionsTemplate');
 
   constructor() {
     effect(() => {
@@ -57,6 +59,27 @@ export class ProductLineComponent implements OnInit {
     this.initializeForm();
   }
 
+  viewdetails(row:any){
+    const dialogConfig: DialogConfig = {
+      header: 'Product Details',
+      content: this.invoiceDetailsTemplate()!,
+      closeOnBackdropClick: false,
+      accessibility: true,
+      draggable: false,
+      closeButton: true,
+      styles: DIALOGBOX_STYLES,
+    };
+    this.dialogService.openDialog(dialogConfig);
+    this.dialogService.afterOpen().subscribe({
+      next: () => {
+        console.log('Dialog opened with row data:', row);
+        this.invoiceDetails = {
+          ...this.invoiceDetails,
+          ...row
+        };
+      },
+    });
+  }
   readonly gridConfig = computed<IGridConfig>(() => ({
     data: this.productLineSignal(),
     draggable: true,
@@ -208,23 +231,32 @@ export class ProductLineComponent implements OnInit {
         resizable: true,
         customTemplate: this.taxamountTemplate(),
       },
-    ],
-    rowActions: [
       {
-        icon: 'ngce-edit-2',
-        color: 'black',
-        rowAlign: 'center',
-        action: (row: ProductItem) => {
-          this.onEditRow(row);
-        },
-      },
-      {
-        icon: 'ngce-trash-empty',
-        color: 'red',
-        rowAlign: 'center',
-        action: (row: ProductItem) => this.onDeleteRow(row),
-      },
+        field: 'Actions',
+        header: 'Actions',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+        customTemplate: this.actionsTemplate(),
+      }
     ],
+    // rowActions: [
+    //   {
+    //     icon: 'ngce-edit-2',
+    //     color: 'black',
+    //     rowAlign: 'center',
+    //     action: (row: ProductItem) => {
+    //       this.onEditRow(row);
+    //     },
+    //   },
+    //   {
+    //     icon: 'ngce-trash-empty',
+    //     color: 'red',
+    //     rowAlign: 'center',
+    //     action: (row: ProductItem) => this.onDeleteRow(row),
+    //   },
+    // ],
     filtering: {
       enabled: false,
       globalFilter: false,

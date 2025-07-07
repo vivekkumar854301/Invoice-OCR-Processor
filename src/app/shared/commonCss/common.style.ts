@@ -11,6 +11,7 @@ export const DIALOGBOX_STYLES = {
     body: {
       padding: '1.5rem',
       backgroundColor: 'white',
-      width: '55vw',
+      width: '97vw',
+      height: '80vh',
     },
   };
