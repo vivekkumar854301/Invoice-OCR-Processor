@@ -21,7 +21,7 @@ import {
 import { HeaderComponent } from '../../../shared/component/header/header.component';
 import { InvoiceData, ProductItem } from '../../model/invoice.model';
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
-import { DIALOGBOX_STYLES } from '../../../shared/commonCss/common.style';
+import { DIALOGBOX_STYLES, customStyles_DIALOGBOX_STYLES } from '../../../shared/commonCss/common.style';
 
 @Component({
   selector: 'IOP-product-line',
@@ -36,6 +36,7 @@ export class ProductLineComponent implements OnInit {
   title = 'Product Line Items';
   readonly gridData = input.required<InvoiceData>();
   productLineSignal = signal<ProductItem[]>([]);
+  selectedDesignCode = signal<string | null>(null);
   private readonly dialogService = inject(DialogService);
 
   editSideDrawer = viewChild<any>(DynamicFormTemplateComponent);
@@ -59,27 +60,37 @@ export class ProductLineComponent implements OnInit {
     this.initializeForm();
   }
 
-  viewdetails(row:any){
+  viewdetails(row: any) {
+    this.selectedDesignCode.set(row.design_code);
     const dialogConfig: DialogConfig = {
       header: 'Product Details',
       content: this.invoiceDetailsTemplate()!,
-      closeOnBackdropClick: false,
+      closeOnBackdropClick: true,
       accessibility: true,
       draggable: false,
       closeButton: true,
       styles: DIALOGBOX_STYLES,
     };
+  
     this.dialogService.openDialog(dialogConfig);
+  
     this.dialogService.afterOpen().subscribe({
       next: () => {
-        console.log('Dialog opened with row data:', row);
         this.invoiceDetails = {
           ...this.invoiceDetails,
-          ...row
+          ...row,
         };
       },
     });
   }
+  filteredProductLines = computed(() => {
+    const code = this.selectedDesignCode();
+    const allLines = this.productLineSignal();
+    if (!code) return [];
+    return allLines.filter(item => item.design_code === code);
+  });
+  
+  
   readonly gridConfig = computed<IGridConfig>(() => ({
     data: this.productLineSignal(),
     draggable: true,
@@ -278,6 +289,196 @@ export class ProductLineComponent implements OnInit {
       // displayGroupByMenu: true,
     }
   }));
+
+  readonly invoicedetailsgridConfig = computed<IGridConfig>(() => ({
+    data: this.filteredProductLines(),
+    draggable: true,
+    pagination: {
+      enabled: true,
+      pageSize: 7,
+      currentPage: 1,
+      pageDetails: true,
+      defaultVariant: false,
+    },
+    nonFrozenBodyCustomStyles: {
+      backgroundColor: 'white',
+      padding: '1rem',
+      fontSize: '0.9rem',
+    },
+    nonFrozenHeaderCustomStyles: {
+      padding: '1rem',
+      fontSize: '0.9rem',
+    },
+    columns: [
+      {
+        header: 'S.No',
+        field: 's_no',
+        filterable: true,
+        sortable: true,
+        type: 'number',
+        resizable: true,
+      },
+      {
+        field: 'category',
+        header: 'Category',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'description',
+        header: 'Description',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'design_code',
+        header: 'Design Code',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'size',
+        header: 'Size',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'UOM',
+        header: 'UOM',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'pieces',
+        header: 'Pieces',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'quantity',
+        header: 'Quantity',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'rate',
+        header: 'Rate',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+        customTemplate: this.rateTemplate(),
+      },
+      {
+        field: 'MRP_rate',
+        header: 'MRP Rate',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+        customTemplate: this.amountTemplate(),
+      },
+      {
+        field: 'item_discount_percentage',
+        header: 'Item Discount %',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'item_discount_amount',
+        header: 'Discount Amount',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'product_valued',
+        header: 'Product Valued',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'HSN',
+        header: 'HSN',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'tax_percentage',
+        header: 'Tax %',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+      },
+      {
+        field: 'tax_amount',
+        header: 'Tax Amount',
+        sortable: true,
+        type: 'text',
+        filterable: true,
+        resizable: true,
+        customTemplate: this.taxamountTemplate(),
+      },
+    ],
+    rowActions: [
+      {
+        icon: 'ngce-edit-2',
+        color: 'black',
+        rowAlign: 'center',
+        action: (row: ProductItem) => {
+          this.onEditRow(row);
+        },
+      },
+      {
+        icon: 'ngce-trash-empty',
+        color: 'red',
+        rowAlign: 'center',
+        action: (row: ProductItem) => this.onDeleteRow(row),
+      },
+    ],
+    filtering: {
+      enabled: false,
+      globalFilter: false,
+      columnFilter: false,
+      rowFilter: true,
+      globalSearch: true,
+    },
+    sorting: {
+      enabled: true,
+    },
+    export: {
+      enabled: false,
+      formats: ['pdf', 'csv', 'excel'],
+    },
+    rowGrouping: {
+      enabled: false,
+      groupByField:'design_code',
+      expandAll:false,
+      // displayGroupByMenu: true,
+    }
+  }));
   initializeForm() {
     this.formConfig = {
       layout: 'horizontal',
@@ -429,7 +630,7 @@ export class ProductLineComponent implements OnInit {
       accessibility: true,
       draggable: false,
       closeButton: true,
-      styles: DIALOGBOX_STYLES,
+      styles: customStyles_DIALOGBOX_STYLES,
     };
     this.dialogService.openDialog(dialogConfig);
     this.dialogService.afterOpen().subscribe({
