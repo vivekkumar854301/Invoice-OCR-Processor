@@ -109,6 +109,8 @@ export class InvoiceComponent implements OnInit {
     'background-color': ' #ffffff',
     'border-radius': '0.5rem',
     'box-shadow': '0 0 0 1px rgba(0, 0, 0, 0.1)',
+    width: 'max-content',
+    cursor: 'default'
   };
   rerunOCR() {
     console.log('Re-run OCR clicked');
@@ -146,4 +148,6 @@ export class InvoiceComponent implements OnInit {
       );
     }
   }
+
+
 }
