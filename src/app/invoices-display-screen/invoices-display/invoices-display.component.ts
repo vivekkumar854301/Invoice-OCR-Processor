@@ -24,9 +24,12 @@ export class InvoicesDisplayComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    console.log('init');
+
     this.fileManangementService.getAllInvoices().subscribe({
       next: (data) => {
         this.apiResponse = data;
+        console.log(this.apiResponse);
       },
     });
   }

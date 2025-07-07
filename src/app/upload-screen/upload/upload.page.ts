@@ -48,39 +48,38 @@ export class UploadComponent implements OnInit {
   //   });
   //   this.router.navigate(['display-invoices']);
   // }
+  onUpload(): void {
+    const base64Files: string[] = [];
+    let filesProcessed = 0;
 
-  async onUpload(): Promise<void> {
-    try {
-      // Convert all files to base64 strings
-      const base64Files: string[] = await Promise.all(
-        this.files.map((file) => this.convertFileToBase64(file))
-      );
-
-      console.log(base64Files);
-
-      // Send base64 array to backend
-      this.fileManagmentService.onUploadInvoice(base64Files).subscribe({
-        next: (data) => {
-          // Navigate after successful upload
-          console.log(data);
-
-          this.router.navigate(['display-invoices']);
-        },
-        error: (err) => {
-          console.error('Upload failed:', err);
-        },
-      });
-    } catch (error) {
-      console.error('File conversion failed:', error);
-    }
-  }
-
-  convertFileToBase64(file: File): Promise<string> {
-    return new Promise((resolve, reject) => {
+    this.files.forEach((file) => {
       const reader = new FileReader();
+
+      reader.onload = () => {
+        base64Files.push(reader.result as string);
+        filesProcessed++;
+
+        if (filesProcessed === this.files.length) {
+          // All files converted
+          console.log(base64Files);
+
+          this.fileManagmentService.onUploadInvoice(base64Files).subscribe({
+            next: (data) => {
+              console.log(data);
+              this.router.navigate(['display-invoices']);
+            },
+            error: (err) => {
+              console.error('Upload failed:', err);
+            },
+          });
+        }
+      };
+
+      reader.onerror = (err) => {
+        console.error('File conversion failed:', err);
+      };
+
       reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result as string);
-      reader.onerror = (error) => reject(error);
     });
   }
 
