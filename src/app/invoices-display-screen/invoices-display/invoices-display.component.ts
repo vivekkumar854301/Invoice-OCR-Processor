@@ -23,22 +23,12 @@ export class InvoicesDisplayComponent implements OnInit {
     height: '10rem',
     border: '1px solid grey',
   };
-  isLoading = false;
 
   ngOnInit(): void {
-    this.isLoading = true;
-    console.log(this.isLoading);
-
     this.fileManangementService.getAllInvoices().subscribe({
       next: (data) => {
-        // this.isLoading = true;
-        console.log(this.isLoading);
         this.apiResponse = data;
         console.log(this.apiResponse);
-        this.isLoading = false;
-      },
-      error: () => {
-        this.isLoading = false;
       },
     });
   }
