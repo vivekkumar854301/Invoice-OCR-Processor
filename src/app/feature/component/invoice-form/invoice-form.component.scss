@@ -1,0 +1,54 @@
+.form-section {
+  width: 100%;
+  margin: auto;
+}
+
+.group-fields {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.row-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  
+}
+
+.row-group input,
+.row-group textarea {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: aliceblue;
+  background-color: aliceblue;
+  color:red;
+}
+
+.group-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  width: 100%;
+  margin-top: 4px
+}
+.textarea{
+  height: 100%;
+}
+.group-column input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 768px) {
+  .group-column {
+    grid-template-columns: 1fr;
+  }
+}

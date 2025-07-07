@@ -416,7 +416,5 @@ export class ProductLineComponent implements OnInit {
     'margin-top': '2rem',
     padding: '1.5rem',
     'background-color': '#ffffff',
-    'border-radius': '0.5rem',
-    'box-shadow': '0 0 0 1px rgba(0, 0, 0, 0.1)',
   };
 }

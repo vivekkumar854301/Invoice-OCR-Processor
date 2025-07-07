@@ -1,1 +1,58 @@
-<p>invoice-form works!</p>
+<form [formGroup]="form" class="form-section">
+  <div formGroupName="invoice" class="group-fields">
+
+    <div class="row-group">
+      <label>Supplier Code</label>
+      <input type="text" formControlName="supplier_code" />
+
+      <label>MSME</label>
+      <input type="text" formControlName="msme_no" />
+    </div>
+
+    <div class="row-group">
+      <label>Supplier Name & Email</label>
+      <textarea class="textarea" formControlName="supplier_details"></textarea>
+    </div>
+
+    <div class="row-group">
+      <label>GSTIN No</label>
+      <input type="text" formControlName="supplier_gst_no" />
+
+      <label>PAN No</label>
+      <input type="text" formControlName="pan_no" />
+    </div>
+
+    <div class="row-group">
+      <label>Invoice Number</label>
+      <input type="text" formControlName="invoice_number" />
+
+      <div class="group-column">
+        <div>
+          <label>AK No</label>
+          <input type="text" formControlName="acknowledgement_no" />
+        </div>
+        <div>
+          <label>AK Data</label>
+          <input type="text" formControlName="acknowledgement_data" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row-group">
+      <div class="group-column">
+        <div>
+          <label>Invoice Date</label>
+          <input type="date" formControlName="invoice_date" />
+        </div>
+        <div>
+          <label>Bill No</label>
+          <input type="text" formControlName="e_way_bill_no" />
+        </div>
+      </div>
+
+      <label>IRN Number</label>
+      <input type="text" formControlName="irn_number" />
+    </div>
+
+  </div>
+</form>

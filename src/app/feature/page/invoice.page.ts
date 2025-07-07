@@ -10,18 +10,19 @@ import { ProductLineComponent } from '../component/product-line/product-line.com
 import { BankDetailsComponent } from '../component/bank-details/bank-details.component';
 import { PurchaseTransportDetailsComponent } from '../component/purchase-transport-details/purchase-transport-details.component';
 import { DIALOGBOX_STYLES } from '../../shared/commonCss/common.style';
+import { InvoiceFormComponent } from '../component/invoice-form/invoice-form.component';
+import { PaymentComponent } from '../component/payment/payment.component';
 
 @Component({
   selector: 'IOP-invoice',
   imports: [
-    InvoiceDetailsComponent,
-    SupplierInformationComponent,
+    InvoiceFormComponent,
     TotalsSummaryComponent,
     NgceIconModule,
     NgceComponentsModule,
     ProductLineComponent,
     BankDetailsComponent,
-    PurchaseTransportDetailsComponent
+    PaymentComponent
   ],
   templateUrl: './invoice.page.html',
   styleUrl: './invoice.page.scss',
@@ -61,10 +62,16 @@ export class InvoiceComponent {
     'align-items': 'center',
     'cursor':'pointer',
     display: 'inline-flex',
-
-
-
   }
+  invoiceDetails = {
+    border: 'none',
+    'margin-top': '2rem',
+    padding: '1.5rem',
+    'background-color':' #ffffff',
+    'border-radius':'0.5rem',
+    'box-shadow': '0 0 0 1px rgba(0, 0, 0, 0.1)',
+
+  };
   rerunOCR() {
     console.log('Re-run OCR clicked');
   }

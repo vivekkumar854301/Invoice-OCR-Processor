@@ -61,13 +61,15 @@
       </div>
     
     </div>
+  
   <div class="grid-container">
-    <IOP-invoice-details [invoiceDetailsData]="invoiceData()"></IOP-invoice-details>
-    <IOP-supplier-information [SupplierData]="invoiceData()"></IOP-supplier-information>
-    <IOP-purchase-transport-details [PurchaseTransportDetails]="invoiceData()"></IOP-purchase-transport-details>
-    <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
-     <IOP-bank-details [bankDetailsData]="invoiceData()"></IOP-bank-details>
-    <IOP-totals-summary [summaryData]="invoiceData()"></IOP-totals-summary>
+    <ngce-card [customStyles]="invoiceDetails">
+      <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
+      <!-- <IOP-purchase-transport-details [PurchaseTransportDetails]="invoiceData()"></IOP-purchase-transport-details> -->
+      <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
+      <IOP-payment></IOP-payment>
+    </ngce-card>
+   
   </div>
 </div>
 </div>
