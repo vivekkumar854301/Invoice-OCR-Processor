@@ -37,6 +37,8 @@ export class ProductLineComponent implements OnInit {
   readonly gridData = input.required<InvoiceData>();
   productLineSignal = signal<ProductItem[]>([]);
   selectedDesignCode = signal<string | null>(null);
+  selectedRowForDelete = signal<ProductItem | null>(null);
+  selectedRowForEdit = signal<ProductItem | null>(null);
   private readonly dialogService = inject(DialogService);
 
   editSideDrawer = viewChild<any>(DynamicFormTemplateComponent);
@@ -252,22 +254,6 @@ export class ProductLineComponent implements OnInit {
         customTemplate: this.actionsTemplate(),
       }
     ],
-    // rowActions: [
-    //   {
-    //     icon: 'ngce-edit-2',
-    //     color: 'black',
-    //     rowAlign: 'center',
-    //     action: (row: ProductItem) => {
-    //       this.onEditRow(row);
-    //     },
-    //   },
-    //   {
-    //     icon: 'ngce-trash-empty',
-    //     color: 'red',
-    //     rowAlign: 'center',
-    //     action: (row: ProductItem) => this.onDeleteRow(row),
-    //   },
-    // ],
     filtering: {
       enabled: false,
       globalFilter: false,
@@ -599,6 +585,7 @@ export class ProductLineComponent implements OnInit {
   }
 
   onDeleteRow(row: ProductItem): void {
+    this.selectedRowForDelete.set(row);
     const dialogConfig: DialogConfig = {
       header: 'Confirmation',
       content: this.deleteTemplate()!,
@@ -606,22 +593,31 @@ export class ProductLineComponent implements OnInit {
       accessibility: true,
       draggable: false,
       closeButton: true,
+      
     };
     this.dialogService.openDialog(dialogConfig);
+
   }
-  onDeleteConfirmed(row: any): void {
+  onDeleteConfirmed(): void {
+    const row = this.selectedRowForDelete();
+    if (!row) return;
+  
     console.log('Delete confirmed for row:', row);
-    
+  
     const updated = this.productLineSignal().filter(
       (item) => item.size !== row.size
     );
-    
+  
     this.productLineSignal.set(updated);
     console.log('Row deleted:', row);
+  
     this.dialogService.closeDialog();
-    
-    
+    this.selectedRowForDelete.set(null);
   }
+  close(){
+    this.dialogService.closeDialog()
+  }
+  
   onEditRow(row: ProductItem): void {
     const dialogConfig: DialogConfig = {
       header: 'Edit Product Item',
