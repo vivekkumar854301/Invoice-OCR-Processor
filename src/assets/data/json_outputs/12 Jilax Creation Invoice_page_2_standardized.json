@@ -1,0 +1,486 @@
+{
+  "invoice": {
+    "invoice_number": "9460/24-25",
+    "invoice_date": "27/01/2025",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": {
+      "name": "JILAX CREATION PVT.LTD.",
+      "address": "29/30,JUPITER MILL COMPOUND,OPP.FITWALA HALL,FITWALA ROAD,PRABHADEVI,MUMBAI - 400 013",
+      "phone": "9320011232",
+      "email": "jilaxcreation@rediffmail.com",
+      "gst_no": "27AAFCJ1439G1ZN",
+      "pan_no": "AAFCJ1439G"
+    },
+    "supplier_address": "29/30,JUPITER MILL COMPOUND,OPP.FITWALA HALL,FITWALA ROAD,PRABHADEVI,MUMBAI - 400 013",
+    "supplier_gst_no": "27AAFCJ1439G1ZN",
+    "msme_no": "",
+    "pan_no": "AAFCJ1439G"
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "TAMILNADU CARRIER",
+    "agent_name": "PAREKH ASSOCIATES",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": "",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "8.00",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": "184602.60",
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": "JILAX CREATION PVT.LTD.",
+    "bank_name": "",
+    "bank_branch": "",
+    "account_name": "",
+    "account_no": "",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "20",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4272B",
+        "size": {
+          "size": "32X38",
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "525",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "7728.00",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "21",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4279",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "12",
+          "quantity": "12",
+          "rate": "480",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "5299.20",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "22",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4503",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "12",
+          "quantity": "12",
+          "rate": "445",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "4912.80",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "23",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4558",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "6",
+          "quantity": "6",
+          "rate": "315",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "1738.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "24",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4628",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "12",
+          "quantity": "12",
+          "rate": "305",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "3367.20",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "25",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4692",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "11",
+          "quantity": "11",
+          "rate": "355",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "3592.60",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "26",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4711",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "12",
+          "quantity": "12",
+          "rate": "390",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "4305.60",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "27",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4711B",
+        "size": {
+          "size": "32X38",
+          "color": "",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "495",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "3643.20",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "28",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4774",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "12",
+          "quantity": "12",
+          "rate": "385",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "4250.40",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "29",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4784",
+        "size": {
+          "size": "18X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "28",
+          "quantity": "28",
+          "rate": "395",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "10175.20",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "30",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4808",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "24",
+          "quantity": "24",
+          "rate": "470",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "10377.60",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "31",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4814",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "24",
+          "quantity": "24",
+          "rate": "340",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "7507.20",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "32",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4814B",
+        "size": {
+          "size": "32X38",
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "445",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "6550.40",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "33",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4823",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "24",
+          "quantity": "24",
+          "rate": "355",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "7838.40",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "34",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4830",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": "24",
+          "quantity": "24",
+          "rate": "370",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "8169.60",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "35",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4845B",
+        "size": {
+          "size": "32X38",
+          "color": "",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "420",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "3091.20",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "36",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4846",
+        "size": {
+          "size": "16X26",
+          "color": "",
+          "UOM": "",
+          "pieces": "24",
+          "quantity": "24",
+          "rate": "305",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "6734.40",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "37",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4864",
+        "size": {
+          "size": "16X32",
+          "color": "",
+          "UOM": "",
+          "pieces": "32",
+          "quantity": "32",
+          "rate": "360",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "10598.40",
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "38",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4908",
+        "size": {
+          "size": "16X26",
+          "color": "",
+          "UOM": "",
+          "pieces": "12",
+          "quantity": "12",
+          "rate": "320",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.00",
+          "discount_amount": "8.00",
+          "product_valued": "3532.80",
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

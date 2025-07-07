@@ -1,0 +1,211 @@
+{
+  "invoice": {
+    "invoice_number": "2425/6/SM-000323",
+    "invoice_date": "27/02/25",
+    "irn_number": "116050be5137ecc0fbf403c033a2df2b4148c596721e8c9b61d6e9e95257d5c4",
+    "acknowledgement_no": "122525493641004",
+    "acknowledgement_date": "",
+    "e_way_bill_no": "241916500709"
+  },
+  "supplier": {
+    "supplier_name": "PEPPERMINT CLOTHING PVT. LTD.",
+    "supplier_address": "36/1/C Sinhgad Road, Next to Hotel Greenfield, Vadgaon Khurd, Pune-411041, Maharashtra",
+    "supplier_gst_no": "27AAECP3206E1ZT",
+    "msme_no": "",
+    "pan_no": "AAECP3206F"
+  },
+  "purchase": {
+    "order_no": "C2/2425/00057",
+    "order_date": "",
+    "transport_name": "Goldmine Logistics India",
+    "agent_name": "Ketan Parekh",
+    "LR_no": "P025979",
+    "LR_date": "27/02/25",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "20852.72",
+    "SGST_amount": "20852.72",
+    "IGST_amount": "20852.72",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": "",
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "bill_to": {
+        "company": "Rmkv Silks Private Limited",
+        "address": "86/88, Kodambakkam High Road, T Nagar",
+        "city": "Chennai - 600017",
+        "state": "Tamil Nadu",
+        "gst_no": "33AAFCR4024B1Z1",
+        "gst_state_code": "33"
+      },
+      "ship_to": {
+        "company": "Rmkv Silks Private Limited",
+        "address": "86/88, Kodambakkam High Road, T Nagar",
+        "city": "Chennai - 600017",
+        "state": "Tamil Nadu",
+        "gst_no": "33AAFCR4024B1Z1"
+      }
+    },
+    "bank_name": "",
+    "bank_branch": "",
+    "account_name": "",
+    "account_no": "",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "",
+        "category": "APPAREL",
+        "description": "Maroon",
+        "design_code": "27MFKADRS2-10691",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38"
+          ],
+          "color": "Maroon",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": [
+            "1,100.47",
+            "1,158.42",
+            "1,216.37",
+            "1,274.32",
+            "1,332.27",
+            "1,390.22",
+            "1,448.17",
+            "1,506.12"
+          ],
+          "MRP_rate": [
+            "1,899.00",
+            "1,999.00",
+            "2,099.00",
+            "2,199.00",
+            "2,299.00",
+            "2,399.00",
+            "2,499.00",
+            "2,599.00"
+          ],
+          "GST": [
+            "12",
+            "12",
+            "12",
+            "12",
+            "12",
+            "12",
+            "12",
+            "12"
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "20852.72",
+          "HSN": "62041919",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "APPAREL",
+        "description": "Cream",
+        "design_code": "36MFKADRE1-17091",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "Cream",
+          "UOM": "",
+          "pieces": "14",
+          "quantity": "14",
+          "rate": [
+            "955.60",
+            "955.60",
+            "955.60",
+            "1,042.52",
+            "1,042.52",
+            "1,042.52",
+            "1,129.45"
+          ],
+          "MRP_rate": [
+            "1,649.00",
+            "1,649.00",
+            "1,649.00",
+            "1,799.00",
+            "1,799.00",
+            "1,799.00",
+            "1,949.00"
+          ],
+          "GST": [
+            "5",
+            "5",
+            "5",
+            "12",
+            "12",
+            "12",
+            "12"
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "14247.62",
+          "HSN": "62044220",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "APPAREL",
+        "description": "Yellow",
+        "design_code": "36MFKAPLS2-17161",
+        "size": {
+          "size": "",
+          "color": "Yellow",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "",
+          "HSN": "62044210",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

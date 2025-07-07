@@ -1,0 +1,97 @@
+{
+  "invoice": {
+    "invoice_number": "25-26/0116",
+    "invoice_date": "07/04/2025",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_data": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "suplier_name": "",
+    "supplier_address": "C-8 PRIME PLAZA BALASHET MADHURKAR MARG OPP.PRABHADEVI STATION, (PRABHADEVI)MUMBAI - 400013",
+    "supplier_gst_no": "33AAFCR4024B1Z1",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "TAMILNADU CARRIER SERV",
+    "agent_name": "PAREKH AGENCIES",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": 60158.75,
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": 3007.94,
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": 3166.25,
+    "discount_amount": 3166.25
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": 63167.0,
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "name": "M/s. RMKV SILKS PVT. LTD.",
+      "address": "86-88, KODAMBAKKAM HIGH ROAD, T. NAGAR, CHENNAI-600017",
+      "gstin": "33AAFCR4024B1Z1",
+      "state": "Tamil Nadu",
+      "code": "33"
+    },
+    "bank_name": "Kotak Mahindra Bank",
+    "bank_branch": "Prabhadevi",
+    "account_name": "",
+    "account_no": "9712171503",
+    "IFSC_code": "KKBK0000963"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "",
+          "quantity": "",
+          "rate": "",
+          "MRP_rate": [
+            "485",
+            "495",
+            "510",
+            "525",
+            "540",
+            "555",
+            "",
+            ""
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

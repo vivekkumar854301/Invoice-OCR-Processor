@@ -1,0 +1,476 @@
+{
+  "invoice": {
+    "invoice_number": "125-26/0116",
+    "invoice_date": "07/04/2025",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_data": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "suplier_name": "",
+    "supplier_address": "C-8 PRIME PLAZA BALASHET MADHURKAR MARG OPP.PRABHADEVI STATION, (PRABHADEVI)MUMBAI - 400013",
+    "supplier_gst_no": "33AAFCR4024B1Z1",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "6416.00",
+    "SGST_amount": "6416.00",
+    "IGST_amount": "6416.00",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": "",
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "name": "M/s. RMKV SILKS PVT. LTD.",
+      "address": "86-88, KODAMBAKKAM HIGH ROAD, T. NAGAR, CHENNAI-600017",
+      "gstin": "33AAFCR4024B1Z1",
+      "state": "Tamil Nadu",
+      "state_code": "33",
+      "contact_no": "044-28144445"
+    },
+    "bank_name": "Kotak Mahindra Bank",
+    "bank_branch": "Prabhadevi",
+    "account_name": "",
+    "account_no": "9712171503",
+    "IFSC_code": "KKBK0000963"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "292.D",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "600",
+            "610",
+            "620",
+            "630",
+            "645",
+            "660",
+            "675",
+            "690",
+            "",
+            "",
+            ""
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "6416.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "295.D",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "600",
+            "610",
+            "620",
+            "630",
+            "645",
+            "660",
+            "675",
+            "690",
+            "",
+            "",
+            ""
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "6416.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "349",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "600",
+            "610",
+            "620",
+            "630",
+            "645",
+            "660",
+            "675",
+            "690",
+            "",
+            "",
+            ""
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "6416.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "350",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "600",
+            "610",
+            "620",
+            "630",
+            "645",
+            "660",
+            "675",
+            "690",
+            "",
+            "",
+            ""
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "6416.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "4409",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "5",
+          "quantity": "5",
+          "rate": "",
+          "MRP_rate": [
+            "680",
+            "710",
+            "725",
+            "755",
+            "770"
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "3269.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "61.A",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "465",
+            "475",
+            "485",
+            "495",
+            "510",
+            "525",
+            "540",
+            "555"
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "5056.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "62.A",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "465",
+            "475",
+            "485",
+            "495",
+            "510",
+            "525",
+            "540",
+            "555"
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "5056.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "63.A",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "465",
+            "475",
+            "485",
+            "495",
+            "510",
+            "525",
+            "540",
+            "555"
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "5056.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "64.A",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "465",
+            "475",
+            "485",
+            "495",
+            "510",
+            "525",
+            "540",
+            "555"
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "5056.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "65.A",
+        "category": "",
+        "description": "",
+        "design_code": "G109",
+        "size": {
+          "size": [
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "",
+          "MRP_rate": [
+            "465",
+            "475",
+            "485",
+            "495",
+            "510",
+            "525",
+            "540",
+            "555"
+          ],
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "5056.00",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

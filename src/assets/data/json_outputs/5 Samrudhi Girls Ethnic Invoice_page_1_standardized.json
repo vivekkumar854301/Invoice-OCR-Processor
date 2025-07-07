@@ -1,0 +1,172 @@
+{
+  "invoice": {
+    "invoice_number": "779/24-25",
+    "invoice_date": "01/01/2025",
+    "irn_number": "eaa1cac29be05ba6de61f4481b61fa7f1a37832cb76008a463f98384b5ef463a",
+    "acknowledgement_no": "122524662230021",
+    "acknowledgement_date": "2025-01-01",
+    "e_way_bill_no": "2418 8442 8799"
+  },
+  "supplier": {
+    "suplier_name": "",
+    "supplier_address": "Shop No. 3, Chandrapuri Building, Opp. New Sanjeevani Hospital, Kedarmal Rd, Malad (E), Mumbai - 400 097",
+    "supplier_gst_no": "27AAZCS9360B1ZS",
+    "msme_no": "",
+    "pan_no": "AAZCS9360B"
+  },
+  "purchase": {
+    "order_no": "KETAN BHAI",
+    "order_date": "",
+    "transport_name": "TAMILNADU SUPER SERVICE",
+    "agent_name": "PAREKH ASSOCIATES",
+    "LR_no": "2785",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "49600.00",
+    "SGST_amount": "49600.00",
+    "IGST_amount": "49600.00",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "-0.20",
+    "invoice_amount": "209619.00",
+    "amount_in_words": "Two Lakh Nine Thousand Six Hundred Nineteen Only"
+  },
+  "billing": {
+    "billed_to": {
+      "name": "RMKV SILKS PRIVATE LIMITED",
+      "address": "86,KODAMBAKKAM HIGH ROAD, T.NAGAR, CHENNAI-600017",
+      "state": "TAMIL NADU-33",
+      "telephone": "044-28144445",
+      "gst_number": "33AAFCR4024B1Z1"
+    },
+    "bank_name": "HDFC BANK",
+    "bank_branch": "MALAD (E),MUMBAI-97",
+    "account_name": "",
+    "account_no": "50200301702668",
+    "IFSC_code": "HDFC0000398"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "1",
+        "category": "CHURIDAR PENT",
+        "description": "CHURIDAR PENT",
+        "design_code": "SP.3101",
+        "size": {
+          "size": "24*38",
+          "color": "",
+          "UOM": "",
+          "pieces": "32",
+          "quantity": "32",
+          "rate": "1550",
+          "MRP_rate": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "49600.00",
+          "HSN": "620413",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "2",
+        "category": "CHURIDAR PENT",
+        "description": "CHURIDAR PENT",
+        "design_code": "SP.1998",
+        "size": {
+          "size": "24*38",
+          "color": "",
+          "UOM": "",
+          "pieces": "32",
+          "quantity": "32",
+          "rate": "1550",
+          "MRP_rate": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "49600.00",
+          "HSN": "620413",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "3",
+        "category": "CHURIDAR PENT",
+        "description": "CHURIDAR PENT",
+        "design_code": "SP.3123",
+        "size": {
+          "size": "24*38",
+          "color": "",
+          "UOM": "",
+          "pieces": "32",
+          "quantity": "32",
+          "rate": "1575",
+          "MRP_rate": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "50400.00",
+          "HSN": "620413",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "4",
+        "category": "CHURIDAR PENT",
+        "description": "CHURIDAR PENT",
+        "design_code": "SP.1985",
+        "size": {
+          "size": "24*38",
+          "color": "",
+          "UOM": "",
+          "pieces": "16",
+          "quantity": "16",
+          "rate": "1550",
+          "MRP_rate": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "24800.00",
+          "HSN": "620413",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "5",
+        "category": "CHURIDAR PENT",
+        "description": "CHURIDAR PENT",
+        "design_code": "SP.1874",
+        "size": {
+          "size": "24*38",
+          "color": "",
+          "UOM": "",
+          "pieces": "8",
+          "quantity": "8",
+          "rate": "1595",
+          "MRP_rate": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "12760.00",
+          "HSN": "620413",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

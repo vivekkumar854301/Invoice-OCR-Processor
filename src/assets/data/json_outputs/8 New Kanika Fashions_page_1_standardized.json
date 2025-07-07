@@ -1,0 +1,423 @@
+{
+  "invoice": {
+    "invoice_number": "382/24-25",
+    "invoice_date": "22.02.2025",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "PARSONS ENTERPRISES",
+    "supplier_address": "87-88, Kodambakkam High Road, T. Nagar, Chennai -600017",
+    "supplier_gst_no": "27AABHD8516K1Z6",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "TAMILNADU CARRIER SERVICE",
+    "agent_name": "",
+    "LR_no": "7430",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": [
+      "993.00",
+      "1029.00",
+      "1065.00",
+      "1101.00",
+      "1137.00",
+      "1173.00",
+      "1209.00",
+      "1245.00"
+    ],
+    "SGST_amount": [
+      "993.00",
+      "1029.00",
+      "1065.00",
+      "1101.00",
+      "1137.00",
+      "1173.00",
+      "1209.00",
+      "1245.00"
+    ],
+    "IGST_amount": [
+      "993.00",
+      "1029.00",
+      "1065.00",
+      "1101.00",
+      "1137.00",
+      "1173.00",
+      "1209.00",
+      "1245.00"
+    ],
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": "2,658.00"
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "-0.30",
+    "invoice_amount": "25,122.00",
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": "RmKV SILKS PVT LTD",
+    "bank_name": "CANARA BANK",
+    "bank_branch": "Chembur Camp Branch",
+    "account_name": "",
+    "account_no": "0170201004306",
+    "IFSC_code": "CNRB0000170"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": 1,
+        "category": "GIRL'S TOPS",
+        "description": "GIRL'S TOPS",
+        "design_code": "1331",
+        "size": {
+          "size": [
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3"
+          ],
+          "quantity": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3"
+          ],
+          "rate": [
+            "331.00",
+            "343.00",
+            "355.00",
+            "367.00",
+            "379.00",
+            "391.00",
+            "403.00",
+            "415.00"
+          ],
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": [
+            "993.00",
+            "1029.00",
+            "1065.00",
+            "1101.00",
+            "1137.00",
+            "1173.00",
+            "1209.00",
+            "1245.00"
+          ],
+          "HSN": "6109",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 2,
+        "category": "GIRL'S TOPS",
+        "description": "GIRL'S TOPS",
+        "design_code": "1307",
+        "size": {
+          "size": [
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "226.00",
+            "238.00",
+            "250.00",
+            "262.00",
+            "274.00",
+            "286.00",
+            "298.00",
+            "310.00"
+          ],
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": [
+            "452.00",
+            "476.00",
+            "500.00",
+            "524.00",
+            "548.00",
+            "572.00",
+            "596.00",
+            "620.00"
+          ],
+          "HSN": "6109",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 3,
+        "category": "GIRL'S TOPS",
+        "description": "GIRL'S TOPS",
+        "design_code": "1303",
+        "size": {
+          "size": [
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "226.00",
+            "238.00",
+            "250.00",
+            "262.00",
+            "274.00",
+            "286.00",
+            "298.00",
+            "310.00"
+          ],
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": [
+            "452.00",
+            "476.00",
+            "500.00",
+            "524.00",
+            "548.00",
+            "572.00",
+            "596.00",
+            "620.00"
+          ],
+          "HSN": "6109",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 4,
+        "category": "GIRL'S TOPS",
+        "description": "GIRL'S TOPS",
+        "design_code": "1306",
+        "size": {
+          "size": [
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "226.00",
+            "238.00",
+            "250.00",
+            "262.00",
+            "274.00",
+            "286.00",
+            "298.00",
+            "310.00"
+          ],
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": [
+            "452.00",
+            "476.00",
+            "500.00",
+            "524.00",
+            "548.00",
+            "572.00",
+            "596.00",
+            "620.00"
+          ],
+          "HSN": "6109",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 5,
+        "category": "GIRL'S TOPS",
+        "description": "GIRL'S TOPS",
+        "design_code": "2295",
+        "size": {
+          "size": [
+            "22",
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "256.00",
+            "268.00",
+            "280.00",
+            "292.00",
+            "304.00",
+            "316.00",
+            "328.00",
+            "340.00"
+          ],
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": [
+            "512.00",
+            "536.00",
+            "560.00",
+            "584.00",
+            "608.00",
+            "632.00",
+            "656.00",
+            "680.00"
+          ],
+          "HSN": "6109",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

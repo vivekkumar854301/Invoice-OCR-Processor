@@ -1,0 +1,576 @@
+{
+  "invoice": {
+    "invoice_number": "",
+    "invoice_date": "",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "",
+    "supplier_address": "",
+    "supplier_gst_no": [
+      "12",
+      "12",
+      "12",
+      "12",
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "20969.78",
+    "SGST_amount": "20969.78",
+    "IGST_amount": "20969.78",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "-.43",
+    "invoice_amount": "1,45,566.00",
+    "amount_in_words": "One Lakh Forty Five Thousand Five Hundred Sixty Six Rupees Only"
+  },
+  "billing": {
+    "billed_to": "",
+    "bank_name": "",
+    "bank_branch": "",
+    "account_name": "",
+    "account_no": "",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "",
+        "category": "APPAREL",
+        "description": "",
+        "design_code": "37MFKADHS2-18715",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38"
+          ],
+          "color": "Olive green",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "1216.37",
+            "1216.37",
+            "1216.37",
+            "1332.27",
+            "1332.27",
+            "1332.27",
+            "1448.17",
+            "1448.17"
+          ],
+          "MRP_rate": [
+            "2099.00",
+            "2099.00",
+            "2099.00",
+            "2299.00",
+            "2299.00",
+            "2299.00",
+            "2499.00",
+            "2499.00"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "20969.78",
+          "HSN": "62042300",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "APPAREL",
+        "description": "",
+        "design_code": "37MFKAPLS2-18679",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "Maroon",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "1448.17",
+            "1448.17",
+            "1448.17",
+            "1448.17",
+            "1564.07",
+            "1564.07",
+            "1564.07"
+          ],
+          "MRP_rate": [
+            "2499.00",
+            "2499.00",
+            "2499.00",
+            "2499.00",
+            "2699.00",
+            "2699.00",
+            "2699.00"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "16913.28",
+          "HSN": "62042300",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "APPAREL",
+        "description": "",
+        "design_code": "37MFKAPNS3-18704",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "Pink",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "1158.42",
+            "1158.42",
+            "1158.42",
+            "1158.42",
+            "1274.32",
+            "1274.32",
+            "1274.32"
+          ],
+          "MRP_rate": [
+            "1999.00",
+            "1999.00",
+            "1999.00",
+            "1999.00",
+            "2199.00",
+            "2199.00",
+            "2199.00"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "20158.48",
+          "HSN": "62042300",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "APPAREL",
+        "description": "",
+        "design_code": "37MFKASOS2-18781",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "Pink",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "1100.47",
+            "1100.47",
+            "1100.47",
+            "1100.47",
+            "1216.37",
+            "1216.37",
+            "1216.37"
+          ],
+          "MRP_rate": [
+            "1899.00",
+            "1899.00",
+            "1899.00",
+            "1899.00",
+            "2099.00",
+            "2099.00",
+            "2099.00"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "16101.98",
+          "HSN": "62042300",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "1216.37",
+            "1216.37",
+            "1216.37",
+            "1332.27",
+            "1332.27",
+            "1332.27",
+            "1448.17",
+            "1448.17"
+          ],
+          "MRP_rate": [
+            "2099.00",
+            "2099.00",
+            "2099.00",
+            "2299.00",
+            "2299.00",
+            "2299.00",
+            "2499.00",
+            "2499.00"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "1448.17",
+            "1448.17",
+            "1448.17",
+            "1448.17",
+            "1564.07",
+            "1564.07",
+            "1564.07"
+          ],
+          "MRP_rate": [
+            "2499.00",
+            "2499.00",
+            "2499.00",
+            "2499.00",
+            "2699.00",
+            "2699.00",
+            "2699.00"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "1158.42",
+            "1158.42",
+            "1158.42",
+            "1158.42",
+            "1274.32",
+            "1274.32",
+            "1274.32"
+          ],
+          "MRP_rate": [
+            "1999.00",
+            "1999.00",
+            "1999.00",
+            "1999.00",
+            "2199.00",
+            "2199.00",
+            "2199.00"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "",
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": [
+            "24",
+            "26",
+            "28",
+            "30",
+            "32",
+            "34",
+            "36"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "quantity": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "rate": [
+            "1100.47",
+            "1100.47",
+            "1100.47",
+            "1100.47",
+            "1216.37",
+            "1216.37",
+            "1216.37"
+          ],
+          "MRP_rate": [
+            "1899.00",
+            "1899.00",
+            "1899.00",
+            "1899.00",
+            "2099.00",
+            "2099.00",
+            "2099.00"
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}
