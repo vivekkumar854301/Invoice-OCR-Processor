@@ -1,0 +1,208 @@
+{
+  "invoice": {
+    "invoice_number": "",
+    "invoice_date": "",
+    "irn_number": "",
+    "acknowledgement_no": "122524853043302",
+    "acknowledgement_date": "2025-01-14",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "PEARL CREATION",
+    "supplier_address": "118,JOGANI INDUSTRIAL ESTATE,S.B.MARG,DADAR (W),MUMBAI-400028",
+    "supplier_gst_no": "27BXRPB6900R1ZT",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "TAMILNADU CARRIER",
+    "agent_name": "PAREKH AGENCY",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": 4068.0,
+    "SGST_amount": 4068.0,
+    "IGST_amount": 4068.0,
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": 1410.0
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": 0.28,
+    "invoice_amount": 14077.0,
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "name": "M/s. RMKV SILK PVT.LTS",
+      "address": "86,KODAMBAKKAM HIGH ROAD T.NAGAR CHENNAI-600017",
+      "state": "TAMIL NADU-33",
+      "tele_no": "044-28144445",
+      "gst_no": "33AAFCR4024B1Z1"
+    },
+    "bank_name": "HDFC BANK",
+    "bank_branch": "DADAR (W),MUMBAI-400028",
+    "account_name": "",
+    "account_no": "50200061056898",
+    "IFSC_code": "HDFC0001119"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": 1,
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": [
+            "18",
+            "20",
+            "22",
+            "24"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "quantity": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "rate": [
+            1055,
+            1105,
+            1155,
+            1205
+          ],
+          "MRP_rate": [
+            1790,
+            1875,
+            1960,
+            2045
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 4068.0,
+          "HSN": "620413",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 2,
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": [
+            "18",
+            "20",
+            "22",
+            "24"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "quantity": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "rate": [
+            1120,
+            1170,
+            1220,
+            1270
+          ],
+          "MRP_rate": [
+            1900,
+            1985,
+            2070,
+            2155
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 4302.0,
+          "HSN": "620413",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 3,
+        "category": "",
+        "description": "",
+        "design_code": "",
+        "size": {
+          "size": [
+            "18",
+            "20",
+            "22",
+            "24"
+          ],
+          "color": "",
+          "UOM": "",
+          "pieces": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "quantity": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "rate": [
+            1125,
+            1175,
+            1225,
+            1275
+          ],
+          "MRP_rate": [
+            1910,
+            1985,
+            2080,
+            2165
+          ],
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": 4320.0,
+          "HSN": "620413",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

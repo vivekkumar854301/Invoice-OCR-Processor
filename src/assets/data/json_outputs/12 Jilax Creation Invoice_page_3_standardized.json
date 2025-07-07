@@ -1,0 +1,229 @@
+{
+  "invoice": {
+    "invoice_number": "9460/24-25",
+    "invoice_date": "27/01/2025",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": {
+      "name": "JILAX CREATION PVT.LTD.",
+      "address": "29/30,JUPITER MILL COMPOUND,OPP.FITWALA HALL,FITWALA ROAD,PRABHADEVI,MUMBAI - 400 013",
+      "phone": "9320011232",
+      "email": "jilaxcreation@rediffmail.com",
+      "gst_no": "27AAFCJ1439G1ZN",
+      "pan_no": "AAFCJ1439G"
+    },
+    "supplier_address": "29/30,JUPITER MILL COMPOUND,OPP.FITWALA HALL,FITWALA ROAD,PRABHADEVI,MUMBAI - 400 013",
+    "supplier_gst_no": "27AAFCJ1439G1ZN",
+    "msme_no": "",
+    "pan_no": "AAFCJ1439G"
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "TAMILNADU CARRIER",
+    "agent_name": "PAREKH ASSOCIATES",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": 11454.69,
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": "",
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": -0.49,
+    "invoice_amount": 229093.8,
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "name": "M/s. RMKV SILKS PVT LTD (C)",
+      "address": "87/88,KODAMBAKKAM HIGH ROAD, T.NAGAR,CHENNAI-600017 TAMIL NADU",
+      "state": "TAMIL NADU-33",
+      "phone": "044-2814445",
+      "gst_no": "33AAFCR4024B1Z1",
+      "pan_no": "AAFCR4024B"
+    },
+    "bank_name": "SBI",
+    "bank_branch": "SION",
+    "account_name": "",
+    "account_no": "40094881149",
+    "IFSC_code": "SBIN0070716"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "39",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4929",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 18,
+          "quantity": 18,
+          "rate": 350,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "8.0",
+          "product_valued": 7796.0,
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "40",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4943",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": 360,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "8.0",
+          "product_valued": 3974.4,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "41",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4950",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 24,
+          "quantity": 24,
+          "rate": 355,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "8.0",
+          "product_valued": 7838.4,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "42",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D4998",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 24,
+          "quantity": 24,
+          "rate": 395,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "8.0",
+          "product_valued": 8721.6,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "43",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D5002",
+        "size": {
+          "size": "16X26",
+          "color": "",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": 325,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "8.0",
+          "product_valued": 3588.0,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "44",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D5003",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 23,
+          "quantity": 23,
+          "rate": 360,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "8.0",
+          "product_valued": 7617.6,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "45",
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D5004",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 24,
+          "quantity": 24,
+          "rate": 315,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "",
+          "discount_amount": "8.0",
+          "product_valued": 6955.2,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

@@ -1,0 +1,486 @@
+{
+  "invoice": {
+    "invoice_number": "9460/24-25",
+    "invoice_date": "27/01/2025",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "JILAX CREATION PVT. LTD.",
+    "supplier_address": "29/30,JUPITER MILL COMPOUND,OPP.FITWALA HALL,FITWALA ROAD,PRABHADEVI,MUMBAI - 400 013",
+    "supplier_gst_no": "27AAFCJ1439G1ZN",
+    "msme_no": "",
+    "pan_no": "AAFCJ1439G"
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "TAMILNADU CARRIER",
+    "agent_name": "PAREKH ASSOCIATES",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": "",
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": 8.0,
+    "discount_amount": ""
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": 71189.6,
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "name": "RMKV SILKS PVT LTD (C)",
+      "address": "87/88,KODAMBAKKAM HIGH ROAD, T.NAGAR,CHENNAI-600017",
+      "state": "TAMIL NADU-33",
+      "gst_no": "33AAFCR4024B1Z1",
+      "pan_no": "AAFCR4024B",
+      "phone": "044-28144445"
+    },
+    "bank_name": "",
+    "bank_branch": "",
+    "account_name": "",
+    "account_no": "",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": 1,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "2355",
+        "size": {
+          "size": "14X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": 230,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 2539.2,
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 2,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "2647",
+        "size": {
+          "size": "14X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": 325,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 3588.0,
+          "HSN": "620443",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 3,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "2652",
+        "size": {
+          "size": "14X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 250,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 1380.0,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 4,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "2942",
+        "size": {
+          "size": "16X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 8,
+          "quantity": 8,
+          "rate": 255,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 1876.8,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 5,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "2986",
+        "size": {
+          "size": "16X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 8,
+          "quantity": 8,
+          "rate": 265,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 1950.4,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 6,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "2999",
+        "size": {
+          "size": "14X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 260,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 1435.2,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 7,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "3006",
+        "size": {
+          "size": "14X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 250,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 1380.0,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 8,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "3023",
+        "size": {
+          "size": "14X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 240,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 1324.8,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 9,
+        "category": "BABY FROCK",
+        "description": "BABY FROCK",
+        "design_code": "3029",
+        "size": {
+          "size": "16X18",
+          "color": "",
+          "UOM": "",
+          "pieces": 8,
+          "quantity": 8,
+          "rate": 310,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 2281.6,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 10,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "8873B",
+        "size": {
+          "size": "32X38",
+          "color": "",
+          "UOM": "",
+          "pieces": 8,
+          "quantity": 8,
+          "rate": 540,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 3974.4,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 11,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "9420B",
+        "size": {
+          "size": "32X38",
+          "color": "",
+          "UOM": "",
+          "pieces": 8,
+          "quantity": 8,
+          "rate": 475,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 3496.0,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 12,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D2219",
+        "size": {
+          "size": "18X32",
+          "color": "",
+          "UOM": "",
+          "pieces": 16,
+          "quantity": 16,
+          "rate": 370,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 5446.4,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 13,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D2342",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 12,
+          "quantity": 12,
+          "rate": 335,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 3698.4,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 14,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D2342B",
+        "size": {
+          "size": "32X38",
+          "color": "",
+          "UOM": "",
+          "pieces": 8,
+          "quantity": 8,
+          "rate": 430,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 3164.8,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 15,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D2804",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 6,
+          "quantity": 6,
+          "rate": 350,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 1932.0,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 16,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D3430",
+        "size": {
+          "size": "18X32",
+          "color": "",
+          "UOM": "",
+          "pieces": 16,
+          "quantity": 16,
+          "rate": 315,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 4636.8,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 17,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D3435",
+        "size": {
+          "size": "16X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 32,
+          "quantity": 32,
+          "rate": 320,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 9420.8,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 18,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D3820",
+        "size": {
+          "size": "20X30",
+          "color": "",
+          "UOM": "",
+          "pieces": 36,
+          "quantity": 36,
+          "rate": 430,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 14241.6,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": 19,
+        "category": "FROCKS",
+        "description": "FROCKS",
+        "design_code": "D3985B",
+        "size": {
+          "size": "32X38",
+          "color": "",
+          "UOM": "",
+          "pieces": 8,
+          "quantity": 8,
+          "rate": 465,
+          "MRP_rate": "",
+          "GST": "",
+          "discount_percentage": "8.0",
+          "discount_amount": "8.0",
+          "product_valued": 3422.4,
+          "HSN": "620442",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "invoice": {
+    "invoice_number": "LTZ0150/26-25",
+    "invoice_date": "",
+    "irn_number": "",
+    "acknowledgement_no": "",
+    "acknowledgement_date": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "supplier_name": "Club Fashion Pvt. Ltd.",
+    "supplier_address": "1, Muktaram BabuStreet, 1st Floor, Kolkata-700007",
+    "supplier_gst_no": "19AADCL4332J1ZF",
+    "msme_no": "",
+    "pan_no": ""
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "",
+    "transport_name": "",
+    "agent_name": "",
+    "LR_no": "",
+    "LR_date": "",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": "1,24,862.28",
+    "CGST_amount": "",
+    "SGST_amount": "",
+    "IGST_amount": "",
+    "total_tax_amount": "6,243.23"
+  },
+  "discount": {
+    "discount_percentage": "49%",
+    "discount_amount": "49%"
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": "",
+    "invoice_amount": "1,31,106.00",
+    "amount_in_words": "INR One Lakh Thirty One Thousand One Hundred Six Only"
+  },
+  "billing": {
+    "billed_to": "Club Fashion Pvt. Ltd.",
+    "bank_name": "INDUSIND BANK",
+    "bank_branch": "C R AVENUE BRANCH & INDUSIND",
+    "account_name": "",
+    "account_no": "652000024137",
+    "IFSC_code": ""
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "62",
+        "category": "BT 1326/1733 BOYS TRACKPANT 32-36",
+        "description": "BT 1326/1733 BOYS TRACKPANT 32-36",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "549.00",
+          "GST": "",
+          "discount_percentage": "49%",
+          "discount_amount": "49%",
+          "product_valued": "1,679.94",
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "63",
+        "category": "BP 1412/1998 BOYS FULL PANT 20-24",
+        "description": "BP 1412/1998 BOYS FULL PANT 20-24",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "449.00",
+          "GST": "",
+          "discount_percentage": "49%",
+          "discount_amount": "49%",
+          "product_valued": "1,373.94",
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "64",
+        "category": "BP 1412/1998 BOYS FULL PANT 26-30",
+        "description": "BP 1412/1998 BOYS FULL PANT 26-30",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "499.00",
+          "GST": "",
+          "discount_percentage": "49%",
+          "discount_amount": "49%",
+          "product_valued": "1,526.94",
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "65",
+        "category": "BP 1412/1998 BOYS FULL PANT 32-36",
+        "description": "BP 1412/1998 BOYS FULL PANT 32-36",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "549.00",
+          "GST": "",
+          "discount_percentage": "49%",
+          "discount_amount": "49%",
+          "product_valued": "1,679.94",
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "66",
+        "category": "BT 1437/1849 BOYS T SHIRT 24-36",
+        "description": "BT 1437/1849 BOYS T SHIRT 24-36",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "14.00 PCS",
+          "quantity": "14.00 PCS",
+          "rate": "",
+          "MRP_rate": "439.00",
+          "GST": "",
+          "discount_percentage": "49%",
+          "discount_amount": "49%",
+          "product_valued": "3,134.46",
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "67",
+        "category": "BT 1432/1846 BOYS LYCRA TSHIRT 24/36",
+        "description": "BT 1432/1846 BOYS LYCRA TSHIRT 24/36",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "14.00 PCS",
+          "quantity": "14.00 PCS",
+          "rate": "",
+          "MRP_rate": "439.00",
+          "GST": "",
+          "discount_percentage": "49%",
+          "discount_amount": "49%",
+          "product_valued": "3,134.46",
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "68",
+        "category": "BT 1441/1963 BOYS T SHIRT 24-36",
+        "description": "BT 1441/1963 BOYS T SHIRT 24-36",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "14.00 PCS",
+          "quantity": "14.00 PCS",
+          "rate": "",
+          "MRP_rate": "439.00",
+          "GST": "",
+          "discount_percentage": "49%",
+          "discount_amount": "49%",
+          "product_valued": "3,134.46",
+          "HSN": "61091000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      },
+      {
+        "s_no": "69",
+        "category": "BP 1328/1760 BOYS TRACK PANT 20/24",
+        "description": "BP 1328/1760 BOYS TRACK PANT 20/24",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "6.00 PCS",
+          "quantity": "6.00 PCS",
+          "rate": "",
+          "MRP_rate": "449.00",
+          "GST": "",
+          "discount_percentage": "49%",
+          "discount_amount": "49%",
+          "product_valued": "1,373.94",
+          "HSN": "61112000",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

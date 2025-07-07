@@ -1,0 +1,97 @@
+{
+  "invoice": {
+    "invoice_number": "UCPL012359",
+    "invoice_date": "17/02/2025",
+    "irn_number": "",
+    "acknowledgement_no": "122525362148436",
+    "acknowledgement_data": "",
+    "e_way_bill_no": ""
+  },
+  "supplier": {
+    "suplier_name": "",
+    "supplier_address": "222-225 SIGMA ESTATE-II,SAYANI ROAD,PRABHADEVI,DADAR WEST, MUMBAI - 400025",
+    "supplier_gst_no": "27AABCU2855M1ZX",
+    "msme_no": "",
+    "pan_no": "AABCU2855M"
+  },
+  "purchase": {
+    "order_no": "",
+    "order_date": "17/02/2025",
+    "transport_name": "YASHWANT LOGISTIC P. LTD",
+    "agent_name": "",
+    "LR_no": "MP25502",
+    "LR_date": "17/02/2025",
+    "merchandiser_name": ""
+  },
+  "taxes": {
+    "taxable_value": 35847.0,
+    "CGST_amount": {
+      "rate": 0.0,
+      "amount": 0.0
+    },
+    "SGST_amount": {
+      "rate": 0.0,
+      "amount": 0.0
+    },
+    "IGST_amount": {
+      "rate": 12.0,
+      "amount": 4301.64
+    },
+    "total_tax_amount": ""
+  },
+  "discount": {
+    "discount_percentage": 3983.0,
+    "discount_amount": 3983.0
+  },
+  "charges": {
+    "other_deductions": "",
+    "freight_charges": "",
+    "other_charges": ""
+  },
+  "amount": {
+    "round_off_amount": 0.36,
+    "invoice_amount": 35847.0,
+    "amount_in_words": ""
+  },
+  "billing": {
+    "billed_to": {
+      "name": "RMKV SILKS PRIVATE LIMITED (CHN)",
+      "address": "NO.87-88,KODAMBAKKAM HIGH ROAD, T-NAGAR CHENNAI-600017 CHENNAI 33-Tamil Nadu 600017",
+      "phone": "044-28144445",
+      "gst_no": "33AAFCR4024B1Z1",
+      "pan_no": "AAFCR4024B"
+    },
+    "bank_name": "HDFC BANK",
+    "bank_branch": "BHAVANI SHANKAR ROAD - DADAR WEST",
+    "account_name": "",
+    "account_no": "50200024051532",
+    "IFSC_code": "HDFC0001119"
+  },
+  "product_details": {
+    "items": [
+      {
+        "s_no": "",
+        "category": "",
+        "description": "BJK9408/1 1 BOYS JACKET KURTA HSN:621139",
+        "design_code": "",
+        "size": {
+          "size": "",
+          "color": "",
+          "UOM": "",
+          "pieces": "",
+          "quantity": "",
+          "rate": "",
+          "MRP_rate": "",
+          "discount_percentage": "",
+          "discount_amount": "",
+          "product_valued": "",
+          "HSN": "",
+          "tax_percentage": "",
+          "tax_amount": ""
+        }
+      }
+    ],
+    "total_quantity": 0,
+    "total_net_Amount": 0
+  }
+}

@@ -1,0 +1,43 @@
+.invoices-main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  row-gap: 2rem;
+  text-align: center;
+  background-color: rgb(224 231 255 / 40%);
+  min-height: 90vh;
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.top-container {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 4rem;
+  text-align: end;
+  // align-items: flex-end;
+}
+
+.invoices-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.invoice-card {
+  flex-direction: column;
+  text-align: center;
+  color: rgb(45, 44, 44);
+  p:hover {
+    text-decoration: underline;
+    color: rgba(0, 0, 255, 0.674);
+    cursor: pointer;
+  }
+}
+
+.image {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid rgba(128, 128, 128, 0.325);
+  border-radius: 0.2rem;
+}
