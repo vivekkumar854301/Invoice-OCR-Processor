@@ -7,7 +7,7 @@ import { Observable, retryWhen } from 'rxjs';
 })
 export class FileManagementService {
   private readonly http = inject(HttpClient);
-  private baseUrl = 'http://10.3.0.49:8000';
+  private baseUrl = 'http://10.3.0.49:8077';
 
   onUploadInvoice(invoices: string[]): Observable<any> {
     return this.http.post(`${this.baseUrl}/upload`, invoices);
