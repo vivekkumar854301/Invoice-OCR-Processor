@@ -9,31 +9,27 @@
             <label>Total Pcs:</label>
             <input type="number" id="totalPcs" value="60" />
           </div>
-  
+
           <div class="form-group">
-            <label>Freight Charges:</label>
-            <input type="number" id="freightCharges" value="0" />
+            <label>Product Total:</label>
+            <input type="number" id="productTotal" value="25000.00" />
+          </div>
+
+          <div class="form-group">
+            <label>Discount:</label>
+            <input type="number" id="discount" value="0" />
           </div>
   
           <div class="form-group">
-            <label>Master Discount%:</label>
-            <input type="number" id="masterDiscount" value="0" />
+            <label>Disc Rounded Off:</label>
+            <input type="number" id="discRounded" value="0" />
+          </div>
+          
+          <div class="form-group">
+            <label>Taxable Value:</label>
+            <input type="number" id="taxableValue" value="25000.00" />
           </div>
   
-          <div class="form-group">
-            <label>CGST:</label>
-            <input type="number" id="cgst" value="6" />
-          </div>
-  
-          <div class="form-group">
-            <label>CGST Rounded Off:</label>
-            <input type="number" id="cgstRounded" value="0" />
-          </div>
-  
-          <div class="form-group">
-            <label>Total Amount:</label>
-            <input type="number" id="totalAmount" readonly />
-          </div>
   
         </div>
       </div>
@@ -43,8 +39,8 @@
         <div class="column-group">
   
           <div class="form-group">
-            <label>Product Total:</label>
-            <input type="number" id="productTotal" value="25000.00" />
+            <label>Freight Charges:</label>
+            <input type="number" id="freightCharges" value="0" />
           </div>
   
           <div class="form-group">
@@ -53,19 +49,13 @@
           </div>
   
           <div class="form-group">
-            <label>Special Discount%:</label>
-            <input type="number" id="specialDiscount" value="0" />
+            <label>Misc. Deductions:</label>
+            <input type="number" id="miscDeductions" value="0" />
           </div>
   
-          <div class="form-group">
-            <label>SGST:</label>
-            <input type="number" id="sgst" value="6" />
-          </div>
+          
   
-          <div class="form-group">
-            <label>SGST Rounded Off:</label>
-            <input type="number" id="sgstRounded" value="0" />
-          </div>
+          
   
         </div>
       </div>
@@ -75,29 +65,23 @@
         <div class="column-group">
   
           <div class="form-group">
-            <label>Discount:</label>
-            <input type="number" id="discount" value="0" />
+            <label>Master Discount%:</label>
+            <input type="number" id="masterDiscount" value="0" />
           </div>
-  
+
           <div class="form-group">
-            <label>Misc. Deductions:</label>
-            <input type="number" id="miscDeductions" value="0" />
+            <label>Special Discount%:</label>
+            <input type="number" id="specialDiscount" value="0" />
           </div>
+          
+  
   
           <div class="form-group">
             <label>Credit Days:</label>
             <input type="number" id="creditDays" value="15" />
           </div>
   
-          <div class="form-group">
-            <label>TCS %:</label>
-            <input type="number" id="tcs" value="0" />
-          </div>
-  
-          <div class="form-group">
-            <label>TCS Rounded Off:</label>
-            <input type="number" id="tcsRounded" value="0" />
-          </div>
+          
   
           <div class="form-group">
             <label>IRN:</label>
@@ -106,19 +90,56 @@
   
         </div>
       </div>
-  
+
       <!-- Row 4 -->
       <div class="row-group">
         <div class="column-group">
-  
           <div class="form-group">
-            <label>Disc Rounded Off:</label>
-            <input type="number" id="discRounded" value="0" />
+            <label>CGST:</label>
+            <input type="number" id="cgst" value="6" />
+          </div>
+
+          <div class="form-group">
+            <label>SGST:</label>
+            <input type="number" id="sgst" value="6" />
+          </div>
+
+          <div class="form-group">
+            <label>TCS %:</label>
+            <input type="number" id="tcs" value="0" />
+          </div>
+
+          <div class="form-group">
+            <label>TCS Rounded Off:</label>
+            <input type="number" id="tcsRounded" value="0" />
+          </div>
+
+        </div>
+      </div>
+  
+      <!-- Row 5 -->
+      <div class="row-group">
+        <div class="column-group">
+
+          <div class="form-group">
+            <label>CGST Rounded Off:</label>
+            <input type="number" id="cgstRounded" value="0" />
           </div>
   
           <div class="form-group">
-            <label>Taxable Value:</label>
-            <input type="number" id="taxableValue" value="25000.00" />
+            <label>SGST Rounded Off:</label>
+            <input type="number" id="sgstRounded" value="0" />
+          </div>
+  
+        </div>
+      </div>
+      
+      <!-- Row 6 -->
+      <div class="row-group">
+        <div class="column-group">
+          <div class="form-group">
+            <label>Total Amount:</label>
+            <input type="number" id="totalAmount" readonly />
           </div>
   
           <div class="form-group">
@@ -131,7 +152,6 @@
           <div class="form-group">
             <button id="exitBtn">Exit</button>
           </div>
-  
         </div>
       </div>
   
