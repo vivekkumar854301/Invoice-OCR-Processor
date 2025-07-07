@@ -17,23 +17,23 @@
   <span>{{ row.tax_amount | currency:'INR':'symbol-narrow' }}</span>
 </ng-template>
 
-<ng-template #editDialogTemplate>
+<ng-template #editDialogTemplate let-row="row">
   <ngce-dynamic-form-template #editSideDrawer="ngceDynamicFormTemplate" [config]="formConfig"
       (formSubmit)="onFormSubmit($event, false)"></ngce-dynamic-form-template>
 </ng-template>
 
 
-<ng-template #deleteTemplate let-row="row">
+
+<ng-template #deleteTemplate>
   <div class="delete-template">
-      <p>
-          Are you sure you want to delete this record?
-      </p>
-      <div class="delete-popup-buttons">
-          <ngce-button (handleClick)="onDeleteConfirmed(row)">Yes</ngce-button>
-          <ngce-button [variant]="'outline'">No</ngce-button>
-      </div>
+    <p>Are you sure you want to delete this record?</p>
+    <div class="delete-popup-buttons">
+      <ngce-button (handleClick)="onDeleteConfirmed()">Yes</ngce-button>
+      <ngce-button [variant]="'outline'" (handleClick)="close()">No</ngce-button>
+    </div>
   </div>
 </ng-template>
+
 
 <ng-template #actionsTemplate let-row="row">
   <div >
