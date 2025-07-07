@@ -12,6 +12,8 @@ import { PurchaseTransportDetailsComponent } from '../component/purchase-transpo
 import { DIALOGBOX_STYLES } from '../../shared/commonCss/common.style';
 import { InvoiceFormComponent } from '../component/invoice-form/invoice-form.component';
 import { PaymentComponent } from '../component/payment/payment.component';
+import { GridConfig } from '../../shared/models/shared.model';
+import { GridComponent } from "../../shared/component/grid/grid.component";
 
 @Component({
   selector: 'IOP-invoice',
@@ -22,8 +24,9 @@ import { PaymentComponent } from '../component/payment/payment.component';
     NgceComponentsModule,
     ProductLineComponent,
     BankDetailsComponent,
-    PaymentComponent
-  ],
+    PaymentComponent,
+    GridComponent
+],
   templateUrl: './invoice.page.html',
   styleUrl: './invoice.page.scss',
 })
@@ -70,7 +73,8 @@ export class InvoiceComponent {
     'background-color':' #ffffff',
     'border-radius':'0.5rem',
     'box-shadow': '0 0 0 1px rgba(0, 0, 0, 0.1)',
-    width: 'max-content'
+    width: 'max-content',
+    cursor: 'default'
   };
   rerunOCR() {
     console.log('Re-run OCR clicked');
@@ -100,4 +104,34 @@ export class InvoiceComponent {
       this.renderer.setStyle(image.nativeElement, 'transition', 'transform 0.2s');
     }
   }
+
+
+
+  // demo
+  users = [
+    { id: 1, name: 'Alice', email: 'alice@mail.com' },
+    { id: 2, name: 'Bob', email: 'bob@mail.com' }
+  ];
+
+  gridConfig: GridConfig = {
+    data: this.users,
+    columns: [
+      { key: 'id', label: 'ID', disabled: true },
+      { key: 'name', label: 'Name' },
+      { key: 'email', label: 'Email' }
+    ],
+    rowActions: {
+      // edit: (row) => console.log('Edit:', row),
+      save: (updatedRow) => {
+        const index = this.users.findIndex(u => u.id === updatedRow.id);
+        if (index !== -1) this.users[index] = updatedRow;
+        console.log('Saved:', updatedRow);
+      },
+      // cancel: () => console.log('Cancelled'),
+      delete: (row) => {
+        this.users = this.users.filter(u => u.id !== row.id);
+        console.log('Deleted:', row);
+      }
+    }
+  };
 }

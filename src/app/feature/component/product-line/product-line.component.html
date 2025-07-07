@@ -1,7 +1,8 @@
-<ngce-card [customStyles]="invoiceDetails">
+<!-- <ngce-card [customStyles]="invoiceDetails"> -->
     <IOP-header [data]="title"></IOP-header>
-    <ngce-grid [config]="gridConfig()"></ngce-grid>
-  </ngce-card>
+    <!-- <ngce-grid [config]="gridConfig()"></ngce-grid> -->
+    <IOP-grid [config]="gridDataConfig()"></IOP-grid>
+  <!-- </ngce-card> -->
 
   <ng-template #invoiceDetailsTemplate>
     <ngce-grid [config]="invoicedetailsgridConfig()"></ngce-grid>

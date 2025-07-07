@@ -1,0 +1,61 @@
+<div class="table-wrapper">
+    <table class="table">
+        <thead>
+          <tr>
+            <th *ngFor="let col of config.columns">{{ col.label }}</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <tr *ngFor="let row of config.data">
+            <ng-container *ngIf="!isEditing(row); else editMode">
+              <td *ngFor="let col of config.columns" (dblclick)="onCellDblClick(row, col.key)">
+                <ng-container *ngIf="!col.customTemplate; else customTemplate">
+                    {{ row[col.key] }}
+                  </ng-container>
+                  <ng-template #customTemplate>
+                    <ng-container
+                      *ngTemplateOutlet="col.customTemplate!; context: { $implicit: row[col.key], row: row, col: col }"
+                    ></ng-container>
+                  </ng-template>
+              </td>
+              <td>
+                <div class="action-buttons">
+                    <button  (click)="startEdit(row)" ngceTooltip="Edit">
+                        <ngce-icon name="edit-2" size="15px" color="blue"></ngce-icon>
+                      </button>
+                      <button (click)="config.rowActions.delete(row)" ngceTooltip="Delete">
+                        <ngce-icon class="ngce-trash" size="15px" color="red"></ngce-icon>
+                      </button>
+                </div>
+              </td>
+            </ng-container>
+      
+            <ng-template #editMode>
+              <td *ngFor="let col of config.columns">
+                <input
+                  class="form-control"
+                  [(ngModel)]="editCopy[col.key]"
+                  [disabled]="!isColumnEditable(col.key)"
+                  [ngStyle]="{ cursor: isColumnEditable(col.key) ? 'text' : 'not-allowed' }"
+                  #inputElement
+                  [attr.data-col-key]="col.key"
+                />
+              </td>
+              <td>
+                <div class="action-buttons">
+                    <button (click)="saveEdit()" ngceTooltip="Save">
+                        <ngce-icon class="ngce-ok-4" size="15px" color="green"></ngce-icon>
+                      </button>
+                      <button  (click)="cancelEdit()" ngceTooltip="Cancel">
+                        <ngce-icon class="ngce-cancel-5" size="15px" color="blue"></ngce-icon>
+                      </button>
+                </div>
+              </td>
+            </ng-template>
+          </tr>
+        </tbody>
+      </table>
+</div>
+  
