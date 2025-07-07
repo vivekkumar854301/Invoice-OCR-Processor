@@ -42,7 +42,7 @@ export class UploadComponent {
 
   onUpload(): void {
     if (this.files.length === 0) {
-      this.snackbarService.show('Please add files to upload', 'danger', {
+      this.snackbarService.show('Please add file to upload', 'danger', {
         vertical: 'top',
         horizontal: 'right',
       });

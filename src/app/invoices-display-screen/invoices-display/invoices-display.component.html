@@ -11,9 +11,6 @@
         </div>
     </div>
     <div class="invoices-container">
-        <!-- @if(isLoading){
-        <ngce-spinner []></ngce-spinner>
-        } -->
         @for((image of apiResponse); track $index){
         <div class="invoice-card" (click)="onInvoiceClick(image.invoice.invoice_number)">
             <img src="image.image_binary_data" class="image">
@@ -25,8 +22,4 @@
 
 <ng-template #searchIcon>
     <ngce-icon class="ngce-search-1"></ngce-icon>
-</ng-template>
-
-<ng-template #noFiles>
-    <p>No files uploaded</p>
 </ng-template>
