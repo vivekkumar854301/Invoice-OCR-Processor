@@ -17,16 +17,19 @@ import {
   IFormConfig,
   DialogService,
   DynamicFormTemplateComponent,
+  SnackbarService
 } from '@clarium/ngce-components';
 import { HeaderComponent } from '../../../shared/component/header/header.component';
 import { InvoiceData, ProductItem } from '../../model/invoice.model';
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
 import { DIALOGBOX_STYLES, customStyles_DIALOGBOX_STYLES } from '../../../shared/commonCss/common.style';
+import { GridConfig } from '../../../shared/models/shared.model';
+import { GridComponent } from "../../../shared/component/grid/grid.component";
 
 @Component({
   selector: 'IOP-product-line',
   standalone: true,
-  imports: [NgceComponentsModule, HeaderComponent, CurrencyPipe, CommonModule],
+  imports: [NgceComponentsModule, HeaderComponent, CurrencyPipe, CommonModule, GridComponent],
   templateUrl: './product-line.component.html',
   styleUrl: './product-line.component.scss',
   providers: [CurrencyPipe, DatePipe],
@@ -40,7 +43,7 @@ export class ProductLineComponent implements OnInit {
   selectedRowForDelete = signal<ProductItem | null>(null);
   selectedRowForEdit = signal<ProductItem | null>(null);
   private readonly dialogService = inject(DialogService);
-
+  private readonly snackbarService = inject(SnackbarService);
   editSideDrawer = viewChild<any>(DynamicFormTemplateComponent);
   editDialogTemplate = viewChild<TemplateRef<any>>('editDialogTemplate');
   invoiceDetailsTemplate = viewChild<TemplateRef<any>>('invoiceDetailsTemplate');
@@ -275,6 +278,118 @@ export class ProductLineComponent implements OnInit {
       // displayGroupByMenu: true,
     }
   }));
+
+  readonly gridDataConfig = computed<GridConfig>(() => ({
+    data: this.productLineSignal(),
+    columns: [
+      {
+        key: 's_no',
+        label: 'S.No',
+        disabled: true
+      },
+      {
+        key: 'category',
+        label: 'Category',
+        disabled: false,
+      },
+      {
+        key: 'description',
+        label: 'Description',
+        disabled: false,
+      },
+      {
+        key: 'design_code',
+        label: 'Design Code',
+        disabled: false
+      },
+      {
+        key: 'size',
+        label: 'Size',
+        disabled: false
+      },
+      {
+        key: 'color',
+        label: 'Color',
+        disabled: false
+      },
+      {
+        key: 'UOM',
+        label: 'UOM',
+        disabled: false
+      },
+      {
+        key: 'pieces',
+        label: 'Pieces',
+        disabled: false
+      },
+      {
+        key: 'quantity',
+        label: 'Quantity',
+        disabled: false
+      },
+      {
+        key: 'rate',
+        label: 'Rate',
+        disabled: false,
+        customTemplate: this.rateTemplate()
+      },
+      {
+        key: 'MRP_rate',
+        label: 'MRP Rate',
+        disabled: false,
+        customTemplate: this.amountTemplate()
+      },
+      {
+        key: 'item_discount_percentage',
+        label: 'Item Discount %',
+        disabled: false
+      },
+      {
+        key: 'item_discount_amount',
+        label: 'Discount Amount',
+        disabled: false
+      },
+      {
+        key: 'product_valued',
+        label: 'Product Valued',
+        disabled: false
+      },
+      {
+        key: 'HSN',
+        label: 'HsN',
+        disabled: false
+      },
+      {
+        key: 'tax_percentage',
+        label: 'Tax %',
+        disabled: false
+      },
+      {
+        key: 'tax_amount',
+        label: 'Tax Amount',
+        disabled: false,
+        customTemplate: this.taxamountTemplate()
+      }
+    ],
+    rowActions: {
+      save: (row) =>{
+        const index = this.productLineSignal().findIndex(r => r.s_no === row.s_no);
+        if (index !== -1) {
+          let data = this.productLineSignal()
+          data[index] = row
+          this.productLineSignal.set(data);
+          this.snackbarService.show("Updated Successfully",'success',{vertical: 'top', horizontal: 'right'},2000, 'X');
+        }
+      },
+      delete: (row)=> {
+          const data = this.productLineSignal().filter(r => r.s_no !== row.s_no);
+          this.productLineSignal.set(data);
+          this.snackbarService.show("Deleted Successfully",'danger',{vertical: 'top', horizontal: 'right'},2000, 'X');
+
+      },
+    }
+  }));
+
 
   readonly invoicedetailsgridConfig = computed<IGridConfig>(() => ({
     data: this.filteredProductLines(),
