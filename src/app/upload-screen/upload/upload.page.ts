@@ -50,7 +50,7 @@ export class UploadComponent {
       });
       return;
     }
-  
+
     const formData = new FormData();
     this.files.forEach((file, index) => {
       formData.append('files', file); // Change 'files' to expected backend field name
@@ -67,6 +67,7 @@ export class UploadComponent {
         this.router.navigate(['invoices']);
       },
       error: (err) => {
+        this.isLoading = false;
         this.snackbarService.show('File upload failed', 'danger', {
           vertical: 'top',
           horizontal: 'right',
@@ -75,5 +76,4 @@ export class UploadComponent {
       },
     });
   }
-  
 }

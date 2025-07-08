@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, EffectRef, computed, effect, input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {NgceComponentsModule} from "@clarium/ngce-components"
+import {NgceIconModule} from "@clarium/ngce-icon"
+import { InvoiceData } from '../../model/invoice.model';
 @Component({
   selector: 'IOP-payment',
-  imports: [],
+  imports: [NgceComponentsModule,NgceIconModule],
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.scss'
 })
 export class PaymentComponent {
+  readonly paymantData = input.required<InvoiceData>();
+  readonly data = computed(()=>this.paymantData());
+
+  // readonly syncFormEffect: EffectRef = effect(() => {
+  //   const payment = this.data().purchase
+  
+  //   if (payment) {
+  //     this.form.get('invoice')?.patchValue({
+  //     });
+  //   }
+  // });
   form = new FormGroup({
     invoice: new FormGroup({
       // Section 1
