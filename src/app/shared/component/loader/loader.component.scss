@@ -1,0 +1,92 @@
+.ai-loader-container {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: #0e2734d9; // Theme blue with transparency
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #ffffff;
+   }
+   .ai-loader-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.4s ease-out;
+   }
+   .loader-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite ease-in-out;
+   }
+   .loader-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+   }
+   .loader-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    .step {
+      opacity: 0;
+      transform: translateY(10px);
+      margin: 0.4rem 0;
+      font-size: 0.95rem;
+      font-weight: 400;
+      position: relative;
+      padding-left: 1.2rem;
+      animation: fadeStep 0.6s forwards;
+      color: #f1f1f1;
+   &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 8px;
+        height: 8px;
+        background-color: #ffffff;
+        border-radius: 50%;
+      }
+    }
+    .step-1 { animation-delay: 0.2s; }
+    .step-2 { animation-delay: 0.6s; }
+    .step-3 { animation-delay: 1s; }
+    .step-4 { animation-delay: 1.4s; }
+    .step-5 { animation-delay: 1.8s; }
+    .step-6 { animation-delay: 2.2s; color: rgba(255, 255, 255, 0.7); }
+   }
+   // Animations
+   @keyframes fadeStep {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+   }
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+   }
+   @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+   }

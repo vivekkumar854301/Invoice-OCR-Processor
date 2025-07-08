@@ -1,4 +1,5 @@
 export interface InvoiceData {
+  image_binary_data? : string,
   invoice: {
     invoice_number: string;
     invoice_date: string;

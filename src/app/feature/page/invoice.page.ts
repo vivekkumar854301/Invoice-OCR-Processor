@@ -117,7 +117,7 @@ export class InvoiceComponent implements OnInit {
     }
   };
   readonly invoiceData = signal<InvoiceData>(
-   this.invoiceStore.invoiceDataStore()
+   this.invoiceStore.EMPTY_INVOICE_DATA
   );
 
   invoiceId: string = '';
@@ -146,9 +146,9 @@ export class InvoiceComponent implements OnInit {
       // });
       this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
         next: (res)=>{
-          console.log(res);
+          console.log(this.transformInvoiceJson(res));
           
-          //this.invoiceData.set(res)
+          this.invoiceData.set(this.transformInvoiceJson(res))
         }
       })
     });
@@ -210,6 +210,52 @@ export class InvoiceComponent implements OnInit {
     this.scale = 1;
     this.applyTransform();
   }
+
+  transformInvoiceJson(originalJson: any): any {
+    if (!originalJson || !originalJson.product_details?.items) return originalJson;
+    const transformed = { ...originalJson };
+    const items = originalJson.product_details.items;
+    console.log(items);
+    
+    const flattenedItems: any[] = [];
+    for (const item of items) {
+      const sizeData = item.size || {};
+      const sizes = sizeData.size || [];
+      const colors = sizeData.color || [];
+      const uoms = sizeData.UOM || [];
+      const pieces = sizeData.pieces || [];
+      const quantities = sizeData.quantity || [];
+      const rates = sizeData.rate || [];
+      const mrps = sizeData.MRP_rate || [];
+      const taxPercents = sizeData.tax_percentage || [];
+      for (let i = 0; i < sizes.length; i++) {
+        flattenedItems.push({
+          s_no: item.s_no || "",
+          category: item.category || "",
+          description: item.description || "",
+          design_code: item.design_code || "",
+          size: sizes[i] || "",
+          color: colors[i] || "",
+          UOM: uoms[i] || "",
+          pieces: pieces[i] || "",
+          quantity: quantities[i] || "",
+          rate: rates[i] || "",
+          MRP_rate: mrps[i] || "",
+          item_discount_percentage: sizeData.discount_percentage || "",
+          item_discount_amount: sizeData.discount_amount || "",
+          product_valued: sizeData.product_valued || "",
+          HSN: sizeData.HSN || "",
+          tax_percentage: taxPercents[i] || "",
+          tax_amount: sizeData.tax_amount || ""
+        });
+      }
+    }
+    transformed.product_details = {
+      ...originalJson.product_details,
+      items: flattenedItems
+    };
+    return transformed;
+   }
 
   private applyTransform(): void {
     const image = this.zoomableImage();
