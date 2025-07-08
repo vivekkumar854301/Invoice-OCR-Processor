@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {NgceComponentsModule} from "@clarium/ngce-components"
+import {NgceIconModule} from "@clarium/ngce-icon"
 @Component({
   selector: 'IOP-payment',
-  imports: [],
+  imports: [NgceComponentsModule,NgceIconModule],
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.scss'
 })
