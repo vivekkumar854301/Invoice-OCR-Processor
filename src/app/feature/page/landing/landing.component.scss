@@ -1,0 +1,220 @@
+.landing-page {
+    font-family: 'Segoe UI', sans-serif;
+    color: #2c3e50;
+    background-color: #f5f7fa;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+  
+    .hero-content {
+      max-width: 720px;
+      margin: 0 auto;
+  
+      h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+  
+      .hero-actions {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+  
+        .btn-primary,
+        .btn-secondary {
+          padding: 12px 24px;
+          border-radius: 6px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: 0.3s;
+        }
+  
+        .btn-primary {
+          background-color: #ffffff;
+          color: #0077b6;
+  
+          &:hover {
+            background-color: #e1e1e1;
+          }
+        }
+  
+        .btn-secondary {
+          border: 2px solid #fff;
+          color: #fff;
+  
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+    }
+  }
+  
+  /* Feature Grid */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  
+    .feature {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+  
+      img {
+        width: 48px;
+        margin-bottom: 16px;
+      }
+  
+      h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: #0077b6;
+      }
+  
+      p {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+  }
+  
+  .why-nextriq {
+    background-color: #ffffff;
+    padding: 80px 20px;
+  
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .text-section {
+      flex: 1;
+      min-width: 300px;
+  
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #1e1e2f;
+  
+        span {
+          color: #0077b6;
+        }
+      }
+  
+      .intro {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 24px;
+        line-height: 1.6;
+      }
+  
+      .benefits {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+  
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+  
+          .icon {
+            font-size: 22px;
+            width: 30px;
+            height: 30px;
+            background-color: #e0f7fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0077b6;
+          }
+  
+          .text {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.5;
+  
+            strong {
+              color: #1e1e2f;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  
+    .image-section {
+      flex: 1;
+      min-width: 280px;
+  
+      img {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+  
+      .text-section,
+      .image-section {
+        max-width: 100%;
+      }
+  
+      .image-section {
+        margin-top: 30px;
+      }
+    }
+  }
+  
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .why-nextriq .content {
+      flex-direction: column;
+    }
+  
+    .hero-content h1 {
+      font-size: 32px;
+    }
+  
+    .hero-content p {
+      font-size: 16px;
+    }
+  }
+  

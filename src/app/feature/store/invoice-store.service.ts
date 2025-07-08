@@ -7,7 +7,7 @@ import { InvoiceData } from '../model/invoice.model';
   providedIn: 'root'
 })
 export class InvoiceStoreService {
-  // private readonly invoiceService= inject(InvoiceService);
+  private readonly invoiceService= inject(InvoiceService);//
   EMPTY_INVOICE_DATA: InvoiceData = {
     invoice: {
       invoice_number: "",
@@ -70,8 +70,8 @@ export class InvoiceStoreService {
   };
   
   
-  // readonly invoiceDataStore= toSignal(this.invoiceService.getMockData(),{
-  //   initialValue: this.EMPTY_INVOICE_DATA
-  // });
+  readonly invoiceDataStore= toSignal(this.invoiceService.getMockData(),{
+    initialValue: this.EMPTY_INVOICE_DATA
+  });
   
 }

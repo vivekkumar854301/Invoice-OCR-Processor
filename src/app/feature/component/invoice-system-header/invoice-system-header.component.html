@@ -1,8 +1,8 @@
 <header class="header">
     <div class="header-content">
         <div class="logo">
-            <span class="clarium">
-                Tintellix
+            <span class="clarium" [routerLink]="['']">
+                NEXTRIQ
                 <!-- <img [routerLink]="['']" src="../assets/Tintexlix-logo.svg" alt="Tintexlix-header-logo"
                     style="max-width: 13rem;height:auto;"> -->
             </span>
@@ -10,7 +10,7 @@
         </div>
         <nav class="nav">
             <a [routerLink]="['invoices']">View All Invoices</a>
-            <ngce-button [customStyles]="{backgroundColor:'#1a237e'}" (handleClick)="onUploadClick()">Upload
+            <ngce-button [customStyles]="{backgroundColor:'#0077b6'}" (handleClick)="onUploadClick()">Upload
                 Invoice</ngce-button>
         </nav>
     </div>
