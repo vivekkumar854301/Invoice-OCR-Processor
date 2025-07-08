@@ -10,20 +10,18 @@
     <div class="image-panel" [class.collapsed]="!showImagePanel">
       <div class="image-header">
         <h3>Invoice Preview</h3>
-        <p class="truncate-text">{{ invoiceData().invoice.invoice_number }} - {{ invoiceData().supplier.suplier_name }}</p>
+        <p class="truncate-text">{{ invoiceData().invoice.invoice_number }} - {{ invoiceData().supplier.supplier_name }}
+        </p>
       </div>
 
       <div class="image-controls">
-        <ngce-icon name="zoom-in" (click)="zoomIn()"  color="#0077b6"></ngce-icon>
-        <ngce-icon name="zoom-out" (click)="zoomOut()"  color="#0077b6"></ngce-icon>
+        <ngce-icon name="zoom-in" (click)="zoomIn()" color="#0077b6"></ngce-icon>
+        <ngce-icon name="zoom-out" (click)="zoomOut()" color="#0077b6"></ngce-icon>
         <ngce-button (handleClick)="resetZoom()">Reset</ngce-button>
       </div>
 
       <div class="image-box">
-        <img
-          #zoomableImage
-          class="zoomable"
-          src="assets/images/images/1 Zeal apparel Invoice_page_1.jpeg"
+        <img #zoomableImage class="zoomable" src="assets/images/images/1 Zeal apparel Invoice_page_1.jpeg"
           alt="Invoice Image" />
       </div>
     </div>
@@ -34,16 +32,16 @@
         <section class="invoice-section">
           <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
         </section>
-    
+
         <section class="invoice-section">
           <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
         </section>
-    
+
         <section class="invoice-section">
           <IOP-payment></IOP-payment>
         </section>
       </ngce-card>
     </div>
-    
+
   </div>
 </div>
