@@ -48,16 +48,16 @@ export class UploadComponent {
       });
       return;
     }
-  
+
     const formData = new FormData();
     this.files.forEach((file, index) => {
       formData.append('files', file); // Change 'files' to expected backend field name
     });
-  
+
     this.fileManagmentService.onUploadInvoice(formData).subscribe({
       next: (data) => {
         console.log(data);
-        this.snackbarService.show('File uploaded successfully', 'success', {
+        this.snackbarService.show('Extracted successfully', 'success', {
           vertical: 'top',
           horizontal: 'right',
         });
@@ -72,5 +72,4 @@ export class UploadComponent {
       },
     });
   }
-  
 }

@@ -8,7 +8,7 @@ export interface InvoiceData {
     e_way_bill_no: string;
   };
   supplier: {
-    suplier_name: string;
+    supplier_name: string;
     supplier_address: string;
     supplier_gst_no: string;
     msme_no: string;
