@@ -7,7 +7,7 @@
           </tr>
         </thead>
       
-        <tbody>
+        <tbody  *ngIf="config.data && config.data.length > 0; else noData">
           <tr *ngFor="let row of config.data">
             <ng-container *ngIf="!isEditing(row); else editMode">
               <td *ngFor="let col of config.columns" (click)="onCellDblClick(row, col.key)">
@@ -58,4 +58,8 @@
         </tbody>
       </table>
 </div>
+
+<ng-template #noData>
+  <span> <ngce-icon name="database-3" color="red" size="20px"></ngce-icon>No Data</span>
+</ng-template>
   
