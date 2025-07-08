@@ -17,7 +17,7 @@
         *ngFor="let image of apiResponse; let i = index"
         (click)="onInvoiceClick(image.invoice.invoice_number)">
         <img [src]="image.image_binary_data" class="image" />
-        <p>{{ image.invoice.invoice_number }}</p>
+        <p style="text-transform: uppercase;">{{ image.supplier.supplier_name }}</p>
       </div>
     </div>
   </div>

@@ -666,9 +666,7 @@ export class InvoiceService {
 
   private readonly http = inject(HttpClient);
 
-  getInvoiceData(invoiceNumber: string): Observable<any> {
-    return this.http.get<any>(
-      `http://10.3.0.49:8000/invoices/number/${invoiceNumber}`
-    );
+  getInvoiceData(invoiceNumber : string):Observable<any>{
+    return this.http.get<any>(`http://10.3.0.49:8000/invoices/number?invoice_num=${invoiceNumber}`);
   }
 }

@@ -21,7 +21,10 @@
       </div>
 
       <div class="image-box">
-        <img #zoomableImage class="zoomable" src="assets/images/images/1 Zeal apparel Invoice_page_1.jpeg"
+        <img
+          #zoomableImage
+          class="zoomable"
+          [src]="invoiceData().image_binary_data"
           alt="Invoice Image" />
       </div>
     </div>
