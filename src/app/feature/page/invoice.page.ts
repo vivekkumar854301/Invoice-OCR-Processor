@@ -44,7 +44,7 @@ import { CommonModule } from '@angular/common';
     PaymentComponent,
     CommonModule
   ],
-  providers: [FileManagementService],
+  providers: [FileManagementService,InvoiceComponent],
   templateUrl: './invoice.page.html',
   styleUrl: './invoice.page.scss',
 })
