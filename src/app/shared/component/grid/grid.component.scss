@@ -1,90 +1,118 @@
-
 input[disabled] {
-    background: red;
-    cursor: not-allowed;
-  }
-  
-  .table-wrapper {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-  }
-  
+  background-color: #f9fafb;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
 
-  .table-wrapper .table {
-    width: 100%;
-    border-collapse: separate; 
-    border-spacing: 0 0.5rem; 
-    font-family: sans-serif;
-    font-size: 14px;
-    table-layout: auto; 
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  &::-webkit-scrollbar {
+    width: 6px; /* thinner than default */
   }
-  
-  .table-wrapper .table th {
-    font-weight: 500;
-    padding: 9px 12px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-    white-space: nowrap;
-    font-size: 15px;
+
+  &::-webkit-scrollbar-track {
+    background: transparent; /* optional */
   }
-  
-  .table-wrapper .table td {
-    padding: 1rem 12px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-    white-space: nowrap;
-    min-width: 120px;
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; /* soft gray */
+    border-radius: 6px;
   }
-  
-  .table-wrapper .table td button {
-    background-color: transparent;
-    border: none;
-    padding: 4px;
-    margin-right: 6px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s ease;
-    border-radius: 4px;
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8; /* darker on hover */
   }
-  
-  .table-wrapper .table td button:hover {
-    background-color: #f0f4f8;
-  }
-  
-  .table-wrapper .table td ngce-icon {
-    vertical-align: middle;
-    pointer-events: none;
-  }
-  
-  .table-wrapper .table td input.form-control {
-    width: 100%;
-    min-width: 100px;
-    max-width: 100%;
-    padding: 6px 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .table-wrapper .table td input.form-control:focus {
-    outline: none;
-    border-color: #409eff;
-    box-shadow: 0 0 2px rgba(64, 158, 255, 0.5);
-  }
-  
-  .table-wrapper .table td .action-buttons {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-  
+
+  // Firefox (requires global rule)
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.table-wrapper .table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  table-layout: auto;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table th {
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.table td {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+  max-width: 200px;
+  vertical-align: middle;
+}
+
+.table td:hover {
+  background-color: #f6f8fa;
+}
+
+.table td input.form-control {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+}
+
+.table td input.form-control:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.table td button {
+  background-color: transparent;
+  border: none;
+  padding: 4px;
+  margin-right: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.table td button:hover {
+  background-color: #f3f4f6;
+}
+
+.table td .action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.table td ngce-icon {
+  pointer-events: none;
+  vertical-align: middle;
+}

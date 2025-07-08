@@ -1,79 +1,49 @@
-<!-- <div class="invoice-grid"> -->
-<!-- <div class="header-container">
-        <div class="title-section">
-          <h1 class="title">Invoice OCR Processor</h1>
-          <p class="subtitle">Upload an invoice image or PDF to extract and edit structured data</p>
-        </div> -->
-<!-- <div class="action-buttons">
-         <ngce-button (handleClick)="viewImage()"><ngce-icon name="eye-1" size="15px" class="btn"></ngce-icon> View Image</ngce-button>
-         <ngce-button><ngce-icon name="arrows-cw" size="15px" class="btn"></ngce-icon> Re-run OCR</ngce-button>
-        </div> -->
-<!-- </div> -->
-
-<!-- <IOP-invoice-details [invoiceDetailsData]="invoiceData()"></IOP-invoice-details>
-  <IOP-supplier-information [SupplierData]="invoiceData()"></IOP-supplier-information>
-  <IOP-purchase-transport-details [PurchaseTransportDetails]="invoiceData()"></IOP-purchase-transport-details>
-  <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
-   <IOP-bank-details [bankDetailsData]="invoiceData()"></IOP-bank-details>
-  <IOP-totals-summary [summaryData]="invoiceData()"></IOP-totals-summary> -->
-<!-- </div> -->
-
-<ng-template #dialogHeader>
-  <!-- <div class="dialog-header">
-    <h3>Original Invoice</h3>
-    <h6>{{invoiceData().invoice.invoice_number}} - {{invoiceData().supplier.suplier_name}}</h6>
-  </div> -->
-</ng-template>
-
-<ng-template #dialogContent>
-  <!-- <div class="dialog-content">
-    <div class="btn-group">
-      <ngce-button [customStyles]="ngcebutton" (handleClick)="zoomIn()"><ngce-icon name="zoom-in" color="black" size="17px"></ngce-icon></ngce-button>
-      <ngce-button [customStyles]="ngcebutton" (handleClick)="zoomOut()"><ngce-icon name="zoom-out" color="black" size="17px"></ngce-icon></ngce-button>
-      <ngce-button [customStyles]="ngcebutton" (handleClick)="resetZoom()">Reset</ngce-button>
-    </div>
-    <div class="image-container">
-      <img #zoomableImage src="assets/Image.png" alt="Zoomable Image" class="zoomable-image">
+<div class="main-container">
+  <!-- Sidebar Toggle Button -->
+  <div class="toggle-button" (click)="toggleImagePanel()">
+    <ngce-icon *ngIf="showImagePanel" name="left-4" size="20px" color="#0077b6"></ngce-icon>
+    <ngce-icon *ngIf="!showImagePanel" name="right-4" size="20px" color="#0077b6"></ngce-icon>
   </div>
-  </div> -->
-</ng-template>
 
-<div class="main-conatiner">
-  <h1 class="heading title">Invoice OCR Processor</h1>
-  <p class="subtitle">Upload an invoice image or PDF to extract and edit structured data</p>
-  <!-- <div class="header-container">
-    <div class="title-section">
-      
-    </div>
-  </div> -->
   <div class="invoice-main-container">
-    <div class="dialog-header">
-      <h3>Original Invoice</h3>
-      <h6>{{invoiceData().invoice.invoice_number}} - {{invoiceData().supplier.suplier_name}}</h6>
-      <div class="dialog-content">
-        <div class="btn-group">
-          <ngce-button [customStyles]="ngcebutton" (handleClick)="zoomIn()"><ngce-icon name="zoom-in" color="black"
-              size="17px"></ngce-icon></ngce-button>
-          <ngce-button [customStyles]="ngcebutton" (handleClick)="zoomOut()"><ngce-icon name="zoom-out" color="black"
-              size="17px"></ngce-icon></ngce-button>
-          <ngce-button [customStyles]="ngcebutton" (handleClick)="resetZoom()">Reset</ngce-button>
-        </div>
-        <div class="image-container">
-          <img #zoomableImage src="assets/images/images/1 Zeal apparel Invoice_page_1.jpeg" alt="Zoomable Image"
-            class="zoomable-image">
-        </div>
+    <!-- IMAGE DRAWER PANEL -->
+    <div class="image-panel" [class.collapsed]="!showImagePanel">
+      <div class="image-header">
+        <h3>Invoice Preview</h3>
+        <p class="truncate-text">{{ invoiceData().invoice.invoice_number }} - {{ invoiceData().supplier.suplier_name }}</p>
       </div>
 
+      <div class="image-controls">
+        <ngce-icon name="zoom-in" (click)="zoomIn()"  color="#0077b6"></ngce-icon>
+        <ngce-icon name="zoom-out" (click)="zoomOut()"  color="#0077b6"></ngce-icon>
+        <ngce-button (handleClick)="resetZoom()">Reset</ngce-button>
+      </div>
+
+      <div class="image-box">
+        <img
+          #zoomableImage
+          class="zoomable"
+          src="assets/images/images/1 Zeal apparel Invoice_page_1.jpeg"
+          alt="Invoice Image" />
+      </div>
     </div>
 
-    <div class="grid-container">
-      <ngce-card [customStyles]="invoiceDetails">
-        <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
-        <!-- <IOP-purchase-transport-details [PurchaseTransportDetails]="invoiceData()"></IOP-purchase-transport-details> -->
-        <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
-        <IOP-payment></IOP-payment>
+    <!-- RIGHT SIDE CONTENT -->
+    <div class="content-panel" [class.expanded]="!showImagePanel">
+      <ngce-card class="form-card" [customStyles]="invoiceDetails">
+        <section class="invoice-section">
+          <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
+        </section>
+    
+        <section class="invoice-section">
+          <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
+        </section>
+    
+        <section class="invoice-section">
+          <IOP-payment></IOP-payment>
+        </section>
       </ngce-card>
-
     </div>
+    
   </div>
 </div>

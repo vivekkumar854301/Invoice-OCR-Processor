@@ -1,46 +1,54 @@
 .main-container {
-  background-color: rgb(224 231 255 / 40%);
+  background-color: rgba(224, 231, 255, 0.4);
   display: flex;
   flex-direction: column;
-  //   justify-content: center;
   align-items: center;
-  //   width: 100vw;
   min-height: 90vh;
-  padding-top: 1rem;
-  h3 {
-    font-size: 2rem;
+  padding: 2rem;
+
+  .heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0077b6;
+    margin-bottom: 0.5rem;
   }
-  p {
-    color: grey;
+
+  .subtext {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 2rem;
   }
+
   .upload-container {
-    background-color: white;
-    width: 55vw;
-    // height: 0vh;
-    margin: 2.5rem;
-    padding: 1rem 3rem;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 55vw;
+    padding: 2rem 3rem;
     border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
   }
-  .image-container {
-    background-color: white;
-    width: 60vw;
-    height: 55vh;
+
+  ngce-button {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    img {
-      width: 45vw;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      filter: brightness(1.05);
     }
-    border-radius: 1rem;
+
+    ngce-icon {
+      font-size: 18px;
+    }
   }
 }
 
-ngce-icon {
-  cursor: pointer;
-}
-
+/* Ensures file list doesn't overflow container */
 ::ng-deep ngce-file-upload .file-list-expanded-single {
-  max-width: auto !important;
+  max-width: 750px !important;
 }

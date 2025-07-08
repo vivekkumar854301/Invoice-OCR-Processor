@@ -30,6 +30,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FileManagementService } from '../../upload-screen/service/file-management.service';
 import { InvoiceService } from '../service/invoice.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'IOP-invoice',
@@ -41,13 +42,14 @@ import { InvoiceService } from '../service/invoice.service';
     ProductLineComponent,
     BankDetailsComponent,
     PaymentComponent,
+    CommonModule
   ],
   providers: [FileManagementService],
   templateUrl: './invoice.page.html',
   styleUrl: './invoice.page.scss',
 })
 export class InvoiceComponent implements OnInit {
-  // private readonly invoiceStore = inject(InvoiceStoreService);
+  private readonly invoiceStore = inject(InvoiceStoreService);
   private readonly invoiceService = inject(InvoiceService)
   private readonly dialogService = inject(DialogService);
   private readonly route = inject(ActivatedRoute);
@@ -115,12 +117,21 @@ export class InvoiceComponent implements OnInit {
     }
   };
   readonly invoiceData = signal<InvoiceData>(
-    this.EMPTY_INVOICE_DATA
+   this.invoiceStore.invoiceDataStore()
   );
 
   invoiceId: string = '';
   imageUrl: string = '';
   invoiceInfo: any;
+
+  showImagePanel = true;
+
+  toggleImagePanel() {
+    this.showImagePanel = !this.showImagePanel;
+  }
+  
+
+
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((params) => {
@@ -137,7 +148,7 @@ export class InvoiceComponent implements OnInit {
         next: (res)=>{
           console.log(res);
           
-          this.invoiceData.set(res)
+          //this.invoiceData.set(res)
         }
       })
     });
@@ -176,10 +187,7 @@ export class InvoiceComponent implements OnInit {
     border: 'none',
     'margin-top': '2rem',
     padding: '1.5rem',
-    'background-color': ' #ffffff',
-    'border-radius': '0.5rem',
-    'box-shadow': '0 0 0 1px rgba(0, 0, 0, 0.1)',
-    width: 'max-content',
+    width: 'auto',
     cursor: 'default'
   };
   rerunOCR() {

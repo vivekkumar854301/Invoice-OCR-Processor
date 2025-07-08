@@ -22,8 +22,9 @@
       margin-left: 2rem;
 
       .clarium {
-        color: #1a237e;
+        color: #0077b6;
         font-size: 1.7rem;
+        cursor: pointer;
       }
 
       .engine {
@@ -44,13 +45,13 @@
         transition: color 0.2s;
 
         &:hover {
-          color: #1a237e;
+          color: #0077b6;
         }
       }
 
       .cta {
         padding: 8px 16px;
-        background: #1a237e;
+        background: #0077b6;
         color: white;
         border: none;
         border-radius: 6px;
@@ -59,7 +60,7 @@
         transition: background 0.2s;
 
         &:hover {
-          background: #2563eb;
+          background: #0077b6;
         }
       }
     }
