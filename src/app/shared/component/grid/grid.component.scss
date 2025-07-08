@@ -116,3 +116,9 @@ input[disabled] {
   pointer-events: none;
   vertical-align: middle;
 }
+.nodata{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
