@@ -26,6 +26,7 @@ export class InvoiceFormComponent {
 
     if (invoice) {
       this.form.get('invoice')?.patchValue({
+        supplier_name: supplier.supplier_name,
         invoice_number: invoice.invoice_number,
         invoice_date: invoice.invoice_date,
         irn_number: invoice.irn_number,
@@ -34,7 +35,7 @@ export class InvoiceFormComponent {
         e_way_bill_no: invoice.e_way_bill_no,
         supplier_code: supplier.pan_no,
         supplier_details:
-          supplier.supplier_name + ',' + supplier.supplier_address,
+           supplier.supplier_address,
         supplier_gst_no: supplier.supplier_gst_no,
         msme_no: supplier.msme_no,
         pan_no: supplier.pan_no,
@@ -45,7 +46,8 @@ export class InvoiceFormComponent {
   form = new FormGroup({
     invoice: new FormGroup({
       invoice_number: new FormControl(''),
-      invoice_date: new FormControl('01/05/25'),
+      supplier_name: new FormControl(''),
+      invoice_date: new FormControl(''),
       irn_number: new FormControl(
         'f5eaba8ba61e2dcb566111065b655f147705e35e47289454bef3878eebb8ebe4e'
       ),
