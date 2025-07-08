@@ -1,116 +1,114 @@
-<div class="invoice-container">
+<form [formGroup]="form" class="invoice-container">
   <div class="form-field">
-
-    <!-- Grouped Fields in 3-column Grid -->
     <div class="grid-form">
 
       <div class="form-group">
-        <label for="totalPcs">Total Pcs:</label>
-        <input type="number" id="totalPcs" value="60" />
+        <label for="totalPcs">Invoice Amount:</label>
+        <input type="number" id="totalPcs" formControlName="invoice_amount" />
       </div>
 
       <div class="form-group">
         <label for="productTotal">Product Total:</label>
-        <input type="number" id="productTotal" value="25000.00" />
+        <input type="number" id="productTotal" formControlName="productTotal" />
       </div>
 
       <div class="form-group">
         <label for="discount">Discount:</label>
-        <input type="number" id="discount" value="0" />
+        <input type="number" id="discount" formControlName="discount" />
       </div>
 
       <div class="form-group">
-        <label for="discRounded">Disc Rounded Off:</label>
-        <input type="number" id="discRounded" value="0" />
+        <label for="discRounded">Rounded Off:</label>
+        <input type="number" id="discRounded" formControlName="round_off_amount" />
       </div>
 
       <div class="form-group">
         <label for="taxableValue">Taxable Value:</label>
-        <input type="number" id="taxableValue" value="25000.00" />
+        <input type="number" id="taxableValue" formControlName="taxable_value" />
       </div>
 
       <div class="form-group">
         <label for="freightCharges">Freight Charges:</label>
-        <input type="number" id="freightCharges" value="0" />
+        <input type="number" id="freightCharges" formControlName="freight_charges" />
       </div>
 
       <div class="form-group">
-        <label for="miscAdditions">Misc. Additions:</label>
-        <input type="number" id="miscAdditions" value="0" />
+        <label for="miscAdditions">Additions Charges:</label>
+        <input type="number" id="miscAdditions" formControlName="other_charges" />
       </div>
 
       <div class="form-group">
         <label for="miscDeductions">Misc. Deductions:</label>
-        <input type="number" id="miscDeductions" value="0" />
+        <input type="number" id="miscDeductions" formControlName="other_deductions" />
       </div>
 
       <div class="form-group">
-        <label for="masterDiscount">Master Discount%:</label>
-        <input type="number" id="masterDiscount" value="0" />
+        <label for="masterDiscount">Discount Amount:</label>
+        <input type="number" id="masterDiscount" formControlName="discount_amount" />
       </div>
 
       <div class="form-group">
-        <label for="specialDiscount">Special Discount%:</label>
-        <input type="number" id="specialDiscount" value="0" />
+        <label for="specialDiscount">Discount%:</label>
+        <input type="number" id="specialDiscount" formControlName="discount_percentage" />
       </div>
 
       <div class="form-group">
         <label for="creditDays">Credit Days:</label>
-        <input type="number" id="creditDays" value="15" />
+        <input type="number" id="creditDays" formControlName="creditDays" />
       </div>
 
       <div class="form-group">
         <label for="irn">IRN:</label>
-        <input type="text" id="irn" value="25abcd9f0d..." />
+        <input type="text" id="irn" formControlName="irn_number" />
       </div>
 
       <div class="form-group">
         <label for="cgst">CGST:</label>
-        <input type="number" id="cgst" value="6" />
+        <input type="number" id="cgst" formControlName="CGST_amount" />
       </div>
 
       <div class="form-group">
         <label for="sgst">SGST:</label>
-        <input type="number" id="sgst" value="6" />
+        <input type="number" id="sgst" formControlName="SGST_amount" />
       </div>
 
       <div class="form-group">
-        <label for="tcs">TCS %:</label>
-        <input type="number" id="tcs" value="0" />
+        <label for="tcs">IGST %:</label>
+        <input type="number" id="tcs" formControlName="IGST_amount" />
       </div>
 
       <div class="form-group">
         <label for="tcsRounded">TCS Rounded Off:</label>
-        <input type="number" id="tcsRounded" value="0" />
+        <input type="number" id="tcsRounded" formControlName="tcsRounded" />
       </div>
 
       <div class="form-group">
         <label for="cgstRounded">CGST Rounded Off:</label>
-        <input type="number" id="cgstRounded" value="0" />
+        <input type="number" id="cgstRounded" formControlName="cgstRounded" />
       </div>
 
       <div class="form-group">
         <label for="sgstRounded">SGST Rounded Off:</label>
-        <input type="number" id="sgstRounded" value="0" />
+        <input type="number" id="sgstRounded" formControlName="sgstRounded" />
       </div>
 
       <div class="form-group">
-        <label for="totalAmount">Total Amount:</label>
-        <input type="number" id="totalAmount" readonly />
+        <label for="totalAmount">Amount In Words:</label>
+        <input type="number" id="totalAmount" formControlName="amount_in_words" readonly />
       </div>
 
       <div class="form-group">
         <label for="tradingNotes">Trading Notes:</label>
-        <select id="tradingNotes">
+        <select id="tradingNotes" formControlName="tradingNotes">
           <option value="-Select-">-Select-</option>
         </select>
       </div>
 
       <div class="form-group button-group">
         <label></label>
-        <ngce-button variant="classic" type="submit">Save</ngce-button>
+        <ngce-button variant="classic" type="button" >Save</ngce-button>
       </div>
 
     </div>
   </div>
-</div>
+</form>
