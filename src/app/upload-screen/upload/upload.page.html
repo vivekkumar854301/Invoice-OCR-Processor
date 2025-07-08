@@ -1,21 +1,16 @@
 <div class="main-container">
     <h3 class="heading">Upload Invoice</h3>
     <p class="subtext">Drag & drop your invoice file below to extract and process the data seamlessly.</p>
-  
+
     <div class="upload-container">
-      <ngce-file-upload
-        [dragDropEnabled]="true"
-        [fileCustomStyles]="customStyles"
-        [selectedFilesCustomStyles]="selectedFileCustomStyles"
-        (valueChange)="OnFileSelect($event)">
-      </ngce-file-upload>
+        <ngce-file-upload [dragDropEnabled]="true" [fileCustomStyles]="customStyles"
+            [selectedFilesCustomStyles]="selectedFileCustomStyles" (valueChange)="OnFileSelect($event)">
+        </ngce-file-upload>
     </div>
-  
-    <ngce-button
-      [customStyles]="{ backgroundColor: '#0077b6', color: '#fff', fontWeight: '600' }"
-      (handleClick)="onUpload()">
-      <ngce-icon class="ngce-upload-cloud"></ngce-icon>
-      Upload Invoice
+
+    <ngce-button [customStyles]="{ backgroundColor: '#0077b6', color: '#fff', fontWeight: '600', cursor:'pointer' }"
+        (handleClick)="onUpload()">
+        <ngce-icon class="ngce-upload-cloud"></ngce-icon>
+        Upload Invoice
     </ngce-button>
-  </div>
-  
+</div>
