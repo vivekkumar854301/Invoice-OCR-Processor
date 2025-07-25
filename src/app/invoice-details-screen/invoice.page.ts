@@ -32,6 +32,7 @@ import { FileManagementService } from '../upload-screen/service/file-management.
 import { InvoiceService } from '../feature/service/invoice.service';
 import { CommonModule } from '@angular/common';
 import { InvoiceInfoFormComponent } from '../feature/component/invoice-info-form/invoice-info-form.component';
+import { InvoiceTabFormComponent } from '../feature/component/invoice-tab-form/invoice-tab-form.component';
 
 @Component({
   selector: 'IOP-invoice',
@@ -45,6 +46,7 @@ import { InvoiceInfoFormComponent } from '../feature/component/invoice-info-form
     PaymentComponent,
     CommonModule,
     InvoiceInfoFormComponent,
+    InvoiceTabFormComponent,
   ],
   providers: [FileManagementService],
   templateUrl: './invoice.page.html',
@@ -172,10 +174,10 @@ export class InvoiceComponent implements OnInit {
   };
   invoiceDetails = {
     border: 'none',
-    'margin-top': '2rem',
     padding: '1.5rem',
     width: 'auto',
     cursor: 'default',
+    height: '100%',
   };
   rerunOCR() {
     console.log('Re-run OCR clicked');

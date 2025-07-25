@@ -8,7 +8,21 @@
   <div class="invoice-main-container">
     <!-- CONTENT SIDE CONTENT -->
     <div class="content-panel" [class.expanded]="!showImagePanel">
-      <IOP-invoice-info-form [invoiceData]="invoiceData()"></IOP-invoice-info-form>
+      <ngce-card class="form-card" [customStyles]="invoiceDetails">
+        <!-- <section class="invoice-section">
+          <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
+        </section>
+
+        <section class="invoice-section">
+          <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
+        </section>
+
+        <section class="invoice-section">
+          <IOP-payment></IOP-payment>
+        </section> -->
+        <IOP-invoice-tab-form></IOP-invoice-tab-form>
+        <!-- <IOP-invoice-info-form></IOP-invoice-info-form> -->
+      </ngce-card>
     </div>
 
     <!-- IMAGE DRAWER PANEL -->

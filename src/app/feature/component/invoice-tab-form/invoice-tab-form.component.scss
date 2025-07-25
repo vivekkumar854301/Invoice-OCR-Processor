@@ -1,0 +1,146 @@
+::ng-deep ngce-tab-group .ce-tab-labels{
+    background-color: #f1f5f9;
+    border-radius: 0.2rem;
+    border-bottom: none;
+    padding: .35rem !important;
+    position: inherit;
+    width: max-content !important;
+    --container-width: 0px !important;
+    --active-width: 0px !important;
+    display: flex;
+    justify-content: flex-start !important;
+}
+
+ 
+::ng-deep ngce-tab-group .ce-tab-header{
+    width: auto;
+}
+ 
+::ng-deep ngce-tab-group .ce-header-block{
+    position: inherit;
+    color: rgb(2,8,23,1) !important;
+    text-align: center;
+    padding: 6px 12px !important;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 600 !important;
+    transition: all 0.2s ease;
+}
+ 
+::ng-deep ngce-tab-group .ce-tab-block{
+    width: auto !important;
+}
+ 
+::ng-deep ngce-tab-group .ce-tab-label.active.selected{
+    background-color: #ffffff;
+    border-radius: 0.2rem;
+    box-shadow: 0 1px 2px 0 rgb(0, 0 ,0 , .13);
+    
+}
+
+.tab-icon{
+    display: flex;
+    justify-content: center;
+    gap: .3rem;
+    align-items: center;
+}
+
+
+
+// Form styles
+form {
+    max-width: 90%;
+    margin: 0px auto;
+    //   font-family: Arial, sans-serif;
+    color: #333;
+  
+    overflow-y: auto;
+    flex: 1 1 auto;
+    // height: calc(100vh - 260px); // subtract nav height
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    // ali
+  }
+  .submit-button {
+    text-align: right;
+  }
+  
+  section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .active-section {
+    // outline: 2px solid #007bff;
+    background-color: #fff0f006;
+    transition: all 0.3s;
+    color: black;
+  }
+  
+  section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    color: #222;
+  }
+  
+  /* Grid layout for fields inside section */
+  section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  i {
+    font-size: 18px;
+  }
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+  }
+  
+  section .fields-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px 20px;
+  }
+  
+  .header-icon {
+    background-color: rgba(137, 43, 226, 0.121);
+    border-radius: 20%;
+    padding: 0.2rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+  /* Input styles */
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    width: 100%;
+    padding: 5px 7px;
+    font-size: 1rem;
+    border: 0.1px solid #cccccc67;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+  }
+  
