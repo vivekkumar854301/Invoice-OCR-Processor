@@ -1,4 +1,11 @@
-import { Component, OnInit, computed, effect, inject, input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  computed,
+  effect,
+  inject,
+  input,
+} from '@angular/core';
 
 import { IFormConfig } from '@clarium/ngce-components';
 import { InvoiceData } from '../../model/invoice.model';
@@ -12,9 +19,9 @@ import { InvoiceCardFormComponent } from '../../../shared/component/invoice-card
 })
 export class InvoiceDetailsComponent {
   title = 'Invoice Details';
-  formConfig !:IFormConfig;
+  formConfig!: IFormConfig;
   readonly invoiceDetailsData = input.required<InvoiceData>();
-  readonly data = computed(()=>this.invoiceDetailsData());
+  readonly data = computed(() => this.invoiceDetailsData());
   constructor() {
     effect(() => {
       const data = this.data();
@@ -23,31 +30,28 @@ export class InvoiceDetailsComponent {
       }
     });
   }
- 
 
-  formInitialization(data: InvoiceData){
-    this.formConfig={
+  formInitialization(data: InvoiceData) {
+    this.formConfig = {
       layout: 'horizontal',
-      columns:2,
+      columns: 2,
       customStyles: {
         padding: '20px',
         gap: '14px',
-       
       },
-      
+
       fields: [
         {
           type: 'text',
           name: 'invoiceNo',
           label: 'Invoice No',
           value: this.data().invoice.invoice_number,
-          
         },
         {
           type: 'date',
           name: 'invoiceDate',
           label: 'Invoice Date',
-          value: new Date( this.data().invoice.invoice_date),
+          value: new Date(this.data().invoice.invoice_date),
           format: 'yyyy-MM-dd',
         },
         {
@@ -66,18 +70,16 @@ export class InvoiceDetailsComponent {
           type: 'text',
           name: 'acknowledgement_data',
           label: 'Acknowledgement Data',
-          value: this.data().invoice.acknowledgement_data,
+          value: this.data().invoice.acknowledgement_date,
         },
         {
           type: 'text',
           name: 'e_way_bill_no',
           label: 'E-Way Bill No',
           value: this.data().invoice.e_way_bill_no,
-        }
+        },
       ],
-      buttons: [
-      ],
+      buttons: [],
     };
-
   }
 }

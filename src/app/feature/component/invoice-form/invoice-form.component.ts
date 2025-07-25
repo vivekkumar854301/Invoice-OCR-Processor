@@ -30,7 +30,7 @@ export class InvoiceFormComponent {
         invoice_date: invoice.invoice_date,
         irn_number: invoice.irn_number,
         acknowledgement_no: invoice.acknowledgement_no,
-        acknowledgement_data: invoice.acknowledgement_data,
+        acknowledgement_data: invoice.acknowledgement_date,
         e_way_bill_no: invoice.e_way_bill_no,
         supplier_code: supplier.pan_no,
         supplier_details:

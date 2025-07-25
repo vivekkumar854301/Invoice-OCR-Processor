@@ -17,19 +17,32 @@ import {
   IFormConfig,
   DialogService,
   DynamicFormTemplateComponent,
-  SnackbarService
+  SnackbarService,
 } from '@clarium/ngce-components';
 import { HeaderComponent } from '../../../shared/component/header/header.component';
-import { InvoiceData, ProductItem } from '../../model/invoice.model';
+import {
+  InvoiceData,
+  InvoiceInfo,
+  ProductItem,
+} from '../../model/invoice.model';
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
-import { DIALOGBOX_STYLES, customStyles_DIALOGBOX_STYLES } from '../../../shared/commonCss/common.style';
+import {
+  DIALOGBOX_STYLES,
+  customStyles_DIALOGBOX_STYLES,
+} from '../../../shared/commonCss/common.style';
 import { GridConfig } from '../../../shared/models/shared.model';
-import { GridComponent } from "../../../shared/component/grid/grid.component";
+import { GridComponent } from '../../../shared/component/grid/grid.component';
 
 @Component({
   selector: 'IOP-product-line',
   standalone: true,
-  imports: [NgceComponentsModule, HeaderComponent, CurrencyPipe, CommonModule, GridComponent],
+  imports: [
+    NgceComponentsModule,
+    HeaderComponent,
+    CurrencyPipe,
+    CommonModule,
+    GridComponent,
+  ],
   templateUrl: './product-line.component.html',
   styleUrl: './product-line.component.scss',
   providers: [CurrencyPipe, DatePipe],
@@ -37,8 +50,8 @@ import { GridComponent } from "../../../shared/component/grid/grid.component";
 export class ProductLineComponent implements OnInit {
   formConfig!: IFormConfig;
   title = 'Product Line Items';
-  readonly gridData = input.required<InvoiceData>();
-  productLineSignal = signal<ProductItem[]>([]);
+  readonly gridData = input.required<InvoiceInfo>();
+  productLineSignal = signal<any[]>([]);
   selectedDesignCode = signal<string | null>(null);
   selectedRowForDelete = signal<ProductItem | null>(null);
   selectedRowForEdit = signal<ProductItem | null>(null);
@@ -46,23 +59,27 @@ export class ProductLineComponent implements OnInit {
   private readonly snackbarService = inject(SnackbarService);
   editSideDrawer = viewChild<any>(DynamicFormTemplateComponent);
   editDialogTemplate = viewChild<TemplateRef<any>>('editDialogTemplate');
-  invoiceDetailsTemplate = viewChild<TemplateRef<any>>('invoiceDetailsTemplate');
+  invoiceDetailsTemplate = viewChild<TemplateRef<any>>(
+    'invoiceDetailsTemplate'
+  );
   rateTemplate = viewChild<TemplateRef<any>>('rateTemplate');
   amountTemplate = viewChild<TemplateRef<any>>('mrpRateTemplate');
   taxamountTemplate = viewChild<TemplateRef<any>>('taxamountTemplate');
   deleteTemplate = viewChild<TemplateRef<any>>('deleteTemplate');
-  actionsTemplate= viewChild<TemplateRef<any>>('actionsTemplate');
+  actionsTemplate = viewChild<TemplateRef<any>>('actionsTemplate');
 
   constructor() {
     effect(() => {
       const data = this.gridData();
       if (data && data.product_details?.items) {
         this.productLineSignal.set(data.product_details.items);
+        console.log(this.productLineSignal());
       }
     });
   }
   ngOnInit(): void {
     this.initializeForm();
+    // this.initializeGrid()
   }
 
   viewdetails(row: any) {
@@ -76,9 +93,9 @@ export class ProductLineComponent implements OnInit {
       closeButton: true,
       styles: DIALOGBOX_STYLES,
     };
-  
+
     this.dialogService.openDialog(dialogConfig);
-  
+
     this.dialogService.afterOpen().subscribe({
       next: () => {
         this.invoiceDetails = {
@@ -92,10 +109,11 @@ export class ProductLineComponent implements OnInit {
     const code = this.selectedDesignCode();
     const allLines = this.productLineSignal();
     if (!code) return [];
-    return allLines.filter(item => item.design_code === code);
+    return allLines.filter((item) => item.design_code === code);
   });
-  
-  
+
+  productItemGrid!: IGridConfig;
+
   readonly gridConfig = computed<IGridConfig>(() => ({
     data: this.productLineSignal(),
     draggable: true,
@@ -255,7 +273,7 @@ export class ProductLineComponent implements OnInit {
         filterable: true,
         resizable: true,
         customTemplate: this.actionsTemplate(),
-      }
+      },
     ],
     filtering: {
       enabled: false,
@@ -273,10 +291,10 @@ export class ProductLineComponent implements OnInit {
     },
     rowGrouping: {
       enabled: false,
-      groupByField:'design_code',
-      expandAll:false,
+      groupByField: 'design_code',
+      expandAll: false,
       // displayGroupByMenu: true,
-    }
+    },
   }));
 
   readonly gridDataConfig = computed<GridConfig>(() => ({
@@ -285,7 +303,7 @@ export class ProductLineComponent implements OnInit {
       {
         key: 's_no',
         label: 'S.No',
-        disabled: true
+        disabled: true,
       },
       {
         key: 'category',
@@ -300,96 +318,110 @@ export class ProductLineComponent implements OnInit {
       {
         key: 'design_code',
         label: 'Design Code',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'size',
         label: 'Size',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'color',
         label: 'Color',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'UOM',
         label: 'UOM',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'pieces',
         label: 'Pieces',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'quantity',
         label: 'Quantity',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'rate',
         label: 'Rate',
         disabled: false,
-        customTemplate: this.rateTemplate()
+        customTemplate: this.rateTemplate(),
       },
       {
         key: 'MRP_rate',
         label: 'MRP Rate',
         disabled: false,
-        customTemplate: this.amountTemplate()
+        customTemplate: this.amountTemplate(),
       },
       {
         key: 'item_discount_percentage',
         label: 'Item Discount %',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'item_discount_amount',
         label: 'Discount Amount',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'product_valued',
         label: 'Product Valued',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'HSN',
         label: 'HsN',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'tax_percentage',
         label: 'Tax %',
-        disabled: false
+        disabled: false,
       },
       {
         key: 'tax_amount',
         label: 'Tax Amount',
         disabled: false,
-        customTemplate: this.taxamountTemplate()
-      }
+        customTemplate: this.taxamountTemplate(),
+      },
     ],
     rowActions: {
-      save: (row) =>{
-        const index = this.productLineSignal().findIndex(r => r.s_no === row.s_no);
+      save: (row) => {
+        const index = this.productLineSignal().findIndex(
+          (r) => r.s_no === row.s_no
+        );
         if (index !== -1) {
-          let data = this.productLineSignal()
-          data[index] = row
+          let data = this.productLineSignal();
+          data[index] = row;
           this.productLineSignal.set(data);
-          this.snackbarService.show("Updated Successfully",'success',{vertical: 'top', horizontal: 'right'},2000, 'X');
+          this.snackbarService.show(
+            'Updated Successfully',
+            'success',
+            { vertical: 'top', horizontal: 'right' },
+            2000,
+            'X'
+          );
         }
       },
-      delete: (row)=> {
-          const data = this.productLineSignal().filter(r => r.s_no !== row.s_no);
-          this.productLineSignal.set(data);
-          this.snackbarService.show("Deleted Successfully",'success',{vertical: 'top', horizontal: 'right'},2000, 'X');
-
+      delete: (row) => {
+        const data = this.productLineSignal().filter(
+          (r) => r.s_no !== row.s_no
+        );
+        this.productLineSignal.set(data);
+        this.snackbarService.show(
+          'Deleted Successfully',
+          'success',
+          { vertical: 'top', horizontal: 'right' },
+          2000,
+          'X'
+        );
       },
-    }
+    },
   }));
-
 
   readonly invoicedetailsgridConfig = computed<IGridConfig>(() => ({
     data: this.filteredProductLines(),
@@ -575,10 +607,10 @@ export class ProductLineComponent implements OnInit {
     },
     rowGrouping: {
       enabled: false,
-      groupByField:'design_code',
-      expandAll:false,
+      groupByField: 'design_code',
+      expandAll: false,
       // displayGroupByMenu: true,
-    }
+    },
   }));
   initializeForm() {
     this.formConfig = {
@@ -593,7 +625,6 @@ export class ProductLineComponent implements OnInit {
           // field:'s_no',
           name: 's_no',
           label: 'S.No',
-
         },
         {
           type: 'text',
@@ -708,31 +739,29 @@ export class ProductLineComponent implements OnInit {
       accessibility: true,
       draggable: false,
       closeButton: true,
-      
     };
     this.dialogService.openDialog(dialogConfig);
-
   }
   onDeleteConfirmed(): void {
     const row = this.selectedRowForDelete();
     if (!row) return;
-  
+
     console.log('Delete confirmed for row:', row);
-  
+
     const updated = this.productLineSignal().filter(
       (item) => item.size !== row.size
     );
-  
+
     this.productLineSignal.set(updated);
     console.log('Row deleted:', row);
-  
+
     this.dialogService.closeDialog();
     this.selectedRowForDelete.set(null);
   }
-  close(){
-    this.dialogService.closeDialog()
+  close() {
+    this.dialogService.closeDialog();
   }
-  
+
   onEditRow(row: ProductItem): void {
     const dialogConfig: DialogConfig = {
       header: 'Edit Product Item',
@@ -747,7 +776,7 @@ export class ProductLineComponent implements OnInit {
     this.dialogService.afterOpen().subscribe({
       next: () => {
         console.log(this.editSideDrawer().form);
-        
+
         this.editSideDrawer().form.patchValue(row);
         console.log('Edit form initialized with row data:', row);
       },
