@@ -1,0 +1,46 @@
+::ng-deep ngce-tab-group .ce-tab-labels{
+    background-color: #f1f5f9;
+    border-radius: 0.2rem;
+    border-bottom: none;
+    padding: .35rem !important;
+    position: inherit;
+    width: max-content !important;
+    --container-width: 0px !important;
+    --active-width: 0px !important;
+    display: flex;
+    justify-content: flex-start !important;
+}
+
+ 
+::ng-deep ngce-tab-group .ce-tab-header{
+    width: auto;
+}
+ 
+::ng-deep ngce-tab-group .ce-header-block{
+    position: inherit;
+    color: rgb(2,8,23,1) !important;
+    text-align: center;
+    padding: 6px 12px !important;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600 !important;
+    transition: all 0.2s ease;
+}
+ 
+::ng-deep ngce-tab-group .ce-tab-block{
+    width: auto !important;
+}
+ 
+::ng-deep ngce-tab-group .ce-tab-label.active.selected{
+    background-color: #ffffff;
+    border-radius: 0.2rem;
+    box-shadow: 0 1px 2px 0 rgb(0, 0 ,0 , .13);
+    
+}
+
+.tab-icon{
+    display: flex;
+    justify-content: center;
+    gap: .3rem;
+    align-items: center;
+}
