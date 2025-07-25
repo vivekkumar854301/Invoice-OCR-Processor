@@ -1,5 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  RouterOutlet,
+} from '@angular/router';
 import { InvoiceComponent } from './feature/page/invoice.page';
 import { ThemeService, THEME_CONFIG } from '@clarium/ngce-components';
 import { InvoiceSystemHeaderComponent } from './feature/component/invoice-system-header/invoice-system-header.component';
@@ -17,6 +22,7 @@ export class AppComponent {
 
   private themeService = inject(ThemeService);
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
   private viewportScroller = inject(ViewportScroller);
 
   constructor() {
@@ -30,17 +36,17 @@ export class AppComponent {
 
   ngOnInit() {
     this.router.events
-      .pipe(
-        filter(
-          (event): event is NavigationEnd => event instanceof NavigationEnd
-        )
-      )
-      .subscribe((event) => {
-        const tree = this.router.parseUrl(event.urlAfterRedirects);
-        if (tree.fragment) {
-          this.viewportScroller.scrollToAnchor(tree.fragment);
-        } else {
-          this.viewportScroller.scrollToPosition([0, 0]);
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const fragment = this.route.snapshot.fragment;
+        if (fragment) {
+          // Wait for the DOM to update/render
+          setTimeout(() => {
+            const element = document.getElementById(fragment);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 50);
         }
       });
   }

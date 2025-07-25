@@ -3,21 +3,32 @@ nav {
   left: 0;
   width: 100%;
   background: white;
-  padding: 0px 20px;
+  // padding: auto 20px;
+  padding-left: 4rem;
+  padding: 1.5rem 4rem;
   z-index: 1000;
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  background-color: rgba(137, 43, 226, 0.042);
+  padding-top: 2rem;
 }
 form {
   max-width: 90%;
-  margin: 30px auto;
+  margin: 0px auto;
   //   font-family: Arial, sans-serif;
   color: #333;
 
   overflow-y: auto;
   flex: 1 1 auto;
   height: calc(100vh - 260px); // subtract nav height
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  // ali
+}
+.submit-button {
+  text-align: right;
 }
 
 section {
@@ -27,6 +38,13 @@ section {
   margin-bottom: 30px;
   box-shadow: 0 1px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e2e8f0;
+}
+
+.active-section {
+  // outline: 2px solid #007bff;
+  background-color: #fff0f006;
+  transition: all 0.3s;
+  color: black;
 }
 
 section h2 {
@@ -54,7 +72,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   font-size: 1.7rem;
 }
 
@@ -100,8 +118,4 @@ a {
 
 a:hover {
   color: black;
-}
-nav {
-  padding-top: 2rem;
-  padding-left: 4rem;
 }

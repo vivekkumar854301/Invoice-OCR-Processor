@@ -118,6 +118,7 @@ export class InvoiceComponent implements OnInit {
       total_net_Amount: 0,
     },
   };
+
   readonly invoiceData = signal<InvoiceData>(
     this.invoiceStore.invoiceDataStore()
   );
@@ -135,19 +136,10 @@ export class InvoiceComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((params) => {
       const invoiceNumber = params.get('invoiceNumber');
-      console.log(invoiceNumber);
-      // this.fileManagementService.getInvoiceDetails(invoiceNumber!).subscribe({
-      //   next: (res) => {
-      //     console.log(res);
-      //     // this.invoiceData.set(res)
-      //     this.invoiceInfo = res;
-      //   },
-      // });
+
       this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
         next: (res) => {
-          console.log(res);
-
-          //this.invoiceData.set(res)
+          this.invoiceData.set(res);
         },
       });
     });

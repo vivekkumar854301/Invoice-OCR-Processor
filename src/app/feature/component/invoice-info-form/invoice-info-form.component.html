@@ -11,12 +11,15 @@
 </nav>
 
 <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
-    <h2>
+    <!-- <h2>
         <div class="header-icon"><i class="ngce-doc-text"></i></div>
         Invoice Information
-    </h2>
-    <section id="invoice-section" formGroupName="invoice">
-        <h2>Invoice Details</h2>
+    </h2> -->
+    <section id="invoice-section" formGroupName="invoice" [iOPAutoFragment]="'invoice-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Invoice Details
+        </h2>
         <div class="fields-grid">
             <label>Invoice Number:
                 <input formControlName="invoice_number" type="text" />
@@ -39,8 +42,11 @@
         </div>
     </section>
 
-    <section id="supplier-section" formGroupName="supplier">
-        <h2>Supplier Details</h2>
+    <section id="supplier-section" formGroupName="supplier" [iOPAutoFragment]="'supplier-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Supplier Details
+        </h2>
         <div class="fields-grid">
             <label>Supplier Name:
                 <input formControlName="supplier_name" type="text" />
@@ -60,8 +66,11 @@
         </div>
     </section>
 
-    <section id="purchase-section" formGroupName="purchase">
-        <h2>Purchase Details</h2>
+    <section id="purchase-section" formGroupName="purchase" [iOPAutoFragment]="'purchase-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Purchase Details
+        </h2>
         <div class="fields-grid">
             <label>Order No:
                 <input formControlName="order_no" type="text" />
@@ -87,8 +96,11 @@
         </div>
     </section>
 
-    <section id="taxes-section" formGroupName="taxes">
-        <h2>Taxes</h2>
+    <section id="taxes-section" formGroupName="taxes" [iOPAutoFragment]="'taxes-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Tax Details
+        </h2>
         <div class="fields-grid">
             <label>Taxable Value:
                 <input formControlName="taxable_value" type="text" />
@@ -108,8 +120,11 @@
         </div>
     </section>
 
-    <section id="discount-section" formGroupName="discount">
-        <h2>Discount</h2>
+    <section id="discount-section" formGroupName="discount" [iOPAutoFragment]="'discount-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Discount
+        </h2>
         <div class="fields-grid">
             <label>Discount %:
                 <input formControlName="discount_percentage" type="text" />
@@ -120,8 +135,11 @@
         </div>
     </section>
 
-    <section id="charges-section" formGroupName="charges">
-        <h2>Charges</h2>
+    <section id="charges-section" formGroupName="charges" [iOPAutoFragment]="'charges-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Charges
+        </h2>
         <div class="fields-grid">
             <label>Other Deductions:
                 <input formControlName="other_deductions" type="text" />
@@ -135,8 +153,11 @@
         </div>
     </section>
 
-    <section id="amount-section" formGroupName="amount">
-        <h2>Amount</h2>
+    <section id="amount-section" formGroupName="amount" [iOPAutoFragment]="'amount-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Amount Details
+        </h2>
         <div class="fields-grid">
             <label>Round Off Amount:
                 <input formControlName="round_off_amount" type="text" />
@@ -150,8 +171,11 @@
         </div>
     </section>
 
-    <section id="billing-section" formGroupName="billing">
-        <h2>Billing</h2>
+    <section id="billing-section" formGroupName="billing" [iOPAutoFragment]="'billing-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Billing Details
+        </h2>
         <div class="fields-grid">
             <label>Billed To:
                 <input formControlName="billed_to" type="text" />
@@ -174,8 +198,11 @@
         </div>
     </section>
 
-    <section id="product-details-section" formGroupName="product_details">
-        <h2>Product Details</h2>
+    <section id="product-details-section" formGroupName="product_details" [iOPAutoFragment]="'product-details-section'">
+        <h2>
+            <div class="header-icon"><i class="ngce-doc-text"></i></div>
+            Product Details
+        </h2>
         <!-- <div class="fields-grid">
             <div formArrayName="items">
                 <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i"
@@ -202,8 +229,10 @@
                 <input formControlName="total_net_Amount" type="number" />
             </label>
         </div> -->
-        <IOP-product-line [gridData]="invoiceData"></IOP-product-line>
+        <IOP-product-line [gridData]="pinvoiceData"></IOP-product-line>
     </section>
+    <div class="submit-button">
+        <ngce-button type="submit" [color]="' rgba(137, 43, 226, 0.5);'">Submit</ngce-button>
+    </div>
 
-    <button type="submit">Submit Invoice</button>
 </form>

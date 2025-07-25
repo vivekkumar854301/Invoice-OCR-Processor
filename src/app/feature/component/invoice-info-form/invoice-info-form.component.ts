@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import {
   FormGroup,
   FormBuilder,
@@ -14,6 +14,7 @@ import { NgceIconModule } from '@clarium/ngce-icon';
 import { ProductLineComponent } from '../product-line/product-line.component';
 import { InvoiceData } from '../../model/invoice.model';
 import { RouterLink, RouterModule } from '@angular/router';
+import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
 
 @Component({
   selector: 'IOP-invoice-info-form',
@@ -25,6 +26,7 @@ import { RouterLink, RouterModule } from '@angular/router';
     ProductLineComponent,
     RouterLink,
     RouterModule,
+    AutoFragmentDirective,
   ],
   templateUrl: './invoice-info-form.component.html',
   styleUrl: './invoice-info-form.component.scss',
@@ -33,6 +35,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 export class InvoiceInfoFormComponent {
   invoiceForm!: FormGroup;
 
+  invoiceData = input<any>();
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
@@ -97,6 +100,8 @@ export class InvoiceInfoFormComponent {
       }),
     });
 
+    console.log(this.invoiceData());
+
     // Initialize one product item for demo
     // this.addProductItem();
   }
@@ -106,19 +111,7 @@ export class InvoiceInfoFormComponent {
     return this.invoiceForm.get('product_details.items') as FormArray;
   }
 
-  // addProductItem() {
-  //   const productItemGroup = this.fb.group({
-  //     name: ['', Validators.required],
-  //     quantity: [1, Validators.required],
-  //     price: [0, Validators.required],
-  //   });
-  //   this.items.push(productItemGroup);
-  // }
-
-  // removeProductItem(index: number) {
-  //   this.items.removeAt(index);
-  // }
-
+  patchFormValues() {}
   onSubmit() {
     if (this.invoiceForm.valid) {
       console.log(this.invoiceForm.value);
@@ -128,7 +121,7 @@ export class InvoiceInfoFormComponent {
     }
   }
 
-  invoiceData: InvoiceData = {
+  pinvoiceData: InvoiceData = {
     invoice: {
       invoice_number: 'INV-001',
       invoice_date: '2025-07-25',

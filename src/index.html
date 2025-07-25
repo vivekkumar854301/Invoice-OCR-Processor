@@ -6,6 +6,20 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    :target {
+      scroll-margin-top: 10px;
+      /* Prevent scroll jump to target */
+    }
+  </style>
+
+  <script>
+    // Cancel browser's default auto-scroll to fragment
+    if (window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+  </script>
+
 </head>
 <body>
   <IOP-root></IOP-root>
