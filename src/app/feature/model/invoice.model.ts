@@ -172,3 +172,9 @@ export interface InvoiceInfo {
   };
   image_binary_data: string;
 }
+
+export interface FieldConfig {
+  label: string;
+  controlName: string;
+  type: string;
+}
