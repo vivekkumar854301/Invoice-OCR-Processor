@@ -9,7 +9,7 @@
 
     <div class="content-panel" [class.expanded]="!showImagePanel">
       <ngce-card class="form-card" [customStyles]="invoiceDetails">
-        <section class="invoice-section">
+        <!-- <section class="invoice-section">
           <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
         </section>
 
@@ -19,7 +19,8 @@
 
         <section class="invoice-section">
           <IOP-payment></IOP-payment>
-        </section>
+        </section> -->
+        <IOP-invoice-tab-form></IOP-invoice-tab-form>
       </ngce-card>
     </div>
 
