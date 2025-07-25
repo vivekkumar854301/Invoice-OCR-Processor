@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, effect, input } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import {NgceComponentsModule} from '@clarium/ngce-components'
 import {NgceIconModule} from '@clarium/ngce-icon'
@@ -23,9 +23,21 @@ export class InvoiceTabFormComponent {
   invoiceForm!: FormGroup;
 
   invoiceData = input<any>();
-  constructor(private fb: FormBuilder) {}
 
+  constructor(private fb: FormBuilder) {
+    effect(() => {
+      const data = this.invoiceData();
+      if (data && this.invoiceForm) {
+        this.invoiceForm.patchValue(data);
+      }
+    });
+  }
   ngOnInit() {
+    this.buildForm();
+
+    console.log(this.invoiceData());
+  }
+  buildForm() {
     this.invoiceForm = this.fb.group({
       invoice: this.fb.group({
         invoice_number: ['', Validators.required],
@@ -73,24 +85,31 @@ export class InvoiceTabFormComponent {
         amount_in_words: [''],
       }),
       billing: this.fb.group({
-        billed_to: [''],
+        billed_to: this.fb.group({
+          customer_name: [''],
+          address_line1: [''],
+          address_line2: [''],
+          address_line3: [''],
+          address_line4: [''],
+          state_country: [''],
+          distance_level_km: [''],
+          phone: [''],
+          state_code: [''],
+          gstin_no_customer: [''],
+        }),
         bank_name: [''],
         bank_branch: [''],
         account_name: [''],
         account_no: [''],
         IFSC_code: [''],
       }),
+
       product_details: this.fb.group({
         items: this.fb.array([]),
         total_quantity: [0],
         total_net_Amount: [0],
       }),
     });
-
-    console.log(this.invoiceData());
-
-    // Initialize one product item for demo
-    // this.addProductItem();
   }
 
   // Getter for product items FormArray
@@ -98,7 +117,6 @@ export class InvoiceTabFormComponent {
     return this.invoiceForm.get('product_details.items') as FormArray;
   }
 
-  patchFormValues() {}
   onSubmit() {
     if (this.invoiceForm.valid) {
       console.log(this.invoiceForm.value);
@@ -114,7 +132,7 @@ export class InvoiceTabFormComponent {
       invoice_date: '2025-07-25',
       irn_number: 'IRN1234567890',
       acknowledgement_no: 'ACK9876543210',
-      acknowledgement_data: '2025-07-25',
+      acknowledgement_date: '2025-07-25',
       e_way_bill_no: 'EWB123456',
     },
     supplier: {

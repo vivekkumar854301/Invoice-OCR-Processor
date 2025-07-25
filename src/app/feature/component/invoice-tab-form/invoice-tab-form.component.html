@@ -208,25 +208,56 @@
                         <div class="header-icon"><i class="ngce-doc-text"></i></div>
                         Billing Details
                     </h2>
-                    <div class="fields-grid">
-                        <label>Billed To:
-                            <input formControlName="billed_to" type="text" />
-                        </label>
-                        <label>Bank Name:
-                            <input formControlName="bank_name" type="text" />
-                        </label>
-                        <label>Bank Branch:
-                            <input formControlName="bank_branch" type="text" />
-                        </label>
-                        <label>Account Name:
-                            <input formControlName="account_name" type="text" />
-                        </label>
-                        <label>Account No:
-                            <input formControlName="account_no" type="text" />
-                        </label>
-                        <label>IFSC Code:
-                            <input formControlName="IFSC_code" type="text" />
-                        </label>
+                    <div>
+                        <div class="fields-grid" formGroupName="billed_to">
+                            <label>Customer Name:
+                                <input formControlName="customer_name" type="text" />
+                            </label>
+                            <label>Address Line 1:
+                                <input formControlName="address_line1" type="text" />
+                            </label>
+                            <label>Address Line 2:
+                                <input formControlName="address_line2" type="text" />
+                            </label>
+                            <label>Address Line 3:
+                                <input formControlName="address_line3" type="text" />
+                            </label>
+                            <label>Address Line 4:
+                                <input formControlName="address_line4" type="text" />
+                            </label>
+                            <label>State / Country:
+                                <input formControlName="state_country" type="text" />
+                            </label>
+                            <label>Distance (km):
+                                <input formControlName="distance_level_km" type="text" />
+                            </label>
+                            <label>Phone:
+                                <input formControlName="phone" type="text" />
+                            </label>
+                            <label>State Code:
+                                <input formControlName="state_code" type="text" />
+                            </label>
+                            <label>GSTIN No:
+                                <input formControlName="gstin_no_customer" type="text" />
+                            </label>
+                        </div>
+                        <div class="fields-grid">
+                            <label>Bank Name:
+                                <input formControlName="bank_name" type="text" />
+                            </label>
+                            <label>Bank Branch:
+                                <input formControlName="bank_branch" type="text" />
+                            </label>
+                            <label>Account Name:
+                                <input formControlName="account_name" type="text" />
+                            </label>
+                            <label>Account No:
+                                <input formControlName="account_no" type="text" />
+                            </label>
+                            <label>IFSC Code:
+                                <input formControlName="IFSC_code" type="text" />
+                            </label>
+                        </div>
                     </div>
                 </section>
             </ngce-tab-content>
@@ -242,7 +273,7 @@
                         Product Details
                     </h2>
                    
-                    <IOP-product-line [gridData]="pinvoiceData"></IOP-product-line>
+                    <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
                 </section>
                 <div class="submit-button">
                     <ngce-button type="submit" [color]="' rgba(137, 43, 226, 0.5);'">Submit</ngce-button>
