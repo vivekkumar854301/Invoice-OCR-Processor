@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgceComponentsModule } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { FileManagementService } from '../../upload-screen/service/file-management.service';
+import { FileManagementService } from '../upload-screen/service/file-management.service';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'IOP-invoices-display',
@@ -31,8 +31,6 @@ export class InvoicesDisplayComponent implements OnInit {
   }
 
   onInvoiceClick(invoiceNumber: string) {
-    console.log(invoiceNumber);
-
     this.router.navigate(['invoice-details'], {
       queryParams: { invoiceNumber },
     });

@@ -1,51 +1,39 @@
-import {
-  CUSTOM_ELEMENTS_SCHEMA,
-  Component,
-  ElementRef,
-  OnInit,
-  Renderer2,
-  TemplateRef,
-  computed,
-  inject,
-  signal,
-  viewChild,
-} from '@angular/core';
-import { InvoiceStoreService } from '../feature/store/invoice-store.service';
-import { InvoiceData, InvoiceInfo } from '../feature/model/invoice.model';
-import { InvoiceDetailsComponent } from '../feature/component/invoice-details/invoice-details.component';
-import { SupplierInformationComponent } from '../feature/component/supplier-information/supplier-information.component';
-import { TotalsSummaryComponent } from '../feature/component/totals-summary/totals-summary.component';
 import { NgceIconModule } from '@clarium/ngce-icon';
 import {
   NgceComponentsModule,
   DialogService,
   DialogConfig,
 } from '@clarium/ngce-components';
-import { ProductLineComponent } from '../feature/component/product-line/product-line.component';
-import { BankDetailsComponent } from '../feature/component/bank-details/bank-details.component';
-import { PurchaseTransportDetailsComponent } from '../feature/component/purchase-transport-details/purchase-transport-details.component';
-import { DIALOGBOX_STYLES } from '../shared/commonCss/common.style';
-import { InvoiceFormComponent } from '../feature/component/invoice-form/invoice-form.component';
-import { PaymentComponent } from '../feature/component/payment/payment.component';
-import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { FileManagementService } from '../upload-screen/service/file-management.service';
-import { InvoiceService } from '../feature/service/invoice.service';
 import { CommonModule } from '@angular/common';
-import { InvoiceInfoFormComponent } from '../feature/component/invoice-info-form/invoice-info-form.component';
-import { InvoiceTabFormComponent } from '../feature/component/invoice-tab-form/invoice-tab-form.component';
-import { SharedService } from '../shared/service/shared.service';
+import { HttpClient } from '@angular/common/http';
+import {
+  Component,
+  OnInit,
+  inject,
+  computed,
+  signal,
+  viewChild,
+  TemplateRef,
+  ElementRef,
+  Renderer2,
+} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { InvoiceInfoFormComponent } from '../../feature/component/invoice-info-form/invoice-info-form.component';
+import { InvoiceTabFormComponent } from '../../feature/component/invoice-tab-form/invoice-tab-form.component';
+import { ProductLineComponent } from '../../feature/component/product-line/product-line.component';
+import { InvoiceInfo } from '../../feature/model/invoice.model';
+import { InvoiceService } from '../../feature/service/invoice.service';
+import { InvoiceStoreService } from '../../feature/store/invoice-store.service';
+import { DIALOGBOX_STYLES } from '../../shared/commonCss/common.style';
+import { SharedService } from '../../shared/service/shared.service';
+import { FileManagementService } from '../upload-screen/service/file-management.service';
 
 @Component({
   selector: 'IOP-invoice',
   imports: [
-    InvoiceFormComponent,
-    TotalsSummaryComponent,
     NgceIconModule,
     NgceComponentsModule,
     ProductLineComponent,
-    BankDetailsComponent,
-    PaymentComponent,
     CommonModule,
     InvoiceInfoFormComponent,
     InvoiceTabFormComponent,

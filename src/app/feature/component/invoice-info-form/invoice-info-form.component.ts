@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, SimpleChanges, effect, input } from '@angular/core';
+import { Component, SimpleChanges, effect, inject, input } from '@angular/core';
 import {
   FormGroup,
   FormBuilder,
@@ -16,6 +16,7 @@ import { InvoiceData } from '../../model/invoice.model';
 import { RouterLink, RouterModule } from '@angular/router';
 import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
 import { InvoiceFormGroupComponent } from '../invoice-form-group/invoice-form-group.component';
+import { SharedService } from '../../../shared/service/shared.service';
 
 @Component({
   selector: 'IOP-invoice-info-form',
@@ -303,103 +304,15 @@ export class InvoiceInfoFormComponent {
     }
   }
 
-  pinvoiceData: InvoiceData = {
-    invoice: {
-      invoice_number: 'INV-001',
-      invoice_date: '2025-07-25',
-      irn_number: 'IRN1234567890',
-      acknowledgement_no: 'ACK9876543210',
-      acknowledgement_date: '2025-07-25',
-      e_way_bill_no: 'EWB123456',
-    },
-    supplier: {
-      supplier_name: 'Sai Textiles Ltd.',
-      supplier_address: '123 MG Road, Bengaluru, Karnataka',
-      supplier_gst_no: '29ABCDE1234F1Z5',
-      msme_no: 'MSME123456',
-      pan_no: 'ABCDE1234F',
-    },
-    purchase: {
-      order_no: 'PO-20250725',
-      order_date: '2025-07-20',
-      transport_name: 'ABC Logistics',
-      agent_name: 'Ravi Kumar',
-      LR_no: 'LR-789456',
-      LR_date: '2025-07-23',
-      merchandiser_name: 'Sita Reddy',
-    },
-    taxes: {
-      taxable_value: '50000',
-      CGST_amount: '4500',
-      SGST_amount: '4500',
-      IGST_amount: '0',
-      total_tax_amount: '9000',
-    },
-    discount: {
-      discount_percentage: '5',
-      discount_amount: '2500',
-    },
-    charges: {
-      other_deductions: '500',
-      freight_charges: '1000',
-      other_charges: '300',
-    },
-    amount: {
-      round_off_amount: '-1',
-      invoice_amount: '52000',
-      amount_in_words: 'Fifty-Two Thousand Rupees Only',
-    },
-    billing: {
-      billed_to: 'KLM Retail Pvt. Ltd.',
-      bank_name: 'HDFC Bank',
-      bank_branch: 'Indiranagar Branch',
-      account_name: 'Sai Textiles Ltd.',
-      account_no: '123456789012',
-      IFSC_code: 'HDFC0000123',
-    },
-    product_details: {
-      items: [
-        {
-          s_no: 1,
-          category: 'Shirts',
-          description: 'Cotton Shirt - Full Sleeve',
-          design_code: 'DS101',
-          size: 'L',
-          color: 'Blue',
-          UOM: 'PCS',
-          pieces: '10',
-          quantity: '10',
-          rate: '1000',
-          MRP_rate: '1200',
-          item_discount_percentage: '5',
-          item_discount_amount: '500',
-          product_valued: '9500',
-          HSN: '6105',
-          tax_percentage: '18',
-          tax_amount: '1710',
-        },
-        {
-          s_no: 2,
-          category: 'Trousers',
-          description: 'Formal Trouser - Slim Fit',
-          design_code: 'DT202',
-          size: '32',
-          color: 'Black',
-          UOM: 'PCS',
-          pieces: '5',
-          quantity: '5',
-          rate: '1500',
-          MRP_rate: '1800',
-          item_discount_percentage: '5',
-          item_discount_amount: '375',
-          product_valued: '7125',
-          HSN: '6103',
-          tax_percentage: '18',
-          tax_amount: '1282.5',
-        },
-      ],
-      total_quantity: 15,
-      total_net_Amount: 16625,
-    },
-  };
+  isBillingSectionExpanded: boolean = true;
+  isProductsSectionExpanded: boolean = true;
+
+  private sharedService = inject(SharedService);
+  onExpansionToggle(id: string) {
+    if (id === 'billing-section') {
+      this.isBillingSectionExpanded = !this.isBillingSectionExpanded;
+    } else if (id === 'product-details-section') {
+      this.isProductsSectionExpanded = !this.isProductsSectionExpanded;
+    }
+  }
 }

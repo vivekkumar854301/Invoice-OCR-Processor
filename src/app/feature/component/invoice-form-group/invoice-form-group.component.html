@@ -1,6 +1,12 @@
-<h2>
-    <div class="header-icon"><i class="ngce-doc-text"></i></div>{{ title }}
-</h2>
+<div class="card-header">
+    <h2>
+        <div class="header-icon"><i class="ngce-doc-text"></i></div>{{ title }}
+    </h2>
+    <div (click)="onExpansionToggle()">
+        <ngce-icon class="ngce-down-open-1"></ngce-icon>
+    </div>
+</div>
+@if(isExpanded){
 <section [formGroup]="formGroup">
     <div class="fields-grid">
         <label *ngFor="let field of fields">
@@ -9,3 +15,4 @@
         </label>
     </div>
 </section>
+}

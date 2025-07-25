@@ -35,17 +35,25 @@ export class AppComponent {
     this.themeService.setCustomProperties({});
   }
 
-  layoutOption(option: string){
+  layoutOption(option: string) {
     this.sharedService.changeSelector(option);
   }
 
+  isLayoutDropdownVisible!: boolean;
+
   ngOnInit() {
     this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
+      .pipe(
+        filter(
+          (event): event is NavigationEnd => event instanceof NavigationEnd
+        )
+      )
+      .subscribe((event) => {
+        // Now `event` is properly typed as NavigationEnd
+
+        // 1. Scroll to fragment if it exists
         const fragment = this.route.snapshot.fragment;
         if (fragment) {
-          // Wait for the DOM to update/render
           setTimeout(() => {
             const element = document.getElementById(fragment);
             if (element) {
@@ -53,6 +61,10 @@ export class AppComponent {
             }
           }, 50);
         }
+
+        // 2. Set layout option visibility based on current route path
+        const currentPath = event.urlAfterRedirects;
+        this.isLayoutDropdownVisible = currentPath.includes('/invoice-details'); // adjust condition as needed
       });
   }
 }

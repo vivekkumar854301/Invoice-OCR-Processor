@@ -17,11 +17,18 @@
     </ng-container>
 
     <!-- Billing Section (custom) -->
+
     <section id="billing-section" formGroupName="billing" [iOPAutoFragment]="'billing-section'">
-        <h2>
-            <div class="header-icon"><i class="ngce-doc-text"></i></div>
-            Billing Details
-        </h2>
+        <div class="card-header">
+            <h2>
+                <div class="header-icon"><i class="ngce-doc-text"></i></div>
+                Billing Details
+            </h2>
+            <div (click)="onExpansionToggle('billing-section')">
+                <ngce-icon class="ngce-down-open-1"></ngce-icon>
+            </div>
+        </div>
+        @if(isBillingSectionExpanded){
         <div>
             <div class="fields-grid" formGroupName="billed_to">
                 <label>Customer Name:
@@ -73,15 +80,25 @@
                 </label>
             </div>
         </div>
+        }
+
     </section>
 
     <!-- Product Details Section -->
     <section id="product-details-section" formGroupName="product_details" [iOPAutoFragment]="'product-details-section'">
-        <h2>
-            <div class="header-icon"><i class="ngce-doc-text"></i></div>
-            Product Details
-        </h2>
+        <div class="card-header">
+            <h2>
+                <div class="header-icon"><i class="ngce-doc-text"></i></div>
+                Product Details
+            </h2>
+            <div (click)="onExpansionToggle('product-details-section')">
+                <ngce-icon class="ngce-down-open-1"></ngce-icon>
+            </div>
+        </div>
+        @if(isProductsSectionExpanded){
         <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
+        }
+
     </section>
 
     <div class="submit-button">

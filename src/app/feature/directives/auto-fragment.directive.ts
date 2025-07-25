@@ -32,6 +32,8 @@ export class AutoFragmentDirective {
             window.location.origin +
             window.location.pathname +
             window.location.search;
+          console.log(window.location);
+
           history.replaceState(null, '', `${baseUrl}#${this.iOPAutoFragment}`);
         } else if (
           !isVisible &&
