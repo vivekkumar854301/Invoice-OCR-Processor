@@ -241,7 +241,7 @@ export class ProductLineComponent implements OnInit {
         resizable: true,
       },
       {
-        field: 'HSN',
+        field: 'size.HSN',
         header: 'HSN',
         sortable: true,
         type: 'text',
@@ -298,7 +298,7 @@ export class ProductLineComponent implements OnInit {
   }));
 
   readonly gridDataConfig = computed<GridConfig>(() => ({
-    data: this.productLineSignal(),
+    data: this.flatProductLines(),
     columns: [
       {
         key: 's_no',
@@ -422,6 +422,30 @@ export class ProductLineComponent implements OnInit {
       },
     },
   }));
+
+  flatProductLines = computed(() =>
+    this.productLineSignal().flatMap((item) =>
+      item.size.size.map((sizeLabel: string, index: number) => ({
+        s_no: item.s_no,
+        category: item.category,
+        description: item.description,
+        design_code: item.design_code,
+        size: sizeLabel,
+        color: item.size.color,
+        UOM: item.size.UOM,
+        pieces: item.size.pieces[index],
+        quantity: item.size.quantity[index],
+        rate: item.size.rate?.[index] ?? 0,
+        MRP_rate: item.MRP_rate ?? 0,
+        item_discount_percentage: item.item_discount_percentage ?? 0,
+        item_discount_amount: item.item_discount_amount ?? 0,
+        product_valued: item.product_valued ?? 0,
+        HSN: item.HSN ?? '',
+        tax_percentage: item.tax_percentage ?? 0,
+        tax_amount: item.tax_amount ?? 0,
+      }))
+    )
+  );
 
   readonly invoicedetailsgridConfig = computed<IGridConfig>(() => ({
     data: this.filteredProductLines(),

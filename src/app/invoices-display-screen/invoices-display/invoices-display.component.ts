@@ -1,9 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { NgceComponentsModule } from '@clarium/ngce-components';
-// import{}
-
 import { NgceIconModule } from '@clarium/ngce-icon';
 import { FileManagementService } from '../../upload-screen/service/file-management.service';
 import { CommonModule } from '@angular/common';

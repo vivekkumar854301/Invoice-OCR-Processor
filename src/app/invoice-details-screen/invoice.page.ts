@@ -10,31 +10,31 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { InvoiceStoreService } from '../store/invoice-store.service';
-import { InvoiceData, InvoiceInfo } from '../model/invoice.model';
-import { InvoiceDetailsComponent } from '../component/invoice-details/invoice-details.component';
-import { SupplierInformationComponent } from '../component/supplier-information/supplier-information.component';
-import { TotalsSummaryComponent } from '../component/totals-summary/totals-summary.component';
+import { InvoiceStoreService } from '../feature/store/invoice-store.service';
+import { InvoiceData, InvoiceInfo } from '../feature/model/invoice.model';
+import { InvoiceDetailsComponent } from '../feature/component/invoice-details/invoice-details.component';
+import { SupplierInformationComponent } from '../feature/component/supplier-information/supplier-information.component';
+import { TotalsSummaryComponent } from '../feature/component/totals-summary/totals-summary.component';
 import { NgceIconModule } from '@clarium/ngce-icon';
 import {
   NgceComponentsModule,
   DialogService,
   DialogConfig,
 } from '@clarium/ngce-components';
-import { ProductLineComponent } from '../component/product-line/product-line.component';
-import { BankDetailsComponent } from '../component/bank-details/bank-details.component';
-import { PurchaseTransportDetailsComponent } from '../component/purchase-transport-details/purchase-transport-details.component';
-import { DIALOGBOX_STYLES } from '../../shared/commonCss/common.style';
-import { InvoiceFormComponent } from '../component/invoice-form/invoice-form.component';
-import { PaymentComponent } from '../component/payment/payment.component';
+import { ProductLineComponent } from '../feature/component/product-line/product-line.component';
+import { BankDetailsComponent } from '../feature/component/bank-details/bank-details.component';
+import { PurchaseTransportDetailsComponent } from '../feature/component/purchase-transport-details/purchase-transport-details.component';
+import { DIALOGBOX_STYLES } from '../shared/commonCss/common.style';
+import { InvoiceFormComponent } from '../feature/component/invoice-form/invoice-form.component';
+import { PaymentComponent } from '../feature/component/payment/payment.component';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { FileManagementService } from '../../upload-screen/service/file-management.service';
-import { InvoiceService } from '../service/invoice.service';
+import { FileManagementService } from '../upload-screen/service/file-management.service';
+import { InvoiceService } from '../feature/service/invoice.service';
 import { CommonModule } from '@angular/common';
-import { InvoiceInfoFormComponent } from '../component/invoice-info-form/invoice-info-form.component';
-import { InvoiceTabFormComponent } from "../component/invoice-tab-form/invoice-tab-form.component";
-import { SharedService } from '../../shared/service/shared.service';
+import { InvoiceInfoFormComponent } from '../feature/component/invoice-info-form/invoice-info-form.component';
+import { InvoiceTabFormComponent } from '../feature/component/invoice-tab-form/invoice-tab-form.component';
+import { SharedService } from '../shared/service/shared.service';
 
 @Component({
   selector: 'IOP-invoice',
@@ -47,9 +47,9 @@ import { SharedService } from '../../shared/service/shared.service';
     BankDetailsComponent,
     PaymentComponent,
     CommonModule,
+    InvoiceInfoFormComponent,
     InvoiceTabFormComponent,
-    InvoiceInfoFormComponent
-],
+  ],
   providers: [FileManagementService],
   templateUrl: './invoice.page.html',
   styleUrl: './invoice.page.scss',
@@ -62,7 +62,7 @@ export class InvoiceComponent implements OnInit {
   private readonly http = inject(HttpClient);
   private readonly fileManagementService = inject(FileManagementService);
   private readonly sharedService = inject(SharedService);
-  option = computed(()=> this.sharedService.getSelector());
+  option = computed(() => this.sharedService.getSelector());
   // EMPTY_INVOICE_DATA: InvoiceData = {
   //   invoice: {
   //     invoice_number: '',
@@ -180,7 +180,7 @@ export class InvoiceComponent implements OnInit {
     padding: '1.5rem',
     width: 'auto',
     cursor: 'default',
-    height: '100%'
+    height: '100%',
   };
   rerunOCR() {
     console.log('Re-run OCR clicked');

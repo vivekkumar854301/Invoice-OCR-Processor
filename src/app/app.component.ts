@@ -5,7 +5,6 @@ import {
   Router,
   RouterOutlet,
 } from '@angular/router';
-import { InvoiceComponent } from './feature/page/invoice.page';
 import { ThemeService, THEME_CONFIG } from '@clarium/ngce-components';
 import { InvoiceSystemHeaderComponent } from './feature/component/invoice-system-header/invoice-system-header.component';
 import { ViewportScroller } from '@angular/common';

@@ -8,27 +8,15 @@
   <div class="invoice-main-container">
     <!-- CONTENT SIDE CONTENT -->
     <div class="content-panel" [class.expanded]="!showImagePanel">
-      <ngce-card class="form-card" [customStyles]="invoiceDetails">
-        <!-- <section class="invoice-section">
-          <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
-        </section>
 
-        <section class="invoice-section">
-          <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
-        </section>
-
-        <section class="invoice-section">
-          <IOP-payment></IOP-payment>
-        </section> -->
-        @switch (option()) {
-          @case ("Tabs") {
-        <IOP-invoice-tab-form></IOP-invoice-tab-form>
-          }
-          @case ("Scroll") {
-        <IOP-invoice-info-form></IOP-invoice-info-form>
-          }
+      @switch (option()) {
+        @case ("Tabs") {
+      <IOP-invoice-tab-form></IOP-invoice-tab-form>
         }
-      </ngce-card>
+        @case ("Scroll") {
+      <IOP-invoice-info-form></IOP-invoice-info-form>
+        }
+      }
     </div>
 
     <!-- IMAGE DRAWER PANEL -->
