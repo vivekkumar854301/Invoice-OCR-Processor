@@ -6,7 +6,7 @@
   </div>
 
   <div class="invoice-main-container">
-
+    <!-- CONTENT SIDE CONTENT -->
     <div class="content-panel" [class.expanded]="!showImagePanel">
       <ngce-card class="form-card" [customStyles]="invoiceDetails">
         <!-- <section class="invoice-section">
@@ -21,6 +21,7 @@
           <IOP-payment></IOP-payment>
         </section> -->
         <IOP-invoice-tab-form></IOP-invoice-tab-form>
+        <!-- <IOP-invoice-info-form></IOP-invoice-info-form> -->
       </ngce-card>
     </div>
 
@@ -43,9 +44,29 @@
           alt="Invoice Image" />
       </div>
     </div>
-
-    <!-- RIGHT SIDE CONTENT -->
-
-
   </div>
 </div>
+
+
+<!-- <div class="tab-nav">
+        <a href="#invoice-section">Invoice Details</a>
+        <a href="#supplier-section">Supplier Details</a>
+        <a href="#purchase-section">Purchase & Transport</a>
+        <a href="#taxes-section">Tax & Charges</a>
+        <a href="#amount-section">Amount Summary</a>
+        <a href="#billing-section">Billing Info</a>
+        <a href="#products-section">Product Details</a>
+      </div> -->
+<!-- <ngce-card class="form-card" [customStyles]="invoiceDetails">
+        <section class="invoice-section">
+          <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
+        </section>
+
+        <section class="invoice-section">
+          <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
+        </section>
+
+        <section class="invoice-section">
+          <IOP-payment></IOP-payment>
+        </section>
+      </ngce-card> -->

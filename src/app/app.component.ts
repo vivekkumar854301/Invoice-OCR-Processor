@@ -1,8 +1,15 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  RouterOutlet,
+} from '@angular/router';
 import { InvoiceComponent } from './feature/page/invoice.page';
 import { ThemeService, THEME_CONFIG } from '@clarium/ngce-components';
 import { InvoiceSystemHeaderComponent } from './feature/component/invoice-system-header/invoice-system-header.component';
+import { ViewportScroller } from '@angular/common';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'IOP-root',
@@ -12,7 +19,11 @@ import { InvoiceSystemHeaderComponent } from './feature/component/invoice-system
 })
 export class AppComponent {
   title = 'Invoice-OCR-Processor';
+
   private themeService = inject(ThemeService);
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
+  private viewportScroller = inject(ViewportScroller);
 
   constructor() {
     this.themeService.setTypography({
@@ -21,5 +32,22 @@ export class AppComponent {
 
     this.themeService.applyTheme('light-theme');
     this.themeService.setCustomProperties({});
+  }
+
+  ngOnInit() {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const fragment = this.route.snapshot.fragment;
+        if (fragment) {
+          // Wait for the DOM to update/render
+          setTimeout(() => {
+            const element = document.getElementById(fragment);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 50);
+        }
+      });
   }
 }

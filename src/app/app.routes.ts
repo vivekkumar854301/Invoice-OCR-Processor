@@ -6,8 +6,9 @@ import { LandingComponent } from './feature/page/landing/landing.component';
 
 export const routes: Routes = [
   { path: 'upload', component: UploadComponent },
-  { path: 'home', component: LandingComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: LandingComponent },
+
   { path: 'invoices', component: InvoicesDisplayComponent },
   { path: 'invoice-details', component: InvoiceComponent },
 ];

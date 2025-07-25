@@ -1,25 +1,38 @@
+import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import {NgceComponentsModule} from '@clarium/ngce-components'
-import {NgceIconModule} from '@clarium/ngce-icon'
-import { InvoiceData } from '../../model/invoice.model';
-import { ProductLineComponent } from "../product-line/product-line.component";
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormArray,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
+import { NgceComponentsModule, IGridConfig } from '@clarium/ngce-components';
+import { NgceIconModule } from '@clarium/ngce-icon';
+import { ProductLineComponent } from '../product-line/product-line.component';
+import { InvoiceData } from '../../model/invoice.model';
+import { RouterLink, RouterModule } from '@angular/router';
+import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
 
 @Component({
-  selector: 'IOP-invoice-tab-form',
-  imports: [NgceComponentsModule, NgceIconModule, ReactiveFormsModule, ProductLineComponent],
-  templateUrl: './invoice-tab-form.component.html',
-  styleUrl: './invoice-tab-form.component.scss'
+  selector: 'IOP-invoice-info-form',
+  imports: [
+    ReactiveFormsModule,
+    NgceIconModule,
+    CommonModule,
+    NgceComponentsModule,
+    ProductLineComponent,
+    RouterLink,
+    RouterModule,
+    AutoFragmentDirective,
+  ],
+  templateUrl: './invoice-info-form.component.html',
+  styleUrl: './invoice-info-form.component.scss',
+  standalone: true,
 })
-export class InvoiceTabFormComponent {
-  // Styles
-  tabContentStyles = {
-    'margin-top': '2rem',
-    'overflow': 'auto',
-    height: '100%'
-  }
-
+export class InvoiceInfoFormComponent {
   invoiceForm!: FormGroup;
 
   invoiceData = input<any>();

@@ -31,6 +31,7 @@ import { HttpClient } from '@angular/common/http';
 import { FileManagementService } from '../../upload-screen/service/file-management.service';
 import { InvoiceService } from '../service/invoice.service';
 import { CommonModule } from '@angular/common';
+import { InvoiceInfoFormComponent } from '../component/invoice-info-form/invoice-info-form.component';
 import { InvoiceTabFormComponent } from "../component/invoice-tab-form/invoice-tab-form.component";
 
 @Component({
@@ -44,7 +45,8 @@ import { InvoiceTabFormComponent } from "../component/invoice-tab-form/invoice-t
     BankDetailsComponent,
     PaymentComponent,
     CommonModule,
-    InvoiceTabFormComponent
+    InvoiceTabFormComponent,
+    InvoiceInfoFormComponent
 ],
   providers: [FileManagementService],
   templateUrl: './invoice.page.html',
@@ -118,6 +120,7 @@ export class InvoiceComponent implements OnInit {
       total_net_Amount: 0,
     },
   };
+
   readonly invoiceData = signal<InvoiceData>(
     this.invoiceStore.invoiceDataStore()
   );
@@ -135,19 +138,10 @@ export class InvoiceComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((params) => {
       const invoiceNumber = params.get('invoiceNumber');
-      console.log(invoiceNumber);
-      // this.fileManagementService.getInvoiceDetails(invoiceNumber!).subscribe({
-      //   next: (res) => {
-      //     console.log(res);
-      //     // this.invoiceData.set(res)
-      //     this.invoiceInfo = res;
-      //   },
-      // });
+
       this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
         next: (res) => {
-          console.log(res);
-
-          //this.invoiceData.set(res)
+          this.invoiceData.set(res);
         },
       });
     });
@@ -184,10 +178,10 @@ export class InvoiceComponent implements OnInit {
   };
   invoiceDetails = {
     border: 'none',
-    'margin-top': '2rem',
     padding: '1.5rem',
     width: 'auto',
     cursor: 'default',
+    height: '100%'
   };
   rerunOCR() {
     console.log('Re-run OCR clicked');
