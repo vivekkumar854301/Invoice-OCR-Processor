@@ -1,6 +1,4 @@
 .main-container {
-  height: 100vh;
-  // padding: 1rem;
   position: relative;
 }
 
@@ -52,7 +50,8 @@
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
-  overflow: hidden;
+  overflow-y: auto;
+  height: 90vh;
 
   &.collapsed {
     width: 0;
@@ -107,6 +106,7 @@
   background-color: #ffffff;
   border-radius: 8px;
   transition: all 0.3s ease;
+  height: 90vh;
 
   &.expanded {
     width: 100%;
@@ -128,5 +128,35 @@
     padding: 1rem 1.25rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     border: 1px solid #e5e7eb;
+  }
+
+  .tab-nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid #ccc;
+    margin: 0 2rem;
+  }
+  .tab {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  .tab:hover {
+    background: #ddd;
+  }
+  .section {
+    height: 100vh;
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  a {
+    color: grey;
+    text-decoration: none;
+    padding: 0 0.4rem;
   }
 }

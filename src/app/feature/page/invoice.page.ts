@@ -31,6 +31,7 @@ import { HttpClient } from '@angular/common/http';
 import { FileManagementService } from '../../upload-screen/service/file-management.service';
 import { InvoiceService } from '../service/invoice.service';
 import { CommonModule } from '@angular/common';
+import { InvoiceInfoFormComponent } from '../component/invoice-info-form/invoice-info-form.component';
 
 @Component({
   selector: 'IOP-invoice',
@@ -43,6 +44,7 @@ import { CommonModule } from '@angular/common';
     BankDetailsComponent,
     PaymentComponent,
     CommonModule,
+    InvoiceInfoFormComponent,
   ],
   providers: [FileManagementService],
   templateUrl: './invoice.page.html',
