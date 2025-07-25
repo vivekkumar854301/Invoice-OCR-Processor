@@ -1,10 +1,5 @@
-import { Component, OnInit, inject } from '@angular/core';
-import {
-  ActivatedRoute,
-  Router,
-  RouterLink,
-  RouterLinkActive,
-} from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   NgceComponentsModule,
   SnackbarService,
@@ -12,7 +7,6 @@ import {
 
 import { NgceIconModule } from '@clarium/ngce-icon';
 import { FileManagementService } from '../service/file-management.service';
-import { InvoiceSystemHeaderComponent } from '../../feature/component/invoice-system-header/invoice-system-header.component';
 @Component({
   selector: 'IOP-upload',
   imports: [NgceComponentsModule, NgceIconModule],

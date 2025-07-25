@@ -6,6 +6,23 @@
   </div>
 
   <div class="invoice-main-container">
+
+    <div class="content-panel" [class.expanded]="!showImagePanel">
+      <ngce-card class="form-card" [customStyles]="invoiceDetails">
+        <section class="invoice-section">
+          <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
+        </section>
+
+        <section class="invoice-section">
+          <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
+        </section>
+
+        <section class="invoice-section">
+          <IOP-payment></IOP-payment>
+        </section>
+      </ngce-card>
+    </div>
+
     <!-- IMAGE DRAWER PANEL -->
     <div class="image-panel" [class.collapsed]="!showImagePanel">
       <div class="image-header">
@@ -27,21 +44,7 @@
     </div>
 
     <!-- RIGHT SIDE CONTENT -->
-    <div class="content-panel" [class.expanded]="!showImagePanel">
-      <ngce-card class="form-card" [customStyles]="invoiceDetails">
-        <section class="invoice-section">
-          <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
-        </section>
 
-        <section class="invoice-section">
-          <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
-        </section>
-
-        <section class="invoice-section">
-          <IOP-payment></IOP-payment>
-        </section>
-      </ngce-card>
-    </div>
 
   </div>
 </div>
