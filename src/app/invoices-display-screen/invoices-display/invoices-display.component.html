@@ -1,28 +1,22 @@
 <div class="invoices-main-container">
-    <div class="header-row">
-      <h3 class="heading">Uploaded Invoice Images</h3>
-      <div class="searchbar">
-        <ngce-text-input
-          [suffix]="searchIcon"
-          [inputSize]="'medium'"
-          [placeholder]="'Search for invoice'">
-        </ngce-text-input>
-      </div>
-    </div>
-    
-  
-    <div class="invoices-container">
-      <div
-        class="invoice-card"
-        *ngFor="let image of apiResponse; let i = index"
-        (click)="onInvoiceClick(image.invoice.invoice_number)">
-        <img [src]="image.image_binary_data" class="image" />
-        <p>{{ image.invoice.invoice_number }}</p>
-      </div>
+  <div class="header-row">
+    <h3 class="heading">Uploaded Invoice Images</h3>
+    <div class="searchbar">
+      <ngce-text-input [suffix]="searchIcon" [inputSize]="'medium'" [placeholder]="'Search for invoice'">
+      </ngce-text-input>
     </div>
   </div>
-  
-  <ng-template #searchIcon>
-    <ngce-icon class="ngce-search-1"></ngce-icon>
-  </ng-template>
-  
+
+
+  <div class="invoices-container">
+    <div class="invoice-card" *ngFor="let image of apiResponse; let i = index"
+      (click)="onInvoiceClick(image.invoice.invoice_number)">
+      <img [src]="image.image_binary_data" class="image" />
+      <p>{{ image.invoice.invoice_number }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #searchIcon>
+  <ngce-icon class="ngce-search-1"></ngce-icon>
+</ng-template>
