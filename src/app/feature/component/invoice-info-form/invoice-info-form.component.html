@@ -1,9 +1,9 @@
 <nav>
-    <a *ngFor="let section of sectionsConfig" [routerLink]="[]" [fragment]="section.id">
+    <a *ngFor="let section of sectionsConfig" [routerLink]="[]" [fragment]="section.id" queryParamsHandling="preserve">
         {{ section.navLabel || section.title }}
     </a>
-    <a [routerLink]="[]" fragment="billing-section">Billing</a>
-    <a [routerLink]="[]" fragment="product-details-section">Products</a>
+    <a [routerLink]="[]" fragment="billing-section" queryParamsHandling="preserve">Billing</a>
+    <a [routerLink]="[]" fragment="product-details-section" queryParamsHandling="preserve">Products</a>
 </nav>
 
 <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
@@ -102,6 +102,6 @@
     </section>
 
     <div class="submit-button">
-        <ngce-button type="submit" [color]="' rgba(137, 43, 226, 0.5);'">Submit</ngce-button>
+        <ngce-button type="submit" [color]="'#4b87c2;'">Save</ngce-button>
     </div>
 </form>

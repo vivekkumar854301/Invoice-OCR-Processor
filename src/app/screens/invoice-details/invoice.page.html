@@ -10,10 +10,10 @@
         <div class="content-panel" [class.expanded]="!showImagePanel">
 
             @switch (option()) {
-            @case ("Tabs") {
+            @case ("Tab View") {
             <IOP-invoice-tab-form [invoiceData]="invoiceData()"></IOP-invoice-tab-form>
             }
-            @case ("Scroll") {
+            @case ("Scroll View") {
             <IOP-invoice-info-form [invoiceData]="invoiceData()"></IOP-invoice-info-form>
             }
             }

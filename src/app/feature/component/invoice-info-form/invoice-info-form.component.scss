@@ -6,7 +6,8 @@ nav {
   z-index: 1000;
   display: flex;
   gap: 20px;
-  background-color: rgba(137, 43, 226, 0.042);
+  // background-color: rgba(137, 43, 226, 0.042);
+  background-color: #f1f5f9;
   padding-top: 2rem;
 }
 .card-header {
@@ -84,7 +85,7 @@ section .fields-grid {
 }
 
 .header-icon {
-  background-color: rgba(137, 43, 226, 0.121);
+  background-color: #f1f5f9;
   border-radius: 20%;
   padding: 0.2rem;
   display: flex;
