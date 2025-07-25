@@ -12,14 +12,16 @@ import { NgceComponentsModule } from '@clarium/ngce-components';
 export class InvoiceSystemHeaderComponent {
   private readonly router = inject(Router);
   layoutOption = output<string>();
-
   onUploadClick() {
     this.router.navigate(['upload']);
   }
 
-  layoutOptions = ['Tabs', 'Scroll', 'Accordian'];
+  layoutOptions:string[] = ['Tabs', 'Scroll', 'Accordian'];
+  option:string = this.layoutOptions[1];
+
 
   layoutOptionChanged(event: any) {
     this.layoutOption.emit(event);
+    this.option = event;
   }
 }

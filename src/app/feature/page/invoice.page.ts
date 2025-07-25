@@ -5,6 +5,7 @@ import {
   OnInit,
   Renderer2,
   TemplateRef,
+  computed,
   inject,
   signal,
   viewChild,
@@ -33,6 +34,7 @@ import { InvoiceService } from '../service/invoice.service';
 import { CommonModule } from '@angular/common';
 import { InvoiceInfoFormComponent } from '../component/invoice-info-form/invoice-info-form.component';
 import { InvoiceTabFormComponent } from "../component/invoice-tab-form/invoice-tab-form.component";
+import { SharedService } from '../../shared/service/shared.service';
 
 @Component({
   selector: 'IOP-invoice',
@@ -59,7 +61,8 @@ export class InvoiceComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly http = inject(HttpClient);
   private readonly fileManagementService = inject(FileManagementService);
-
+  private readonly sharedService = inject(SharedService);
+  option = computed(()=> this.sharedService.getSelector());
   // EMPTY_INVOICE_DATA: InvoiceData = {
   //   invoice: {
   //     invoice_number: '',

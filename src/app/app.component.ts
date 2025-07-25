@@ -10,6 +10,7 @@ import { ThemeService, THEME_CONFIG } from '@clarium/ngce-components';
 import { InvoiceSystemHeaderComponent } from './feature/component/invoice-system-header/invoice-system-header.component';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
+import { SharedService } from './shared/service/shared.service';
 
 @Component({
   selector: 'IOP-root',
@@ -19,6 +20,7 @@ import { filter } from 'rxjs';
 })
 export class AppComponent {
   title = 'Invoice-OCR-Processor';
+  private readonly sharedService = inject(SharedService);
 
   private themeService = inject(ThemeService);
   private router = inject(Router);
@@ -32,6 +34,10 @@ export class AppComponent {
 
     this.themeService.applyTheme('light-theme');
     this.themeService.setCustomProperties({});
+  }
+
+  layoutOption(option: string){
+    this.sharedService.changeSelector(option);
   }
 
   ngOnInit() {

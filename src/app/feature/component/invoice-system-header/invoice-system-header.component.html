@@ -10,7 +10,7 @@
         </div>
         <nav class="nav">
             <ngce-select [dataSource]="layoutOptions" (valueChange)="layoutOptionChanged($event)"
-                [(ngModel)]="layoutOptions[0]"></ngce-select>
+                [(ngModel)]="option"></ngce-select>
             <a [routerLink]="['invoices']">View All Invoices</a>
             <ngce-button [customStyles]="{backgroundColor:'#0077b6'}" (handleClick)="onUploadClick()">Upload
                 Invoice</ngce-button>
