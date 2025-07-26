@@ -117,6 +117,19 @@ a {
   }
 }
 
+a.active-link {
+  color: #0077b6; /* Example highlight color */
+  font-weight: 600; /* Bold or highlight */
+  /* Optional: background or underline */
+  text-decoration: underline;
+}
+
+/* Optional: override hover styles so it does not remove active style */
+a.active-link:hover {
+  color: #005f87; /* darken on hover */
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   nav {
     flex-direction: column;
