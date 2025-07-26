@@ -53,8 +53,6 @@ export class InvoiceInfoFormComponent {
   }
   ngOnInit() {
     this.buildForm();
-
-    console.log(this.invoiceData());
     this.createSectionsConfig();
   }
   buildForm() {
@@ -132,6 +130,10 @@ export class InvoiceInfoFormComponent {
     });
   }
 
+  inputStyles = {
+    width: 'auto',
+    'font-size': '0.9rem',
+  };
   sectionsConfig: any;
   createSectionsConfig() {
     this.sectionsConfig = [

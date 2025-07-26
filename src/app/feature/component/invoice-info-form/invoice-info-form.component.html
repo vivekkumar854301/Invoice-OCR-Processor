@@ -30,54 +30,44 @@
         </div>
         @if(isBillingSectionExpanded){
         <div>
+
             <div class="fields-grid" formGroupName="billed_to">
-                <label>Customer Name:
-                    <input formControlName="customer_name" type="text" />
-                </label>
-                <label>Address Line 1:
-                    <input formControlName="address_line1" type="text" />
-                </label>
-                <label>Address Line 2:
-                    <input formControlName="address_line2" type="text" />
-                </label>
-                <label>Address Line 3:
-                    <input formControlName="address_line3" type="text" />
-                </label>
-                <label>Address Line 4:
-                    <input formControlName="address_line4" type="text" />
-                </label>
-                <label>State / Country:
-                    <input formControlName="state_country" type="text" />
-                </label>
-                <label>Distance (km):
-                    <input formControlName="distance_level_km" type="text" />
-                </label>
-                <label>Phone:
-                    <input formControlName="phone" type="text" />
-                </label>
-                <label>State Code:
-                    <input formControlName="state_code" type="text" />
-                </label>
-                <label>GSTIN No:
-                    <input formControlName="gstin_no_customer" type="text" />
-                </label>
+                <ngce-text-input formControlName="customer_name" label="Customer Name:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="phone" label="Phone:" [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="state_country" label="State / Country:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-textarea formControlName="address_line1" label="Address Line 1:"
+                    [customStyles]="inputStyles"></ngce-textarea>
+                <ngce-textarea formControlName="address_line2" label="Address Line 2:"
+                    [customStyles]="inputStyles"></ngce-textarea>
+                <ngce-textarea formControlName="address_line3" label="Address Line 3:"
+                    [customStyles]="inputStyles"></ngce-textarea>
+                <ngce-textarea formControlName="address_line4" label="Address Line 4:"
+                    [customStyles]="inputStyles"></ngce-textarea>
+
+                <ngce-text-input formControlName="distance_level_km" label="Distance (km):"
+                    [customStyles]="inputStyles"></ngce-text-input>
+
+                <ngce-text-input formControlName="state_code" label="State Code:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="gstin_no_customer" label="GSTIN No:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+
+
             </div>
+
             <div class="fields-grid">
-                <label>Bank Name:
-                    <input formControlName="bank_name" type="text" />
-                </label>
-                <label>Bank Branch:
-                    <input formControlName="bank_branch" type="text" />
-                </label>
-                <label>Account Name:
-                    <input formControlName="account_name" type="text" />
-                </label>
-                <label>Account No:
-                    <input formControlName="account_no" type="text" />
-                </label>
-                <label>IFSC Code:
-                    <input formControlName="IFSC_code" type="text" />
-                </label>
+                <ngce-text-input formControlName=" bank_name" label="Bank Name:" [customStyles]="inputStyles">
+                </ngce-text-input>
+                <ngce-text-input formControlName="bank_branch" label="Bank Branch:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="account_name" label="Account Name:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="account_no" label="Account No:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="IFSC_code" label="IFSC Code:"
+                    [customStyles]="inputStyles"></ngce-text-input>
             </div>
         </div>
         }
@@ -102,6 +92,7 @@
     </section>
 
     <div class="submit-button">
+        <ngce-button type="reset" [color]="'#4b87c2;'" [variant]="'outline'">Cancel</ngce-button>
         <ngce-button type="submit" [color]="'#4b87c2;'">Save</ngce-button>
     </div>
 </form>

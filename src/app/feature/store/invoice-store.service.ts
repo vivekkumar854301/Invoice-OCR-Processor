@@ -175,4 +175,11 @@ export class InvoiceStoreService {
       initialValue: this.initialInvoiceData,
     }
   );
+
+  // readonly invoiceDataStore1 = toSignal(
+  //   this.invoiceService.getInvoiceData(),
+  //   {
+  //     initialValue: this.initialInvoiceData,
+  //   }
+  // );
 }

@@ -9,10 +9,33 @@
 @if(isExpanded){
 <section [formGroup]="formGroup">
     <div class="fields-grid">
-        <label *ngFor="let field of fields">
+        @for (field of fields; track $index) {
+        @switch (field.type) {
+        @case ('text') {
+        <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"
+            [label]="field.label"></ngce-text-input>
+        }
+
+        @case ('number') {
+        <ngce-number-input [formControlName]="field.controlName" [label]="field.label"></ngce-number-input>
+        }
+
+        @case ('date') {
+        <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"></ngce-datepicker>
+        }
+
+        @default {
+        <ngce-text-input [formControlName]="field.controlName"></ngce-text-input>
+        }
+        }
+        }
+
+        <!-- <label *ngFor="let field of fields">
             {{ field.label }}:
+           
+
             <input [formControlName]="field.controlName" [type]="field.type" />
-        </label>
+        </label> -->
     </div>
 </section>
 }

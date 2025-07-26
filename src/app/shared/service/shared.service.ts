@@ -6,7 +6,7 @@ import { Injectable, signal } from '@angular/core';
 export class SharedService {
   constructor() {}
 
-  private selectorOrg = signal<string>('Scroll');
+  private selectorOrg = signal<string>('Scroll View');
   private selector = this.selectorOrg.asReadonly();
   private isExpanded = signal<boolean>(true);
   private isCardExpanded = this.isExpanded.asReadonly();

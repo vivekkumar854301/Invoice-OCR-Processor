@@ -33,7 +33,6 @@ import { FileManagementService } from '../upload-screen/service/file-management.
   imports: [
     NgceIconModule,
     NgceComponentsModule,
-    ProductLineComponent,
     CommonModule,
     InvoiceInfoFormComponent,
     InvoiceTabFormComponent,
@@ -44,137 +43,37 @@ import { FileManagementService } from '../upload-screen/service/file-management.
 })
 export class InvoiceComponent implements OnInit {
   private readonly invoiceStore = inject(InvoiceStoreService);
-  private readonly invoiceService = inject(InvoiceService);
-  private readonly dialogService = inject(DialogService);
   private readonly route = inject(ActivatedRoute);
-  private readonly http = inject(HttpClient);
-  private readonly fileManagementService = inject(FileManagementService);
   private readonly sharedService = inject(SharedService);
+  private readonly renderer = inject(Renderer2);
+  private readonly invoiceService = inject(InvoiceService);
+
+  scale: number = 1;
+  showImagePanel = true;
+
   option = computed(() => this.sharedService.getSelector());
-  // EMPTY_INVOICE_DATA: InvoiceData = {
-  //   invoice: {
-  //     invoice_number: '',
-  //     invoice_date: '',
-  //     irn_number: '',
-  //     acknowledgement_no: '',
-  //     acknowledgement_data: '',
-  //     e_way_bill_no: '',
-  //   },
-  //   supplier: {
-  //     supplier_name: '',
-  //     supplier_address: '',
-  //     supplier_gst_no: '',
-  //     msme_no: '',
-  //     pan_no: '',
-  //   },
-  //   purchase: {
-  //     order_no: '',
-  //     order_date: '',
-  //     transport_name: '',
-  //     agent_name: '',
-  //     LR_no: '',
-  //     LR_date: '',
-  //     merchandiser_name: '',
-  //   },
-  //   taxes: {
-  //     taxable_value: '',
-  //     CGST_amount: '',
-  //     SGST_amount: '',
-  //     IGST_amount: '',
-  //     total_tax_amount: '',
-  //   },
-  //   discount: {
-  //     discount_percentage: '',
-  //     discount_amount: '',
-  //   },
-  //   charges: {
-  //     other_deductions: '',
-  //     freight_charges: '',
-  //     other_charges: '',
-  //   },
-  //   amount: {
-  //     round_off_amount: '',
-  //     invoice_amount: '',
-  //     amount_in_words: '',
-  //   },
-  //   billing: {
-  //     billed_to: '',
-  //     bank_name: '',
-  //     bank_branch: '',
-  //     account_name: '',
-  //     account_no: '',
-  //     IFSC_code: '',
-  //   },
-  //   product_details: {
-  //     items: [],
-  //     total_quantity: 0,
-  //     total_net_Amount: 0,
-  //   },
-  // };
 
   readonly invoiceData = signal<InvoiceInfo>(
     this.invoiceStore.invoiceDataStore1()
   );
 
-  invoiceId: string = '';
-  imageUrl: string = '';
-  invoiceInfo: any;
-
-  showImagePanel = true;
-
-  toggleImagePanel() {
-    this.showImagePanel = !this.showImagePanel;
-  }
+  zoomableImage = viewChild<ElementRef<HTMLImageElement>>('zoomableImage');
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((params) => {
       const invoiceNumber = params.get('invoiceNumber');
-
+      // this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
+      //   next:(res)=>{
+      //     this.invoiceData.set(res);
+      //   }
+      // })
       this.invoiceData.set(this.invoiceStore.invoiceDataStore1());
     });
   }
 
-  dialogHeaderTemplate = viewChild<TemplateRef<any>>('dialogHeader');
-  dialogcontentTemplate = viewChild<TemplateRef<any>>('dialogContent');
-  zoomableImage = viewChild<ElementRef<HTMLImageElement>>('zoomableImage');
-  viewImage() {
-    const dialogConfig: DialogConfig = {
-      header: this.dialogHeaderTemplate(),
-      content: this.dialogcontentTemplate()!,
-      dialogType: 'classic',
-      closeOnBackdropClick: false,
-      accessibility: true,
-      draggable: true,
-      closeButton: true,
-      styles: DIALOGBOX_STYLES,
-      resizable: true,
-    };
-    this.dialogService.openDialog(dialogConfig);
+  toggleImagePanel() {
+    this.showImagePanel = !this.showImagePanel;
   }
-  ngcebutton = {
-    'background-color': '#ffffffe6',
-    color: 'black',
-    'padding-left': '.75rem',
-    'padding-right': '.75rem',
-    'font-size': '.875rem',
-    'line-height': '1.25rem',
-    'justify-content': 'center',
-    'align-items': 'center',
-    cursor: 'pointer',
-    display: 'inline-flex',
-  };
-  invoiceDetails = {
-    border: 'none',
-    padding: '1.5rem',
-    width: 'auto',
-    cursor: 'default',
-    height: '100%',
-  };
-  rerunOCR() {
-    console.log('Re-run OCR clicked');
-  }
-  private readonly renderer = inject(Renderer2);
-  scale: number = 1;
 
   zoomIn(): void {
     this.scale += 0.1;

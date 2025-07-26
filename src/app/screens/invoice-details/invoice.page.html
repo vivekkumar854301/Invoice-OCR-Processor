@@ -1,8 +1,11 @@
 <div class="main-container">
     <!-- Sidebar Toggle Button -->
     <div [ngClass]="showImagePanel? 'toggle-button': 'hide-image-btn'" (click)="toggleImagePanel()">
-        <ngce-icon *ngIf="showImagePanel" name="left-4" size="20px" color="#0077b6"></ngce-icon>
-        <ngce-icon *ngIf="!showImagePanel" name="right-4" size="20px" color="#0077b6"></ngce-icon>
+        @if(showImagePanel){
+        <ngce-icon *ngIf="showImagePanel" name="right-4" size="20px" color="#0077b6"></ngce-icon>
+        }@else {
+        <ngce-icon *ngIf="!showImagePanel" name="left-4" size="20px" color="#0077b6"></ngce-icon>
+        }
     </div>
 
     <div class="invoice-main-container">
@@ -21,6 +24,7 @@
 
         <!-- IMAGE DRAWER PANEL -->
         <div class="image-panel" [class.collapsed]="!showImagePanel">
+
             <div class="image-header">
                 <h3>Invoice Preview</h3>
                 <p class="truncate-text">{{ invoiceData().invoice.invoice_number }} - {{
@@ -34,6 +38,8 @@
                 <ngce-button (handleClick)="resetZoom()">Reset</ngce-button>
             </div>
 
+
+
             <div class="image-box">
                 <img #zoomableImage class="zoomable" src="assets/images/images/1 Zeal apparel Invoice_page_1.jpeg"
                     alt="Invoice Image" />
@@ -41,27 +47,3 @@
         </div>
     </div>
 </div>
-
-
-<!-- <div class="tab-nav">
-          <a href="#invoice-section">Invoice Details</a>
-          <a href="#supplier-section">Supplier Details</a>
-          <a href="#purchase-section">Purchase & Transport</a>
-          <a href="#taxes-section">Tax & Charges</a>
-          <a href="#amount-section">Amount Summary</a>
-          <a href="#billing-section">Billing Info</a>
-          <a href="#products-section">Product Details</a>
-        </div> -->
-<!-- <ngce-card class="form-card" [customStyles]="invoiceDetails">
-          <section class="invoice-section">
-            <IOP-invoice-form [invoiceData]="invoiceData()"></IOP-invoice-form>
-          </section>
-  
-          <section class="invoice-section">
-            <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
-          </section>
-  
-          <section class="invoice-section">
-            <IOP-payment></IOP-payment>
-          </section>
-        </ngce-card> -->

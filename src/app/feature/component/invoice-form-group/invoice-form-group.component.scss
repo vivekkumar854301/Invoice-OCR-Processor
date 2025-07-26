@@ -39,17 +39,10 @@ form {
 section {
   background: #fff;
   border-radius: 8px;
-  padding: 20px 30px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   box-shadow: 0 1px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e2e8f0;
-}
-
-.active-section {
-  // outline: 2px solid #007bff;
-  background-color: #fff0f006;
-  transition: all 0.3s;
-  color: black;
+  padding: 0.8rem;
 }
 
 section h2 {
@@ -83,7 +76,7 @@ h2 {
 
 section .fields-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 12px 20px;
 }
 
@@ -94,25 +87,6 @@ section .fields-grid {
   display: flex;
   align-self: center;
   justify-content: center;
-}
-/* Input styles */
-input[type="text"],
-input[type="date"],
-input[type="number"] {
-  width: 100%;
-  padding: 5px 7px;
-  // font-size: 1rem;
-  font-weight: 400;
-  border: 0.1px solid #cccccc67;
-  border-radius: 5px;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="date"]:focus,
-input[type="number"]:focus {
-  outline: none;
 }
 
 a {

@@ -43,7 +43,7 @@
 
 .image-panel {
   width: 50%;
-  // background-color: #ffffff;
+  text-align: center;
   background-color: #f1f5f933;
   border-radius: 8px;
   padding: 1rem;
@@ -75,6 +75,12 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+  }
+
+  .image-header-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
   }
 
   .image-controls {

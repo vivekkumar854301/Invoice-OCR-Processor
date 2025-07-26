@@ -2,7 +2,7 @@
     <ngce-tab-group>
         <ngce-tab>
             <ngce-tab-header>
-                Invoice  
+                Invoice
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
                 <section id="invoice-section" formGroupName="invoice">
@@ -35,7 +35,7 @@
         </ngce-tab>
         <ngce-tab>
             <ngce-tab-header>
-                Supplier  
+                Supplier
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
                 <section id="supplier-section" formGroupName="supplier">
@@ -65,7 +65,7 @@
         </ngce-tab>
         <ngce-tab>
             <ngce-tab-header>
-                Purchase  
+                Purchase
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
                 <section id="purchase-section" formGroupName="purchase">
@@ -101,7 +101,7 @@
         </ngce-tab>
         <ngce-tab>
             <ngce-tab-header>
-                Taxes  
+                Taxes
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
                 <section id="taxes-section" formGroupName="taxes">
@@ -131,7 +131,7 @@
         </ngce-tab>
         <ngce-tab>
             <ngce-tab-header>
-                Discount  
+                Discount
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
                 <section id="discount-section" formGroupName="discount">
@@ -152,7 +152,7 @@
         </ngce-tab>
         <ngce-tab>
             <ngce-tab-header>
-                Charges  
+                Charges
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
                 <section id="charges-section" formGroupName="charges">
@@ -176,7 +176,7 @@
         </ngce-tab>
         <ngce-tab>
             <ngce-tab-header>
-                Amount  
+                Amount
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
                 <section id="amount-section" formGroupName="amount">
@@ -200,7 +200,7 @@
         </ngce-tab>
         <ngce-tab>
             <ngce-tab-header>
-                Billing  
+                Billing
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
                 <section id="billing-section" formGroupName="billing">
@@ -264,19 +264,20 @@
         </ngce-tab>
         <ngce-tab>
             <ngce-tab-header>
-                Products  
+                Products
             </ngce-tab-header>
             <ngce-tab-content [customStyles]="tabContentStyles">
-                <section id="product-details-section" formGroupName="product_details" >
+                <section id="product-details-section" formGroupName="product_details">
                     <h2>
                         <div class="header-icon"><i class="ngce-doc-text"></i></div>
                         Product Details
                     </h2>
-                   
+
                     <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
                 </section>
                 <div class="submit-button">
                     <ngce-button type="submit" [color]="' rgba(137, 43, 226, 0.5);'">Submit</ngce-button>
+
                 </div>
             </ngce-tab-content>
         </ngce-tab>

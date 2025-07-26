@@ -1,8 +1,9 @@
-import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Inject, Input, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Directive({
   selector: '[iOPAutoFragment]',
+  standalone: true,
 })
 export class AutoFragmentDirective {
   @Input() iOPAutoFragment!: string;
@@ -11,7 +12,10 @@ export class AutoFragmentDirective {
   private hasBeenVisible = false;
   private static currentFragment = '';
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    @Inject(ElementRef) private el: ElementRef,
+    private renderer: Renderer2
+  ) {}
 
   ngOnInit(): void {
     this.observer = new IntersectionObserver(
