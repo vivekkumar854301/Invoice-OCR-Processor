@@ -354,9 +354,9 @@ export class InvoiceInfoFormComponent {
   onSubmit() {
     if (this.invoiceForm.valid) {
       console.log(this.invoiceForm.value);
-      alert('Form submitted! Check console.');
+      // alert('Form submitted! Check console.');
     } else {
-      alert('Please fill the required fields.');
+      // alert('Please fill the required fields.');
     }
   }
 }
