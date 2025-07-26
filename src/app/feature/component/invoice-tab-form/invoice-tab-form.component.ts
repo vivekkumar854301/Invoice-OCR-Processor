@@ -44,8 +44,6 @@ export class InvoiceTabFormComponent {
   }
   ngOnInit() {
     this.buildForm();
-
-    console.log(this.invoiceData());
   }
   buildForm() {
     this.invoiceForm = this.fb.group({

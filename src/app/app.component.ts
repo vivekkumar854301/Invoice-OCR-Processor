@@ -20,11 +20,11 @@ import { SharedService } from './shared/service/shared.service';
 export class AppComponent {
   title = 'Invoice-OCR-Processor';
   private readonly sharedService = inject(SharedService);
+  private readonly themeService = inject(ThemeService);
+  private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
 
-  private themeService = inject(ThemeService);
-  private router = inject(Router);
-  private route = inject(ActivatedRoute);
-  private viewportScroller = inject(ViewportScroller);
+  isLayoutDropdownVisible!: boolean;
 
   constructor() {
     this.themeService.setTypography({
@@ -38,8 +38,6 @@ export class AppComponent {
   layoutOption(option: string) {
     this.sharedService.changeSelector(option);
   }
-
-  isLayoutDropdownVisible!: boolean;
 
   ngOnInit() {
     this.router.events
@@ -64,7 +62,7 @@ export class AppComponent {
 
         // 2. Set layout option visibility based on current route path
         const currentPath = event.urlAfterRedirects;
-        this.isLayoutDropdownVisible = currentPath.includes('/invoice-details'); // adjust condition as needed
+        this.isLayoutDropdownVisible = currentPath.includes('/invoice-details');
       });
   }
 }

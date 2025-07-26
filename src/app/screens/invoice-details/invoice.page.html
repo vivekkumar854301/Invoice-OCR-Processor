@@ -1,5 +1,5 @@
 <div class="main-container">
-    <!-- Sidebar Toggle Button -->
+    <!-- Image Toggle Button -->
     <div [ngClass]="showImagePanel? 'toggle-button': 'hide-image-btn'" (click)="toggleImagePanel()">
         @if(showImagePanel){
         <ngce-icon *ngIf="showImagePanel" name="right-4" size="20px" color="#0077b6"></ngce-icon>
@@ -13,11 +13,12 @@
         <div class="content-panel" [class.expanded]="!showImagePanel">
 
             @switch (option()) {
-            @case ("Tab View") {
-            <IOP-invoice-tab-form [invoiceData]="invoiceData()"></IOP-invoice-tab-form>
-            }
+
             @case ("Scroll View") {
             <IOP-invoice-info-form [invoiceData]="invoiceData()"></IOP-invoice-info-form>
+            }
+            @case ("Tab View") {
+            <IOP-invoice-tab-form [invoiceData]="invoiceData()"></IOP-invoice-tab-form>
             }
             }
         </div>
