@@ -6,7 +6,7 @@ import { NgceIconModule } from '@clarium/ngce-icon';
 
 import { NgceComponentsModule } from '@clarium/ngce-components';
 import { SharedService } from '../../../shared/service/shared.service';
-import { FormGroupHeaderComponent } from '../../../form-group-header/form-group-header.component';
+import { FormGroupHeaderComponent } from '../form-group-header/form-group-header.component';
 
 @Component({
   selector: 'IOP-invoice-form-group',

@@ -29,7 +29,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
 import { InvoiceFormGroupComponent } from '../invoice-form-group/invoice-form-group.component';
 import { SharedService } from '../../../shared/service/shared.service';
-import { FormGroupHeaderComponent } from '../../../form-group-header/form-group-header.component';
+import { FormGroupHeaderComponent } from '../form-group-header/form-group-header.component';
 
 @Component({
   selector: 'IOP-invoice-info-form',
