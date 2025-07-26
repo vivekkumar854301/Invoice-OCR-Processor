@@ -41,6 +41,13 @@ export class InvoiceComponent implements OnInit {
   private readonly renderer = inject(Renderer2);
 
   scale = 1;
+  offsetX = 0;
+  offsetY = 0;
+  isPanning = false;
+  startX = 0;
+  startY = 0;
+  imgStartX = 0;
+  imgStartY = 0;
   showImagePanel = true;
 
   option = computed(() => this.sharedService.getSelector());
@@ -68,17 +75,55 @@ export class InvoiceComponent implements OnInit {
 
   zoomIn(): void {
     this.scale += 0.1;
+    if (this.scale - 0.1 <= 1) {
+      // First zoom: re-center any pan
+      this.offsetX = 0;
+      this.offsetY = 0;
+    }
     this.applyTransform();
   }
 
   zoomOut(): void {
-    this.scale = Math.max(0.1, this.scale - 0.1);
+    this.scale = Math.max(1, this.scale - 0.1);
+    if (this.scale === 1) {
+      this.offsetX = 0;
+      this.offsetY = 0;
+    }
     this.applyTransform();
   }
 
   resetZoom(): void {
     this.scale = 1;
+    this.offsetX = 0;
+    this.offsetY = 0;
     this.applyTransform();
+  }
+
+  startPan(event: MouseEvent | TouchEvent) {
+    if (this.scale <= 1) return; // Only allow panning if zoomed in
+    event.preventDefault();
+    this.isPanning = true;
+    const e = (event instanceof TouchEvent ? event.touches[0] : event) as
+      | MouseEvent
+      | Touch;
+    this.startX = e.clientX;
+    this.startY = e.clientY;
+    this.imgStartX = this.offsetX;
+    this.imgStartY = this.offsetY;
+  }
+
+  onPan(event: MouseEvent | TouchEvent) {
+    if (!this.isPanning || this.scale <= 1) return; // No drag unless zoomed
+    const e = (event instanceof TouchEvent ? event.touches[0] : event) as
+      | MouseEvent
+      | Touch;
+    this.offsetX = this.imgStartX + (e.clientX - this.startX);
+    this.offsetY = this.imgStartY + (e.clientY - this.startY);
+    this.applyTransform();
+  }
+
+  endPan() {
+    this.isPanning = false;
   }
 
   private applyTransform(): void {
@@ -86,7 +131,7 @@ export class InvoiceComponent implements OnInit {
       this.renderer.setStyle(
         this.zoomableImage.nativeElement,
         'transform',
-        `scale(${this.scale})`
+        `translate(-50%, -50%) translate(${this.offsetX}px, ${this.offsetY}px) scale(${this.scale})`
       );
       this.renderer.setStyle(
         this.zoomableImage.nativeElement,

@@ -36,7 +36,6 @@
   text-align: center;
   background-color: #f1f5f933;
   border-radius: 8px;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -50,15 +49,29 @@
     pointer-events: none;
   }
 
+  .image-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.116);
+    height: 5rem;
+  }
   .image-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     h3 {
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: #2c3e50;
       margin-bottom: 0.3rem;
     }
     .truncate-text {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #6b7280;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -66,32 +79,42 @@
     }
   }
 
-  .image-header-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #ffffff;
-  }
-
   .image-controls {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 0.5rem;
     margin: 1rem 0;
   }
 
   .image-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    user-select: none;
 
     img.zoomable {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      /* These lines ensure the image starts fit inside the box: */
       max-width: 100%;
-      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
       border-radius: 6px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+      cursor: pointer;
+      user-drag: none;
+      user-select: none;
+      transition: transform 0.3s cubic-bezier(0.4, 2, 0.5, 1), box-shadow 0.3s;
+    }
+    // Optional: show grab cursor only when zoomed in
+    img.zoomable.zoomed-in {
+      cursor: grab;
     }
   }
 }
