@@ -40,6 +40,11 @@ export class InvoiceInfoFormComponent {
 
   invoiceData = input<any>();
 
+  isBillingSectionExpanded: boolean = true;
+  isProductsSectionExpanded: boolean = true;
+
+  private sharedService = inject(SharedService);
+
   constructor(private fb: FormBuilder) {
     effect(() => {
       const data = this.invoiceData();
@@ -292,11 +297,6 @@ export class InvoiceInfoFormComponent {
     ];
   }
 
-  // Getter for product items FormArray
-  get items(): FormArray {
-    return this.invoiceForm.get('product_details.items') as FormArray;
-  }
-
   onSubmit() {
     if (this.invoiceForm.valid) {
       console.log(this.invoiceForm.value);
@@ -306,10 +306,6 @@ export class InvoiceInfoFormComponent {
     }
   }
 
-  isBillingSectionExpanded: boolean = true;
-  isProductsSectionExpanded: boolean = true;
-
-  private sharedService = inject(SharedService);
   onExpansionToggle(id: string) {
     if (id === 'billing-section') {
       this.isBillingSectionExpanded = !this.isBillingSectionExpanded;
