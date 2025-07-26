@@ -1,15 +1,17 @@
-<div class="card-header">
+<!-- <div class="card-header">
     <h2>
-        <div class="header-icon"><i class="ngce-doc-text"></i></div>{{ title }}
+        <div class="header-icon"><i class="ngce-doc-text"></i></div>{{ title() }}
     </h2>
     <div (click)="onExpansionToggle()">
         <ngce-icon class="ngce-down-open-1"></ngce-icon>
     </div>
-</div>
-@if(isExpanded){
-<section [formGroup]="formGroup">
+</div> -->
+<IOP-form-group-header [header]="formHeaderConfig" (isExpanded)="onToggleClick($event)"></IOP-form-group-header>
+
+@if(isExpansionNeeded() && isExpanded){
+<section [formGroup]="formGroup()!">
     <div class="fields-grid">
-        @for (field of fields; track $index) {
+        @for (field of fields(); track $index) {
         @switch (field.type) {
         @case ('text') {
         <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"
@@ -26,6 +28,33 @@
 
         @default {
         <ngce-text-input [formControlName]="field.controlName"></ngce-text-input>
+        }
+        }
+        }
+    </div>
+</section>
+}@else if (!isExpansionNeeded()) {
+<section [formGroup]="formGroup()!">
+    <div class="fields-grid">
+        @for (field of fields(); track $index) {
+        @switch (field.type) {
+        @case ('text') {
+        <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"
+            [label]="field.label"></ngce-text-input>
+        }
+
+        @case ('number') {
+        <ngce-number-input [formControlName]="field.controlName" [label]="field.label"
+            [customStyles]="inputStyles"></ngce-number-input>
+        }
+
+        @case ('date') {
+        <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"
+            [customStyles]="inputStyles"></ngce-datepicker>
+        }
+
+        @default {
+        <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"></ngce-text-input>
         }
         }
         }

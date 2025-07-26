@@ -1,0 +1,14 @@
+<div class="header-container">
+    <h2>
+        <div class="header-icon">
+            <ngce-icon [class]="header()?.headerIcon!"></ngce-icon>
+        </div>
+        {{ header()?.title }}
+    </h2>
+
+    @if (header()?.isExpansionNeed) {
+    <div (click)="onToggleClicked()" style="cursor: pointer;">
+        <ngce-icon [class]="isContentExpanded? 'ngce-down-open-1' : 'ngce-up-open-1'"></ngce-icon>
+    </div>
+    }
+</div>

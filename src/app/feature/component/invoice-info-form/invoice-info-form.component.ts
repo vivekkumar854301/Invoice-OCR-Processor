@@ -1,5 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, SimpleChanges, effect, inject, input } from '@angular/core';
+import {
+  Component,
+  SimpleChanges,
+  computed,
+  effect,
+  inject,
+  input,
+  signal,
+} from '@angular/core';
 import {
   FormGroup,
   FormBuilder,
@@ -12,11 +20,16 @@ import {
 import { NgceComponentsModule, IGridConfig } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
 import { ProductLineComponent } from '../product-line/product-line.component';
-import { InvoiceData } from '../../model/invoice.model';
+import {
+  IFormHeader,
+  InvoiceData,
+  InvoiceInfo,
+} from '../../model/invoice.model';
 import { RouterLink, RouterModule } from '@angular/router';
 import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
 import { InvoiceFormGroupComponent } from '../invoice-form-group/invoice-form-group.component';
 import { SharedService } from '../../../shared/service/shared.service';
+import { FormGroupHeaderComponent } from '../../../form-group-header/form-group-header.component';
 
 @Component({
   selector: 'IOP-invoice-info-form',
@@ -30,35 +43,81 @@ import { SharedService } from '../../../shared/service/shared.service';
     RouterModule,
     AutoFragmentDirective,
     InvoiceFormGroupComponent,
+    FormGroupHeaderComponent,
   ],
   templateUrl: './invoice-info-form.component.html',
   styleUrl: './invoice-info-form.component.scss',
   standalone: true,
 })
 export class InvoiceInfoFormComponent {
+  private readonly sharedService = inject(SharedService);
+  private readonly fb = inject(FormBuilder);
+
+  isExpansionNeeded = input<boolean>();
   invoiceForm!: FormGroup;
+  invoiceData = input<InvoiceInfo>();
+  isBillingSectionExpanded = signal(true);
 
-  invoiceData = input<any>();
-
-  isBillingSectionExpanded: boolean = true;
   isProductsSectionExpanded: boolean = true;
-
-  private sharedService = inject(SharedService);
-
-  constructor(private fb: FormBuilder) {
+  inputStyles = {
+    width: 'auto',
+    'font-size': '0.9rem',
+  };
+  sectionsConfig: any;
+  option = computed(() => this.sharedService.getSelector());
+  constructor() {
     effect(() => {
       const data = this.invoiceData();
       if (data && this.invoiceForm) {
         this.invoiceForm.patchValue(data);
       }
+      console.log(this.isExpansionNeeded());
+      this.billingDetailsHeader = {
+        ...this.billingDetailsHeader,
+        isExpansionNeed: this.isExpansionNeeded()!,
+        isExpanded: this.isExpansionNeeded() ? true : false,
+      };
+      this.productDetailsHeader = {
+        ...this.productDetailsHeader,
+        isExpansionNeed: this.isExpansionNeeded()!,
+        isExpanded: this.isExpansionNeeded() ? true : false,
+      };
+      console.log(this.billingDetailsHeader);
     });
   }
+
   getFormGroup(groupName: string): FormGroup {
     return this.invoiceForm.get(groupName) as FormGroup;
   }
+
   ngOnInit() {
     this.buildForm();
     this.createSectionsConfig();
+  }
+
+  productDetailsHeader: IFormHeader = {
+    title: 'Product Details',
+    headerIcon: 'ngce-doc-text',
+    isExpansionNeed: this.isExpansionNeeded()!,
+    isExpanded: this.isExpansionNeeded() ? true : false,
+  };
+
+  billingDetailsHeader: IFormHeader = {
+    title: 'Billing Details',
+    headerIcon: 'ngce-doc-text',
+    isExpansionNeed: this.isExpansionNeeded()!,
+    isExpanded: this.isExpansionNeeded() ? true : false,
+  };
+
+  onBillingDetailsToggle(expanded: boolean) {
+    this.isBillingSectionExpanded.set(expanded);
+    this.billingDetailsHeader.isExpanded = expanded; // Keep in sync
+    console.log(this.isBillingSectionExpanded(), this.option());
+  }
+
+  onProductDetailsToggle(expanded: boolean) {
+    this.isProductsSectionExpanded = expanded;
+    this.productDetailsHeader.isExpanded = expanded; // Keep in sync
   }
   buildForm() {
     this.invoiceForm = this.fb.group({
@@ -135,11 +194,6 @@ export class InvoiceInfoFormComponent {
     });
   }
 
-  inputStyles = {
-    width: 'auto',
-    'font-size': '0.9rem',
-  };
-  sectionsConfig: any;
   createSectionsConfig() {
     this.sectionsConfig = [
       {
@@ -303,14 +357,6 @@ export class InvoiceInfoFormComponent {
       alert('Form submitted! Check console.');
     } else {
       alert('Please fill the required fields.');
-    }
-  }
-
-  onExpansionToggle(id: string) {
-    if (id === 'billing-section') {
-      this.isBillingSectionExpanded = !this.isBillingSectionExpanded;
-    } else if (id === 'product-details-section') {
-      this.isProductsSectionExpanded = !this.isProductsSectionExpanded;
     }
   }
 }

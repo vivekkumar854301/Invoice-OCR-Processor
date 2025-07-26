@@ -1,34 +1,75 @@
 <nav>
-    <a *ngFor="let section of sectionsConfig" [routerLink]="[]" [fragment]="section.id" queryParamsHandling="preserve">
+    @for(section of sectionsConfig; track section.id){
+    <a [routerLink]="[]" [fragment]="section.id" queryParamsHandling="preserve">
         {{ section.navLabel || section.title }}
     </a>
-    <a [routerLink]="[]" fragment="billing-section" queryParamsHandling="preserve">Billing</a>
-    <a [routerLink]="[]" fragment="product-details-section" queryParamsHandling="preserve">Products</a>
+    }
+    <a [routerLink]="[]" [fragment]="'billing-section'" queryParamsHandling="preserve">
+        Billing
+    </a>
+    <a [routerLink]="[]" [fragment]="'product-details-section'" queryParamsHandling="preserve">
+        Product Details
+    </a>
 </nav>
 
 <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
 
-    <ng-container *ngFor="let section of sectionsConfig">
-        <section [id]="section.id" [formGroupName]="section.groupName" [iOPAutoFragment]="section.id">
-            <IOP-invoice-form-group [title]="section.title" [formGroup]="getFormGroup(section.groupName)"
-                [fields]="section.fields">
-            </IOP-invoice-form-group>
-        </section>
-    </ng-container>
+    @for (section of sectionsConfig; track section.id) {
+    <section [id]="section.id" [formGroupName]="section.groupName" [iOPAutoFragment]="section.id">
+        <IOP-invoice-form-group [title]="section.title" [formGroup]="getFormGroup(section.groupName)"
+            [fields]="section.fields" [isExpansionNeeded]="isExpansionNeeded()!">
+        </IOP-invoice-form-group>
+    </section>
+    }
 
     <!-- Billing Section (custom) -->
 
     <section id="billing-section" formGroupName="billing" [iOPAutoFragment]="'billing-section'">
-        <div class="card-header">
-            <h2>
-                <div class="header-icon"><i class="ngce-doc-text"></i></div>
-                Billing Details
-            </h2>
-            <div (click)="onExpansionToggle('billing-section')">
-                <ngce-icon class="ngce-down-open-1"></ngce-icon>
+        <IOP-form-group-header [header]="billingDetailsHeader"
+            (isExpanded)="onBillingDetailsToggle($event)"></IOP-form-group-header>
+        @if(option()==='Accordian View' && isBillingSectionExpanded()){
+        <div>
+
+            <div class="fields-grid" formGroupName="billed_to">
+                <ngce-text-input formControlName="customer_name" label="Customer Name:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="phone" label="Phone:" [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="state_country" label="State / Country:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-textarea formControlName="address_line1" label="Address Line 1:"
+                    [customStyles]="inputStyles"></ngce-textarea>
+                <ngce-textarea formControlName="address_line2" label="Address Line 2:"
+                    [customStyles]="inputStyles"></ngce-textarea>
+                <ngce-textarea formControlName="address_line3" label="Address Line 3:"
+                    [customStyles]="inputStyles"></ngce-textarea>
+                <ngce-textarea formControlName="address_line4" label="Address Line 4:"
+                    [customStyles]="inputStyles"></ngce-textarea>
+
+                <ngce-text-input formControlName="distance_level_km" label="Distance (km):"
+                    [customStyles]="inputStyles"></ngce-text-input>
+
+                <ngce-text-input formControlName="state_code" label="State Code:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="gstin_no_customer" label="GSTIN No:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+
+
+            </div>
+
+            <div class="fields-grid">
+                <ngce-text-input formControlName="bank_name" label="Bank Name:" [customStyles]="inputStyles">
+                </ngce-text-input>
+                <ngce-text-input formControlName="bank_branch" label="Bank Branch:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="account_name" label="Account Name:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="account_no" label="Account No:"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                <ngce-text-input formControlName="IFSC_code" label="IFSC Code:"
+                    [customStyles]="inputStyles"></ngce-text-input>
             </div>
         </div>
-        @if(isBillingSectionExpanded){
+        }@else if (option()!=='Accordian View') {
         <div>
 
             <div class="fields-grid" formGroupName="billed_to">
@@ -76,17 +117,13 @@
 
     <!-- Product Details Section -->
     <section id="product-details-section" formGroupName="product_details" [iOPAutoFragment]="'product-details-section'">
-        <div class="card-header">
-            <h2>
-                <div class="header-icon"><i class="ngce-doc-text"></i></div>
-                Product Details
-            </h2>
-            <div (click)="onExpansionToggle('product-details-section')">
-                <ngce-icon class="ngce-down-open-1"></ngce-icon>
-            </div>
-        </div>
-        @if(isProductsSectionExpanded){
-        <IOP-product-line [gridData]="invoiceData()"></IOP-product-line>
+
+        <IOP-form-group-header [header]="productDetailsHeader"
+            (isExpanded)="onProductDetailsToggle($event)"></IOP-form-group-header>
+        @if(option()==='Accordian View' && isProductsSectionExpanded){
+        <IOP-product-line [gridData]="invoiceData()!"></IOP-product-line>
+        }@else if (option()!=='Accordian View') {
+        <IOP-product-line [gridData]="invoiceData()!"></IOP-product-line>
         }
 
     </section>

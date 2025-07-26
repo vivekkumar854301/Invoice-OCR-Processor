@@ -1,0 +1,21 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.header-icon {
+  background-color: #f1f5f9;
+  border-radius: 20%;
+  padding: 0.2rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}

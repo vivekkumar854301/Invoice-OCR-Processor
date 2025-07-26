@@ -1,35 +1,28 @@
-import { NgceIconModule } from '@clarium/ngce-icon';
-import {
-  NgceComponentsModule,
-  DialogService,
-  DialogConfig,
-} from '@clarium/ngce-components';
-import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import {
   Component,
   OnInit,
   inject,
   computed,
   signal,
-  viewChild,
-  TemplateRef,
+  ViewChild,
   ElementRef,
   Renderer2,
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgceIconModule } from '@clarium/ngce-icon';
+import { NgceComponentsModule } from '@clarium/ngce-components';
+import { CommonModule } from '@angular/common';
 import { InvoiceInfoFormComponent } from '../../feature/component/invoice-info-form/invoice-info-form.component';
 import { InvoiceTabFormComponent } from '../../feature/component/invoice-tab-form/invoice-tab-form.component';
-import { ProductLineComponent } from '../../feature/component/product-line/product-line.component';
 import { InvoiceInfo } from '../../feature/model/invoice.model';
 import { InvoiceService } from '../../feature/service/invoice.service';
 import { InvoiceStoreService } from '../../feature/store/invoice-store.service';
-import { DIALOGBOX_STYLES } from '../../shared/commonCss/common.style';
 import { SharedService } from '../../shared/service/shared.service';
 import { FileManagementService } from '../upload-screen/service/file-management.service';
 
 @Component({
   selector: 'IOP-invoice',
+  standalone: true,
   imports: [
     NgceIconModule,
     NgceComponentsModule,
@@ -46,9 +39,8 @@ export class InvoiceComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly sharedService = inject(SharedService);
   private readonly renderer = inject(Renderer2);
-  private readonly invoiceService = inject(InvoiceService);
 
-  scale: number = 1;
+  scale = 1;
   showImagePanel = true;
 
   option = computed(() => this.sharedService.getSelector());
@@ -57,21 +49,20 @@ export class InvoiceComponent implements OnInit {
     this.invoiceStore.invoiceDataStore1()
   );
 
-  zoomableImage = viewChild<ElementRef<HTMLImageElement>>('zoomableImage');
+  @ViewChild('zoomableImage') zoomableImage!: ElementRef<HTMLImageElement>;
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((params) => {
       const invoiceNumber = params.get('invoiceNumber');
+      // If needed, replace mocked invoice with actual service fetch.
       // this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
-      //   next:(res)=>{
-      //     this.invoiceData.set(res);
-      //   }
-      // })
+      //   next: (res) => this.invoiceData.set(res),
+      // });
       this.invoiceData.set(this.invoiceStore.invoiceDataStore1());
     });
   }
 
-  toggleImagePanel() {
+  toggleImagePanel(): void {
     this.showImagePanel = !this.showImagePanel;
   }
 
@@ -91,15 +82,14 @@ export class InvoiceComponent implements OnInit {
   }
 
   private applyTransform(): void {
-    const image = this.zoomableImage();
-    if (image && image.nativeElement) {
+    if (this.zoomableImage && this.zoomableImage.nativeElement) {
       this.renderer.setStyle(
-        image.nativeElement,
+        this.zoomableImage.nativeElement,
         'transform',
         `scale(${this.scale})`
       );
       this.renderer.setStyle(
-        image.nativeElement,
+        this.zoomableImage.nativeElement,
         'transition',
         'transform 0.2s'
       );

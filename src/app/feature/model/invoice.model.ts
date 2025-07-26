@@ -178,3 +178,10 @@ export interface FieldConfig {
   controlName: string;
   type: string;
 }
+
+export interface IFormHeader {
+  title: string;
+  headerIcon: string;
+  isExpansionNeed: boolean;
+  isExpanded?: boolean;
+}

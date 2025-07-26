@@ -8,23 +8,26 @@
         }
     </div>
 
+
     <div class="invoice-main-container">
         <!-- CONTENT SIDE CONTENT -->
         <div class="content-panel" [class.expanded]="!showImagePanel">
-
             @switch (option()) {
-
             @case ("Scroll View") {
-            <IOP-invoice-info-form [invoiceData]="invoiceData()"></IOP-invoice-info-form>
+            <IOP-invoice-info-form [invoiceData]="invoiceData()" [isExpansionNeeded]="false"></IOP-invoice-info-form>
             }
             @case ("Tab View") {
             <IOP-invoice-tab-form [invoiceData]="invoiceData()"></IOP-invoice-tab-form>
+            }@case('Accordian View'){
+            <IOP-invoice-info-form [invoiceData]="invoiceData()" [isExpansionNeeded]="true"></IOP-invoice-info-form>
             }
             }
         </div>
 
+
         <!-- IMAGE DRAWER PANEL -->
         <div class="image-panel" [class.collapsed]="!showImagePanel">
+
 
             <div class="image-header">
                 <h3>Invoice Preview</h3>
@@ -33,11 +36,13 @@
                 </p>
             </div>
 
+
             <div class="image-controls">
                 <ngce-icon name="zoom-in" (click)="zoomIn()" color="#0077b6"></ngce-icon>
                 <ngce-icon name="zoom-out" (click)="zoomOut()" color="#0077b6"></ngce-icon>
                 <ngce-button (handleClick)="resetZoom()">Reset</ngce-button>
             </div>
+
 
 
 
