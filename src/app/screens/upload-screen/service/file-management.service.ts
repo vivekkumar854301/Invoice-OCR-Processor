@@ -7,7 +7,7 @@ import { Observable, retryWhen } from 'rxjs';
 })
 export class FileManagementService {
   private readonly http = inject(HttpClient);
-  private baseUrl = 'http://10.3.0.49:8000';
+  private baseUrl = 'http://10.3.0.19:8000';
 
   onUploadInvoice(invoices: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/upload`, invoices);
@@ -18,6 +18,12 @@ export class FileManagementService {
   }
 
   getInvoiceDetails(invoiceNumber: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/invoices/number/${invoiceNumber}`);
+    return this.http.get(`${this.baseUrl}/invoices/number`, {
+      params: { invoice_num: invoiceNumber },
+    });
   }
 }
+
+// for upload: 'http://10.3.0.49:8000/upload'
+// to get all invoies : 'http://10.3.0.49:8000/invoices'
+// to get particular invoice details: 'http://10.3.0.49:8000/invoices/number/${invoiceNumber}'

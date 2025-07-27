@@ -90,7 +90,7 @@ export interface InvoiceInfo {
   };
   supplier: {
     supplier_name: string;
-    supplier_address: string;
+    supplier_address: SupplierAddress | string;
     supplier_gst_no: string;
     msme_no: string;
     pan_no: string;
@@ -173,10 +173,18 @@ export interface InvoiceInfo {
   image_binary_data: string;
 }
 
+export interface SupplierAddress {
+  address: string;
+  email?: string;
+  mobile?: string;
+}
+
 export interface FieldConfig {
   label: string;
   controlName: string;
   type: string;
+  fields?: FieldConfig[];
+  groupName?: string;
 }
 
 export interface IFormHeader {

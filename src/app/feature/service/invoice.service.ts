@@ -19,8 +19,12 @@ export class InvoiceService {
     },
     supplier: {
       supplier_name: 'ZEAL APPAREL',
-      supplier_address:
-        '234, ASHISH INDUSTRIAL ESTATE, GOKHALE ROAD (SOUTH), DADAR (WEST), MUMBAI MAHARASHTRA(27)',
+      supplier_address: {
+        address:
+          '234, ASHISH INDUSTRIAL ESTATE, GOKHALE ROAD (SOUTH), DADAR (WEST), MUMBAI MAHARASHTRA(27)',
+        email: 'contact@zealapparel.com', // add realistic mock email
+        mobile: '9876543210', // add realistic mock mobile
+      },
       supplier_gst_no: '',
       msme_no: '',
       pan_no: '',
@@ -201,8 +205,8 @@ export class InvoiceService {
   private readonly http = inject(HttpClient);
 
   getInvoiceData(invoiceNumber: string): Observable<any> {
-    return this.http.get<any>(
-      `http://10.3.0.49:8000/invoices/number/${invoiceNumber}`
-    );
+    return this.http.get<any>(`http://10.3.0.19:8000/invoices/number`, {
+      params: { invoice_num: invoiceNumber },
+    });
   }
 }

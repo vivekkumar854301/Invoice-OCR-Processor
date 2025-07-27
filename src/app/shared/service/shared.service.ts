@@ -11,6 +11,16 @@ export class SharedService {
   private isExpanded = signal<boolean>(true);
   private isCardExpanded = this.isExpanded.asReadonly();
 
+  private selectedImageBinary = signal<string | null>(null);
+
+  setSelectedImage(binaryData: string) {
+    this.selectedImageBinary.set(binaryData);
+  }
+
+  getSelectedImage(): string | null {
+    return this.selectedImageBinary();
+  }
+
   changeSelector(option: string) {
     this.selectorOrg.set(option);
   }

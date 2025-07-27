@@ -80,7 +80,11 @@ export class InvoiceStoreService {
     },
     supplier: {
       supplier_name: '',
-      supplier_address: '',
+      supplier_address: {
+        address: '',
+        email: '',
+        mobile: '',
+      },
       supplier_gst_no: '',
       msme_no: '',
       pan_no: '',

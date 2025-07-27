@@ -9,10 +9,10 @@
 </ng-template>
 
 <ng-template #rateTemplate let-row="row">
-  <span>{{ row.rate | currency:'INR':'symbol-narrow' }}</span>
+  <span>{{ parseRate(row.rate) | currency:'INR':'symbol-narrow' }}</span>
 </ng-template>
 <ng-template #mrpRateTemplate let-row="row">
-  <span>{{ row.MRP_rate | currency:'INR':'symbol-narrow' }}</span>
+  <span>{{ parseRate(row.rate) | currency:'INR':'symbol-narrow' }}</span>
 </ng-template>
 <ng-template #taxamountTemplate let-row="row">
   <span>{{ row.tax_amount | currency:'INR':'symbol-narrow' }}</span>

@@ -13,6 +13,29 @@
     <div class="fields-grid">
         @for (field of fields(); track $index) {
         @switch (field.type) {
+        @case('group'){
+        <ng-container [formGroupName]="field.groupName!">
+            @for (subField of field.fields; track $index) {
+            @switch(subField.type) {
+            @case('text') {
+            <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-text-input>
+            }
+            @case('number') {
+            <ngce-number-input [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-number-input>
+            }
+            @case('date') {
+            <ngce-datepicker [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-datepicker>
+            }
+            @default {
+            <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-text-input>
+            }
+            }}
+        </ng-container>
+        }
         @case ('text') {
         <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"
             [label]="field.label"></ngce-text-input>
@@ -38,23 +61,44 @@
     <div class="fields-grid">
         @for (field of fields(); track $index) {
         @switch (field.type) {
+        @case('group'){
+        <ng-container [formGroupName]="field.groupName!">
+            @for (subField of field.fields; track $index) {
+            @switch(subField.type) {
+            @case('text') {
+            <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-text-input>
+            }
+            @case('number') {
+            <ngce-number-input [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-number-input>
+            }
+            @case('date') {
+            <ngce-datepicker [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-datepicker>
+            }
+            @default {
+            <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-text-input>
+            }
+            }}
+        </ng-container>
+        }
         @case ('text') {
         <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"
             [label]="field.label"></ngce-text-input>
         }
 
         @case ('number') {
-        <ngce-number-input [formControlName]="field.controlName" [label]="field.label"
-            [customStyles]="inputStyles"></ngce-number-input>
+        <ngce-number-input [formControlName]="field.controlName" [label]="field.label"></ngce-number-input>
         }
 
         @case ('date') {
-        <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"
-            [customStyles]="inputStyles"></ngce-datepicker>
+        <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"></ngce-datepicker>
         }
 
         @default {
-        <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"></ngce-text-input>
+        <ngce-text-input [formControlName]="field.controlName"></ngce-text-input>
         }
         }
         }

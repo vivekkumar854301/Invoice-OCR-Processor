@@ -69,7 +69,38 @@ export class InvoiceInfoFormComponent {
     effect(() => {
       const data = this.invoiceData();
       if (data && this.invoiceForm) {
-        this.invoiceForm.patchValue(data);
+        // Normalize supplier_address if needed
+        let normalizedData = { ...data };
+        if (
+          normalizedData.supplier &&
+          typeof normalizedData.supplier.supplier_address === 'string'
+        ) {
+          normalizedData.supplier = {
+            ...normalizedData.supplier,
+            supplier_address: {
+              address: normalizedData.supplier.supplier_address,
+              email: '',
+              mobile: '',
+            },
+          };
+        }
+
+        const transformedData = {
+          ...normalizedData,
+          invoice: {
+            ...normalizedData.invoice,
+            invoice_date: this.convertToDateObject(
+              normalizedData.invoice.invoice_date
+            ),
+          },
+          purchase: {
+            ...normalizedData.purchase,
+            LR_date: this.convertToDateObject(normalizedData.purchase.LR_date),
+          },
+        };
+
+        console.log(transformedData);
+        this.invoiceForm.patchValue(transformedData);
       }
       console.log(this.isExpansionNeeded());
       this.billingDetailsHeader = {
@@ -88,6 +119,19 @@ export class InvoiceInfoFormComponent {
 
   getFormGroup(groupName: string): FormGroup {
     return this.invoiceForm.get(groupName) as FormGroup;
+  }
+
+  convertToDateObject(dateStr: string): Date | null {
+    if (!dateStr) return null;
+
+    const [day, month, year] = dateStr.split('/').map(Number);
+
+    if (isNaN(day) || isNaN(month) || isNaN(year)) return null;
+
+    const fullYear = year < 100 ? 2000 + year : year; // handle 2-digit years
+    console.log(new Date(fullYear, month - 1, day));
+
+    return new Date(fullYear, month - 1, day); // month is 0-based
   }
 
   ngOnInit() {
@@ -131,7 +175,11 @@ export class InvoiceInfoFormComponent {
       }),
       supplier: this.fb.group({
         supplier_name: ['', Validators.required],
-        supplier_address: [''],
+        supplier_address: this.fb.group({
+          address: [''],
+          email: [''],
+          mobile: [''],
+        }),
         supplier_gst_no: [''],
         msme_no: [''],
         pan_no: [''],
@@ -237,14 +285,20 @@ export class InvoiceInfoFormComponent {
           },
           {
             label: 'Supplier Address',
-            controlName: 'supplier_address',
-            type: 'text',
+            groupName: 'supplier_address', // nested group for address fields
+            type: 'group', // specify this is a group
+            fields: [
+              { label: 'Address', controlName: 'address', type: 'text' },
+              { label: 'Email', controlName: 'email', type: 'email' },
+              { label: 'Mobile', controlName: 'mobile', type: 'text' },
+            ],
           },
           { label: 'GST No', controlName: 'supplier_gst_no', type: 'text' },
           { label: 'MSME No', controlName: 'msme_no', type: 'text' },
           { label: 'PAN No', controlName: 'pan_no', type: 'text' },
         ],
       },
+
       {
         id: 'purchase-section',
         title: 'Purchase Details',
@@ -349,6 +403,17 @@ export class InvoiceInfoFormComponent {
         ],
       },
     ];
+  }
+
+  normalizeData(data: any) {
+    if (data.supplier && typeof data.supplier.supplier_address === 'string') {
+      data.supplier.supplier_address = {
+        address: data.supplier.supplier_address,
+        email: '',
+        mobile: '',
+      };
+    }
+    return data;
   }
 
   onSubmit() {

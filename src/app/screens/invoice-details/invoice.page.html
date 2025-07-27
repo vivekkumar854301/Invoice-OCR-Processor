@@ -49,8 +49,8 @@
 
             <div class="image-box" (mousedown)="startPan($event)" (mousemove)="onPan($event)" (mouseleave)="endPan()"
                 (mouseup)="endPan()" (touchstart)="startPan($event)" (touchmove)="onPan($event)" (touchend)="endPan()">
-                <img #zoomableImage class="zoomable" [class.zoomed-in]="scale > 1"
-                    src="assets/images/images/1 Zeal apparel Invoice_page_1.jpeg" alt="Invoice Image" />
+                <img #zoomableImage class="zoomable" [class.zoomed-in]="scale > 1" [src]="imageData"
+                    alt="Invoice Image" />
             </div>
 
         </div>

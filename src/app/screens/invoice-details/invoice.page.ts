@@ -39,6 +39,7 @@ export class InvoiceComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly sharedService = inject(SharedService);
   private readonly renderer = inject(Renderer2);
+  private readonly invoiceService = inject(InvoiceService);
 
   scale = 1;
   offsetX = 0;
@@ -56,16 +57,23 @@ export class InvoiceComponent implements OnInit {
     this.invoiceStore.invoiceDataStore1()
   );
 
+  imageData!: string;
+
   @ViewChild('zoomableImage') zoomableImage!: ElementRef<HTMLImageElement>;
 
   ngOnInit(): void {
+    this.imageData = this.sharedService.getSelectedImage()!;
+
     this.route.queryParamMap.subscribe((params) => {
       const invoiceNumber = params.get('invoiceNumber');
       // If needed, replace mocked invoice with actual service fetch.
-      // this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
-      //   next: (res) => this.invoiceData.set(res),
-      // });
-      this.invoiceData.set(this.invoiceStore.invoiceDataStore1());
+      this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
+        next: (res) => {
+          this.invoiceData.set(res);
+          console.log(this.invoiceData());
+        },
+      });
+      // this.invoiceData.set(this.invoiceStore.invoiceDataStore1());
     });
   }
 

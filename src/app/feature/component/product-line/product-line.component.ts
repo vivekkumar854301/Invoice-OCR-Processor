@@ -71,10 +71,22 @@ export class ProductLineComponent implements OnInit {
   constructor() {
     effect(() => {
       const data = this.gridData();
+      console.log(this.gridData());
+
       if (data && data.product_details?.items) {
         this.productLineSignal.set(data.product_details.items);
         console.log(this.productLineSignal());
       }
+      console.log(this.gridDataConfig());
+      console.log(this.productLineSignal());
+
+      console.log(this.flatProductLines());
+
+      const raw = this.productLineSignal();
+      console.log('Raw product line:', raw);
+
+      const flat = this.flatProductLines();
+      console.log('Flattened product line:', flat);
     });
   }
   ngOnInit(): void {
@@ -297,6 +309,16 @@ export class ProductLineComponent implements OnInit {
     },
   }));
 
+  parseRate(rate: string | number): number {
+    if (typeof rate === 'string') {
+      return parseFloat(rate.replace(/,/g, ''));
+    }
+    if (typeof rate === 'number') {
+      return rate;
+    }
+    return 0; // fallback for null, undefined, etc.
+  }
+
   readonly gridDataConfig = computed<GridConfig>(() => ({
     data: this.flatProductLines(),
     columns: [
@@ -423,19 +445,57 @@ export class ProductLineComponent implements OnInit {
     },
   }));
 
+  private safeArray<T>(value: T | T[] | undefined | null): T[] {
+    if (Array.isArray(value)) return value;
+    if (value == null || value === '') return [];
+    // If it's a single value (string/number), wrap in array
+    return [value] as T[];
+  }
   flatProductLines = computed(() =>
-    this.productLineSignal().flatMap((item) =>
-      item.size.size.map((sizeLabel: string, index: number) => ({
+    this.productLineSignal().flatMap((item, i) => {
+      // Defensive check: treat empty string as no size (empty array)
+      const rawSizes = item.size?.size;
+      const sizes = Array.isArray(rawSizes)
+        ? rawSizes
+        : rawSizes && rawSizes !== '' // non-empty string
+        ? [rawSizes]
+        : [];
+
+      const rawPieces = item.size?.pieces;
+      const pieces = Array.isArray(rawPieces)
+        ? rawPieces
+        : rawPieces && rawPieces !== ''
+        ? [rawPieces]
+        : [];
+
+      const rawQuantities = item.size?.quantity;
+      const quantities = Array.isArray(rawQuantities)
+        ? rawQuantities
+        : rawQuantities && rawQuantities !== ''
+        ? [rawQuantities]
+        : [];
+
+      const rawRates = item.size?.rate;
+      const rates = Array.isArray(rawRates)
+        ? rawRates
+        : rawRates && rawRates !== ''
+        ? [rawRates]
+        : [];
+
+      // If sizes array is empty but pieces/quantity are present, create a default sizes array with empty string to map properly:
+      const finalSizes = sizes.length > 0 ? sizes : [''];
+
+      return finalSizes.map((sizeLabel: string, index: number) => ({
         s_no: item.s_no,
         category: item.category,
         description: item.description,
         design_code: item.design_code,
         size: sizeLabel,
-        color: item.size.color,
-        UOM: item.size.UOM,
-        pieces: item.size.pieces[index],
-        quantity: item.size.quantity[index],
-        rate: item.size.rate?.[index] ?? 0,
+        color: item.size?.color ?? '',
+        UOM: item.size?.UOM ?? '',
+        pieces: pieces[index] ?? pieces[0] ?? '',
+        quantity: quantities[index] ?? quantities[0] ?? '',
+        rate: rates[index] ?? rates[0] ?? 0,
         MRP_rate: item.MRP_rate ?? 0,
         item_discount_percentage: item.item_discount_percentage ?? 0,
         item_discount_amount: item.item_discount_amount ?? 0,
@@ -443,8 +503,8 @@ export class ProductLineComponent implements OnInit {
         HSN: item.HSN ?? '',
         tax_percentage: item.tax_percentage ?? 0,
         tax_amount: item.tax_amount ?? 0,
-      }))
-    )
+      }));
+    })
   );
 
   readonly invoicedetailsgridConfig = computed<IGridConfig>(() => ({
