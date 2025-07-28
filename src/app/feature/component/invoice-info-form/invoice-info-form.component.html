@@ -17,7 +17,7 @@
     @for (section of sectionsConfig; track section.id) {
     <section [id]="section.id" [formGroupName]="section.groupName" [iOPAutoFragment]="section.id">
         <IOP-invoice-form-group [title]="section.title" [formGroup]="getFormGroup(section.groupName)"
-            [fields]="section.fields" [isExpansionNeeded]="isExpansionNeeded()!">
+            [fields]="section.fields" [isExpansionNeeded]="isExpansionNeeded()!" [sectionId]="section.id">
         </IOP-invoice-form-group>
     </section>
     }

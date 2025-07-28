@@ -74,9 +74,15 @@ h2 {
   font-size: 1.7rem;
 }
 
-section .fields-grid {
+.fields-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px 20px;
+}
+
+.amount-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 12px 20px;
 }
 

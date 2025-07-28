@@ -59,12 +59,6 @@ section {
   box-shadow: 0 1px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e2e8f0;
 
-  &.active-section {
-    background-color: #fff0f006;
-    transition: all 0.3s;
-    color: black;
-  }
-
   h2 {
     font-size: 1.2rem;
     margin-bottom: 20px;

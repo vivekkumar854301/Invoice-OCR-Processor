@@ -9,11 +9,11 @@
 
 
   <div class="invoices-container">
-    <!-- <ngce-button (click)="onInvoiceClick('291')">Demo</ngce-button> -->
+    <!-- <ngce-button (click)="onInvoiceClick('291', 's')">Demo</ngce-button> -->
     <div class="invoice-card" *ngFor="let image of apiResponse; let i = index"
       (click)="onInvoiceClick(image.invoice.invoice_number,  image.image_binary_data)">
       <img [src]="image.image_binary_data" class="image" />
-      <p>{{ image.invoice.invoice_number }}</p>
+      <p>{{ image.supplier.supplier_name }}</p>
     </div>
   </div>
 </div>

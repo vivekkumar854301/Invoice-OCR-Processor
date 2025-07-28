@@ -17,8 +17,8 @@ export class InvoiceSystemHeaderComponent {
     this.router.navigate(['upload']);
   }
 
-  layoutOptions: string[] = ['Tab View', 'Scroll View', 'Accordian View'];
-  option: string = this.layoutOptions[1];
+  layoutOptions: string[] = ['Scroll View', 'Accordian View', 'Tab View'];
+  option: string = this.layoutOptions[0];
 
   layoutOptionChanged(event: any) {
     this.layoutOption.emit(event);

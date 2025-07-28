@@ -25,6 +25,7 @@ export class InvoiceFormGroupComponent {
   formGroup = input<FormGroup>();
   fields = input<FieldConfig[]>();
   isExpansionNeeded = input<boolean>();
+  sectionId = input<string>();
 
   formHeaderConfig!: IFormHeader;
 
@@ -39,6 +40,8 @@ export class InvoiceFormGroupComponent {
   }
 
   ngOnInit() {
+    console.log(this.sectionId());
+
     this.isExpanded = this.sharedService.getIsExpandedState();
   }
 

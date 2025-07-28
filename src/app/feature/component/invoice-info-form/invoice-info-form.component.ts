@@ -288,9 +288,9 @@ export class InvoiceInfoFormComponent {
             groupName: 'supplier_address', // nested group for address fields
             type: 'group', // specify this is a group
             fields: [
-              { label: 'Address', controlName: 'address', type: 'text' },
               { label: 'Email', controlName: 'email', type: 'email' },
               { label: 'Mobile', controlName: 'mobile', type: 'text' },
+              { label: 'Address', controlName: 'address', type: 'text-area' },
             ],
           },
           { label: 'GST No', controlName: 'supplier_gst_no', type: 'text' },
@@ -398,7 +398,7 @@ export class InvoiceInfoFormComponent {
           {
             label: 'Amount in Words',
             controlName: 'amount_in_words',
-            type: 'text',
+            type: 'text-area',
           },
         ],
       },
