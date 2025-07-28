@@ -10,11 +10,14 @@ import {
 import { RouterLink, RouterModule } from '@angular/router';
 import { NgceComponentsModule } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { SharedService } from '../../../shared/service/shared/shared.service';
-import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
-import { IFormHeader, InvoiceInfo } from '../../../shared/models/invoice.model';
-import { FormGroupHeaderComponent } from '../../../shared/component/reusable-components/form-group-header/form-group-header.component';
-import { InvoiceFormGroupComponent } from '../../../shared/component/reusable-components/invoice-form-group/invoice-form-group.component';
+import { SharedService } from '../../../../shared/service/shared/shared.service';
+import { AutoFragmentDirective } from '../../../../feature/directives/auto-fragment.directive';
+import {
+  IFormHeader,
+  InvoiceInfo,
+} from '../../../../shared/models/invoice.model';
+import { FormGroupHeaderComponent } from '../../../../shared/component/reusable-components/form-group-header/form-group-header.component';
+import { InvoiceFormGroupComponent } from '../../../../shared/component/reusable-components/invoice-form-group/invoice-form-group.component';
 import { ProductLineComponent } from '../product-line/product-line.component';
 
 @Component({
@@ -54,9 +57,11 @@ export class InvoiceInfoFormComponent {
   constructor() {
     effect(() => {
       const data = this.invoiceData();
-      console.log('invoice data coming from page:', data);
+
       if (data && this.invoiceForm) {
         let normalizedData = { ...data };
+
+        //Sometimes supplier_address is string, and sometimes it is object, to normalize it to object, we are using this
         if (
           normalizedData.supplier &&
           typeof normalizedData.supplier.supplier_address === 'string'
@@ -71,6 +76,7 @@ export class InvoiceInfoFormComponent {
           };
         }
 
+        //converting all the date strings into objects
         const transformedData = {
           ...normalizedData,
           invoice: {
@@ -84,9 +90,6 @@ export class InvoiceInfoFormComponent {
             LR_date: this.convertToDateObject(normalizedData.purchase.LR_date),
           },
         };
-        console.log('invoice data coming:', data);
-        console.log('normalized  data coming:', normalizedData);
-        console.log('transformed data coming:', transformedData);
 
         this.invoiceForm.patchValue(transformedData);
       }
@@ -99,8 +102,9 @@ export class InvoiceInfoFormComponent {
     });
   }
 
-  getFormGroup(groupName: string): FormGroup {
-    return this.invoiceForm.get(groupName) as FormGroup;
+  ngOnInit() {
+    this.buildForm();
+    this.createSectionsConfig();
   }
 
   convertToDateObject(dateStr: string): Date | null {
@@ -113,11 +117,8 @@ export class InvoiceInfoFormComponent {
     return new Date(fullYear, month - 1, day); // month is 0-based
   }
 
-  ngOnInit() {
-    console.log('Invoice-info-form-initiated:', this.invoiceData());
-
-    this.buildForm();
-    this.createSectionsConfig();
+  getFormGroup(groupName: string): FormGroup {
+    return this.invoiceForm.get(groupName) as FormGroup;
   }
 
   productDetailsHeader: IFormHeader = {
@@ -132,6 +133,7 @@ export class InvoiceInfoFormComponent {
     this.productDetailsHeader.isExpanded = expanded; // Keep in sync
   }
 
+  //Form Configuration
   buildForm() {
     this.invoiceForm = this.fb.group({
       invoice: this.fb.group({
@@ -211,6 +213,7 @@ export class InvoiceInfoFormComponent {
     });
   }
 
+  //Creating sections to send it to reusable component
   createSectionsConfig() {
     this.sectionsConfig = [
       {
@@ -457,6 +460,7 @@ export class InvoiceInfoFormComponent {
 
   onSubmit() {
     if (this.invoiceForm.valid) {
+      console.log(this.invoiceForm);
     } else {
     }
   }

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, of, retryWhen } from 'rxjs';
 import { InvoiceInfo } from '../../models/invoice.model';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Injectable({
   providedIn: 'root',
@@ -305,6 +306,10 @@ export class FileManagementService {
   getInitialInvoiceData(): Observable<any> {
     return of(this.initialInvoiceData);
   }
+
+  readonly invoiceMockData = toSignal(this.getInvoiceMockData(), {
+    initialValue: this.initialInvoiceData,
+  });
 
   //Real Apis
   onUploadInvoice(invoices: any): Observable<any> {

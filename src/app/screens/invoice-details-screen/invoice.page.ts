@@ -12,10 +12,8 @@ import {
 import { ActivatedRoute } from '@angular/router';
 import { NgceComponentsModule } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { InvoiceInfoFormComponent } from '../../feature/component/invoice-info-form/invoice-info-form.component';
+import { InvoiceInfoFormComponent } from './components/invoice-info-form/invoice-info-form.component';
 import { InvoiceTabFormComponent } from '../../feature/component/invoice-tab-form/invoice-tab-form.component';
-import { InvoiceService } from '../../feature/service/invoice.service';
-import { InvoiceStoreService } from '../../feature/store/invoice-store.service';
 import { InvoiceInfo } from '../../shared/models/invoice.model';
 import { FileManagementService } from '../../shared/service/file-management/file-management.service';
 import { SharedService } from '../../shared/service/shared/shared.service';
@@ -35,11 +33,10 @@ import { SharedService } from '../../shared/service/shared/shared.service';
   styleUrl: './invoice.page.scss',
 })
 export class InvoiceComponent implements OnInit {
-  private readonly invoiceStore = inject(InvoiceStoreService);
   private readonly route = inject(ActivatedRoute);
   private readonly sharedService = inject(SharedService);
   private readonly renderer = inject(Renderer2);
-  private readonly invoiceService = inject(InvoiceService);
+  private readonly fileManagementService = inject(FileManagementService);
 
   scale = 1;
   offsetX = 0;
@@ -54,7 +51,7 @@ export class InvoiceComponent implements OnInit {
   option = computed(() => this.sharedService.getSelector());
 
   readonly invoiceData = signal<InvoiceInfo>(
-    this.invoiceStore.invoiceDataStore1()
+    this.fileManagementService.invoiceMockData()
   );
 
   imageData!: string;
@@ -67,7 +64,7 @@ export class InvoiceComponent implements OnInit {
     this.route.queryParamMap.subscribe((params) => {
       const invoiceNumber = params.get('invoiceNumber');
       // If needed, replace mocked invoice with actual service fetch.
-      this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
+      this.fileManagementService.getInvoiceDetails(invoiceNumber!).subscribe({
         next: (res) => {
           this.invoiceData.set(res);
           console.log('invoice data', this.invoiceData());
@@ -76,7 +73,6 @@ export class InvoiceComponent implements OnInit {
 
       // this.invoiceData.set(this.invoiceStore.invoiceDataStore1());
     });
-    console.log('invoice data', this.invoiceData());
   }
 
   toggleImagePanel(): void {

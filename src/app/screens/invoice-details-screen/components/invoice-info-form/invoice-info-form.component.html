@@ -1,4 +1,10 @@
 <nav>
+    <!-- 
+        why we are using queryParamsHandling="preserve"?
+        -Preserves the existing query parameters (such as invoiceNumber) 
+        in the URL when navigating to a different fragment (section) within this page. 
+        This ensures that the user's current context is not lost.
+-->
     @for(section of sectionsConfig; track section.id){
     <a [routerLink]="[]" [fragment]="section.id" queryParamsHandling="preserve">
         {{ section.navLabel || section.title }}
@@ -12,7 +18,7 @@
 <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
 
     @for (section of sectionsConfig; track section.id) {
-    <section [id]="section.id" [formGroupName]="section.groupName" [iOPAutoFragment]="section.id">
+    <section [id]="section.id" [formGroupName]="section.groupName">
         <IOP-invoice-form-group [title]="section.title" [formGroup]="getFormGroup(section.groupName)"
             [fields]="section.fields" [isExpansionNeeded]="isExpansionNeeded()!" [sectionId]="section.id">
         </IOP-invoice-form-group>
@@ -21,7 +27,7 @@
 
 
     <!-- Product Details Section -->
-    <section id="product-details-section" formGroupName="product_details" [iOPAutoFragment]="'product-details-section'">
+    <section id="product-details-section" formGroupName="product_details">
         <IOP-form-group-header [header]="productDetailsHeader"
             (isExpanded)="onProductDetailsToggle($event)"></IOP-form-group-header>
         @if((option()==='Accordian View' && isProductsSectionExpanded)|| option()!=='Accordian View'){

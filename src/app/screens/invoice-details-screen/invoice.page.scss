@@ -14,6 +14,7 @@
   z-index: 10;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
+
 .toggle-button {
   @extend .toggle-base;
   right: 39%;
@@ -108,7 +109,6 @@
       border-radius: 6px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       cursor: pointer;
-      user-drag: none;
       user-select: none;
       transition: transform 0.3s cubic-bezier(0.4, 2, 0.5, 1), box-shadow 0.3s;
     }
@@ -139,7 +139,7 @@
 // Responsive styles
 @media (max-width: 1024px) {
   .invoice-main-container {
-    flex-direction: column;
+    // flex-direction: column;
     height: auto;
   }
   .image-panel {
