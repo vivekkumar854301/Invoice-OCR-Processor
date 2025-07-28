@@ -1,118 +1,64 @@
 <IOP-form-group-header [header]="formHeaderConfig" (isExpanded)="onToggleClick($event)"></IOP-form-group-header>
 
-@if(isExpansionNeeded() && isExpanded){
-<section [formGroup]="formGroup()!">
-    <div [ngClass]="sectionId() === 'amount-section' ? 'amount-section' : 'fields-grid'">
-        @for (field of fields(); track $index) {
-        @switch (field.type) {
-        @case('group'){
-        <ng-container [formGroupName]="field.groupName!">
-            @for (subField of field.fields; track $index) {
-            @switch(subField.type) {
-            @case('text') {
-            <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-text-input>
+<ng-template #formSections let-formGroup="formGroup" let-fields="fields">
+    <section [formGroup]="formGroup!">
+        <div class="fields-grid">
+            @for (field of fields; track $index) {
+            @switch (field.type) {
+            @case('group'){
+            <ng-container [formGroupName]="field.groupName!">
+                @for (subField of field.fields; track $index) {
+                @switch(subField.type) {
+                @case('text') {
+                <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                }
+                @case('number') {
+                <ngce-number-input [formControlName]="subField.controlName" [label]="subField.label"
+                    [customStyles]="inputStyles"></ngce-number-input>
+                }
+                @case('date') {
+                <ngce-datepicker [formControlName]="subField.controlName" [label]="subField.label"
+                    [customStyles]="inputStyles"></ngce-datepicker>
+                }
+                @case('text-area') {
+                <ngce-textarea [formControlName]="subField.controlName" [label]="subField.label"
+                    [customStyles]="inputStyles"></ngce-textarea>
+                }
+                @default {
+                <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
+                    [customStyles]="inputStyles"></ngce-text-input>
+                }
+                }}
+            </ng-container>
+            }
+            @case ('text') {
+            <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"
+                [label]="field.label"></ngce-text-input>
+            }
+
+            @case ('number') {
+            <ngce-number-input [formControlName]="field.controlName" [label]="field.label"></ngce-number-input>
+            }
+
+            @case ('date') {
+            <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"></ngce-datepicker>
             }
             @case('text-area') {
-            <ngce-textarea [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-textarea>
-            }
-            @case('number') {
-            <ngce-number-input [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-number-input>
-            }
-            @case('date') {
-            <ngce-datepicker [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-datepicker>
-            }
-            @default {
-            <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-text-input>
-            }
-            }}
-        </ng-container>
-        }
-        @case ('text') {
-        <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"
-            [label]="field.label"></ngce-text-input>
-        }
-
-        @case ('number') {
-        <ngce-number-input [formControlName]="field.controlName" [label]="field.label"></ngce-number-input>
-        }
-
-        @case ('date') {
-        <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"></ngce-datepicker>
-        }
-        @case('text-area') {
-        <ngce-textarea [formControlName]="field.controlName" [label]="field.label"
-            [customStyles]="inputStyles"></ngce-textarea>
-        }
-
-        @default {
-        <ngce-text-input [formControlName]="field.controlName"></ngce-text-input>
-        }
-        }
-        }
-    </div>
-</section>
-}@else if (!isExpansionNeeded()) {
-<section [formGroup]="formGroup()!">
-    <div class="fields-grid">
-        @for (field of fields(); track $index) {
-        @switch (field.type) {
-        @case('group'){
-        <ng-container [formGroupName]="field.groupName!">
-            @for (subField of field.fields; track $index) {
-            @switch(subField.type) {
-            @case('text') {
-            <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-text-input>
-            }
-            @case('number') {
-            <ngce-number-input [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-number-input>
-            }
-            @case('date') {
-            <ngce-datepicker [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-datepicker>
-            }
-            @case('text-area') {
-            <ngce-textarea [formControlName]="subField.controlName" [label]="subField.label"
+            <ngce-textarea [formControlName]="field.controlName" [label]="field.label"
                 [customStyles]="inputStyles"></ngce-textarea>
             }
             @default {
-            <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
-                [customStyles]="inputStyles"></ngce-text-input>
+            <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"></ngce-text-input>
             }
-            }}
-        </ng-container>
-        }
-        @case ('text') {
-        <ngce-text-input [formControlName]="field.controlName" [customStyles]="inputStyles"
-            [label]="field.label"></ngce-text-input>
-        }
+            }
+            }
+        </div>
+    </section>
+</ng-template>
 
-        @case ('number') {
-        <ngce-number-input [formControlName]="field.controlName" [label]="field.label"></ngce-number-input>
-        }
-
-        @case ('date') {
-        <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"></ngce-datepicker>
-        }
-        @case('text-area') {
-        <ngce-textarea [formControlName]="field.controlName" [label]="field.label"
-            [customStyles]="inputStyles"></ngce-textarea>
-        }
-        @default {
-        <ngce-text-input [formControlName]="field.controlName"></ngce-text-input>
-        }
-        }
-        }
-    </div>
-</section>
+@if ((isExpansionNeeded() && isExpanded) || !isExpansionNeeded()) {
+<ng-container [ngTemplateOutlet]="formSections"
+    [ngTemplateOutletContext]="{ formGroup: formGroup(), fields: fields() }">
+</ng-container>
 }
-
-<!-- <ng-template #>
-
-</ng-template> -->

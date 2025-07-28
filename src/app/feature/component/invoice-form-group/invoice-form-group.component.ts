@@ -21,6 +21,8 @@ import { FormGroupHeaderComponent } from '../form-group-header/form-group-header
   styleUrl: './invoice-form-group.component.scss',
 })
 export class InvoiceFormGroupComponent {
+  private readonly sharedService = inject(SharedService);
+
   title = input<string>();
   formGroup = input<FormGroup>();
   fields = input<FieldConfig[]>();
@@ -31,7 +33,11 @@ export class InvoiceFormGroupComponent {
 
   isExpanded!: boolean;
 
-  private sharedService = inject(SharedService);
+  inputStyles = {
+    width: 'auto',
+    'font-size': '0.9rem',
+  };
+
   onExpansionToggle() {
     this.sharedService.toggleCardExpansion(
       !this.sharedService.getIsExpandedState()
@@ -40,15 +46,8 @@ export class InvoiceFormGroupComponent {
   }
 
   ngOnInit() {
-    console.log(this.sectionId());
-
     this.isExpanded = this.sharedService.getIsExpandedState();
   }
-
-  inputStyles = {
-    width: 'auto',
-    'font-size': '0.9rem',
-  };
 
   constructor() {
     effect(() => {

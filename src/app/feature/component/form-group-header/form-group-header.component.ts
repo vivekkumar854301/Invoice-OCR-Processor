@@ -10,7 +10,6 @@ import { IFormHeader } from '../../model/invoice.model';
 export class FormGroupHeaderComponent {
   header = input<IFormHeader>();
   isContentExpanded: boolean = true;
-
   isExpanded = output<boolean>();
 
   constructor() {
@@ -18,6 +17,7 @@ export class FormGroupHeaderComponent {
       this.isContentExpanded = this.header()!.isExpanded!;
     });
   }
+
   onToggleClicked() {
     if (this.header()) {
       this.isContentExpanded = !this.isContentExpanded;

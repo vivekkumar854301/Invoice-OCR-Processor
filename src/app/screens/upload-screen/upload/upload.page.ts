@@ -62,6 +62,12 @@ export class UploadComponent {
           horizontal: 'right',
         });
         this.router.navigate(['invoices']);
+        const invoiceNumber =
+          data.files_processed[0].result.invoice.invoice_number;
+        // this.router.navigate(['invoice-details', {queryParams: { data.invoice.invoiceNumber },}]);
+        this.router.navigate(['invoice-details'], {
+          queryParams: { invoiceNumber },
+        });
       },
       error: (err) => {
         this.isLoading = false;
