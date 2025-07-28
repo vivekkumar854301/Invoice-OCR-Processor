@@ -1,11 +1,3 @@
-<!-- <div class="card-header">
-    <h2>
-        <div class="header-icon"><i class="ngce-doc-text"></i></div>{{ title() }}
-    </h2>
-    <div (click)="onExpansionToggle()">
-        <ngce-icon class="ngce-down-open-1"></ngce-icon>
-    </div>
-</div> -->
 <IOP-form-group-header [header]="formHeaderConfig" (isExpanded)="onToggleClick($event)"></IOP-form-group-header>
 
 @if(isExpansionNeeded() && isExpanded){
@@ -29,6 +21,10 @@
             <ngce-datepicker [formControlName]="subField.controlName" [label]="subField.label"
                 [customStyles]="inputStyles"></ngce-datepicker>
             }
+            @case('text-area') {
+            <ngce-textarea [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-textarea>
+            }
             @default {
             <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
                 [customStyles]="inputStyles"></ngce-text-input>
@@ -48,7 +44,10 @@
         @case ('date') {
         <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"></ngce-datepicker>
         }
-
+        @case('text-area') {
+        <ngce-textarea [formControlName]="field.controlName" [label]="field.label"
+            [customStyles]="inputStyles"></ngce-textarea>
+        }
         @default {
         <ngce-text-input [formControlName]="field.controlName"></ngce-text-input>
         }
@@ -77,6 +76,10 @@
             <ngce-datepicker [formControlName]="subField.controlName" [label]="subField.label"
                 [customStyles]="inputStyles"></ngce-datepicker>
             }
+            @case('text-area') {
+            <ngce-textarea [formControlName]="subField.controlName" [label]="subField.label"
+                [customStyles]="inputStyles"></ngce-textarea>
+            }
             @default {
             <ngce-text-input [formControlName]="subField.controlName" [label]="subField.label"
                 [customStyles]="inputStyles"></ngce-text-input>
@@ -96,7 +99,10 @@
         @case ('date') {
         <ngce-datepicker [formControlName]="field.controlName" [label]="field.label"></ngce-datepicker>
         }
-
+        @case('text-area') {
+        <ngce-textarea [formControlName]="field.controlName" [label]="field.label"
+            [customStyles]="inputStyles"></ngce-textarea>
+        }
         @default {
         <ngce-text-input [formControlName]="field.controlName"></ngce-text-input>
         }

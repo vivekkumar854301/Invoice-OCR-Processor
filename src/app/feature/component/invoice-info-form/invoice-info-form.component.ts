@@ -1,35 +1,21 @@
 import { CommonModule } from '@angular/common';
+import { Component, computed, effect, inject, input } from '@angular/core';
 import {
-  Component,
-  SimpleChanges,
-  computed,
-  effect,
-  inject,
-  input,
-  signal,
-} from '@angular/core';
-import {
-  FormGroup,
   FormBuilder,
-  Validators,
-  FormArray,
-  FormsModule,
+  FormGroup,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 
-import { NgceComponentsModule, IGridConfig } from '@clarium/ngce-components';
-import { NgceIconModule } from '@clarium/ngce-icon';
-import { ProductLineComponent } from '../product-line/product-line.component';
-import {
-  IFormHeader,
-  InvoiceData,
-  InvoiceInfo,
-} from '../../model/invoice.model';
 import { RouterLink, RouterModule } from '@angular/router';
+import { NgceComponentsModule } from '@clarium/ngce-components';
+import { NgceIconModule } from '@clarium/ngce-icon';
+import { SharedService } from '../../../shared/service/shared-service/shared.service';
 import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
-import { InvoiceFormGroupComponent } from '../invoice-form-group/invoice-form-group.component';
-import { SharedService } from '../../../shared/service/shared.service';
+import { IFormHeader, InvoiceInfo } from '../../model/invoice.model';
 import { FormGroupHeaderComponent } from '../form-group-header/form-group-header.component';
+import { InvoiceFormGroupComponent } from '../invoice-form-group/invoice-form-group.component';
+import { ProductLineComponent } from '../product-line/product-line.component';
 
 @Component({
   selector: 'IOP-invoice-info-form',
@@ -56,20 +42,19 @@ export class InvoiceInfoFormComponent {
   isExpansionNeeded = input<boolean>();
   invoiceForm!: FormGroup;
   invoiceData = input<InvoiceInfo>();
-  isBillingSectionExpanded = signal(true);
-
   isProductsSectionExpanded: boolean = true;
   inputStyles = {
     width: 'auto',
     'font-size': '0.9rem',
   };
   sectionsConfig: any;
+
   option = computed(() => this.sharedService.getSelector());
+
   constructor() {
     effect(() => {
       const data = this.invoiceData();
       if (data && this.invoiceForm) {
-        // Normalize supplier_address if needed
         let normalizedData = { ...data };
         if (
           normalizedData.supplier &&
@@ -98,22 +83,14 @@ export class InvoiceInfoFormComponent {
             LR_date: this.convertToDateObject(normalizedData.purchase.LR_date),
           },
         };
-
-        console.log(transformedData);
         this.invoiceForm.patchValue(transformedData);
       }
-      console.log(this.isExpansionNeeded());
-      this.billingDetailsHeader = {
-        ...this.billingDetailsHeader,
-        isExpansionNeed: this.isExpansionNeeded()!,
-        isExpanded: this.isExpansionNeeded() ? true : false,
-      };
+
       this.productDetailsHeader = {
         ...this.productDetailsHeader,
         isExpansionNeed: this.isExpansionNeeded()!,
         isExpanded: this.isExpansionNeeded() ? true : false,
       };
-      console.log(this.billingDetailsHeader);
     });
   }
 
@@ -123,14 +100,11 @@ export class InvoiceInfoFormComponent {
 
   convertToDateObject(dateStr: string): Date | null {
     if (!dateStr) return null;
-
     const [day, month, year] = dateStr.split('/').map(Number);
 
     if (isNaN(day) || isNaN(month) || isNaN(year)) return null;
 
     const fullYear = year < 100 ? 2000 + year : year; // handle 2-digit years
-    console.log(new Date(fullYear, month - 1, day));
-
     return new Date(fullYear, month - 1, day); // month is 0-based
   }
 
@@ -146,23 +120,11 @@ export class InvoiceInfoFormComponent {
     isExpanded: this.isExpansionNeeded() ? true : false,
   };
 
-  billingDetailsHeader: IFormHeader = {
-    title: 'Billing Details',
-    headerIcon: 'ngce-doc-text',
-    isExpansionNeed: this.isExpansionNeeded()!,
-    isExpanded: this.isExpansionNeeded() ? true : false,
-  };
-
-  onBillingDetailsToggle(expanded: boolean) {
-    this.isBillingSectionExpanded.set(expanded);
-    this.billingDetailsHeader.isExpanded = expanded; // Keep in sync
-    console.log(this.isBillingSectionExpanded(), this.option());
-  }
-
   onProductDetailsToggle(expanded: boolean) {
     this.isProductsSectionExpanded = expanded;
     this.productDetailsHeader.isExpanded = expanded; // Keep in sync
   }
+
   buildForm() {
     this.invoiceForm = this.fb.group({
       invoice: this.fb.group({
@@ -283,19 +245,24 @@ export class InvoiceInfoFormComponent {
             controlName: 'supplier_name',
             type: 'text',
           },
+
+          { label: 'GST No', controlName: 'supplier_gst_no', type: 'text' },
+          { label: 'MSME No', controlName: 'msme_no', type: 'text' },
+          { label: 'PAN No', controlName: 'pan_no', type: 'text' },
+          { label: 'Email', controlName: 'email', type: 'email' },
+          { label: 'Mobile', controlName: 'mobile', type: 'text' },
           {
             label: 'Supplier Address',
             groupName: 'supplier_address', // nested group for address fields
             type: 'group', // specify this is a group
             fields: [
-              { label: 'Address', controlName: 'address', type: 'text' },
-              { label: 'Email', controlName: 'email', type: 'email' },
-              { label: 'Mobile', controlName: 'mobile', type: 'text' },
+              {
+                label: 'Supplier Address',
+                controlName: 'address',
+                type: 'text-area',
+              },
             ],
           },
-          { label: 'GST No', controlName: 'supplier_gst_no', type: 'text' },
-          { label: 'MSME No', controlName: 'msme_no', type: 'text' },
-          { label: 'PAN No', controlName: 'pan_no', type: 'text' },
         ],
       },
 
@@ -402,18 +369,73 @@ export class InvoiceInfoFormComponent {
           },
         ],
       },
-    ];
-  }
 
-  normalizeData(data: any) {
-    if (data.supplier && typeof data.supplier.supplier_address === 'string') {
-      data.supplier.supplier_address = {
-        address: data.supplier.supplier_address,
-        email: '',
-        mobile: '',
-      };
-    }
-    return data;
+      {
+        id: 'billing-section',
+        title: 'Billing Details',
+        groupName: 'billing',
+        fields: [
+          {
+            label: 'Billed To',
+            groupName: 'billed_to', // nested group for billed_to fields
+            type: 'group',
+            fields: [
+              {
+                label: 'Customer Name',
+                controlName: 'customer_name',
+                type: 'text',
+              },
+
+              {
+                label: 'Address Line 1',
+                controlName: 'address_line1',
+                type: 'text-area',
+              },
+              {
+                label: 'Address Line 2',
+                controlName: 'address_line2',
+                type: 'text-area',
+              },
+              {
+                label: 'Address Line 3',
+                controlName: 'address_line3',
+                type: 'text',
+              },
+              {
+                label: 'Address Line 4',
+                controlName: 'address_line4',
+                type: 'text',
+              },
+              {
+                label: 'State / Country',
+                controlName: 'state_country',
+                type: 'text',
+              },
+              {
+                label: 'Distance (km)',
+                controlName: 'distance_level_km',
+                type: 'text',
+              },
+              { label: 'State Code', controlName: 'state_code', type: 'text' },
+              {
+                label: 'GSTIN No',
+                controlName: 'gstin_no_customer',
+                type: 'text',
+              },
+            ],
+          },
+          {
+            label: 'Bank Name',
+            controlName: 'bank_name',
+            type: 'text',
+          },
+          { label: 'Bank Branch', controlName: 'bank_branch', type: 'text' },
+          { label: 'Account No', controlName: 'account_no', type: 'text' },
+          { label: 'Account Name', controlName: 'account_name', type: 'text' },
+          { label: 'IFSC Code', controlName: 'IFSC_code', type: 'text' },
+        ],
+      },
+    ];
   }
 
   onSubmit() {

@@ -9,7 +9,7 @@ import { ThemeService, THEME_CONFIG } from '@clarium/ngce-components';
 import { InvoiceSystemHeaderComponent } from './feature/component/invoice-system-header/invoice-system-header.component';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
-import { SharedService } from './shared/service/shared.service';
+import { SharedService } from './shared/service/shared-service/shared.service';
 
 @Component({
   selector: 'IOP-root',

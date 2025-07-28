@@ -1,11 +1,11 @@
-import { Component, Input, effect, inject, input } from '@angular/core';
+import { Component, effect, inject, input } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FieldConfig, IFormHeader } from '../../model/invoice.model';
 import { CommonModule } from '@angular/common';
 import { NgceIconModule } from '@clarium/ngce-icon';
 
 import { NgceComponentsModule } from '@clarium/ngce-components';
-import { SharedService } from '../../../shared/service/shared.service';
+import { SharedService } from '../../../shared/service/shared-service/shared.service';
 import { FormGroupHeaderComponent } from '../form-group-header/form-group-header.component';
 
 @Component({

@@ -17,8 +17,8 @@ import { InvoiceTabFormComponent } from '../../feature/component/invoice-tab-for
 import { InvoiceInfo } from '../../feature/model/invoice.model';
 import { InvoiceService } from '../../feature/service/invoice.service';
 import { InvoiceStoreService } from '../../feature/store/invoice-store.service';
-import { SharedService } from '../../shared/service/shared.service';
-import { FileManagementService } from '../upload-screen/service/file-management.service';
+import { SharedService } from '../../shared/service/shared-service/shared.service';
+import { FileManagementService } from '../../shared/service/file-management-service/file-management.service';
 
 @Component({
   selector: 'IOP-invoice',
@@ -41,6 +41,8 @@ export class InvoiceComponent implements OnInit {
   private readonly renderer = inject(Renderer2);
   private readonly invoiceService = inject(InvoiceService);
 
+  @ViewChild('zoomableImage') zoomableImage!: ElementRef<HTMLImageElement>;
+
   scale = 1;
   offsetX = 0;
   offsetY = 0;
@@ -59,18 +61,14 @@ export class InvoiceComponent implements OnInit {
 
   imageData!: string;
 
-  @ViewChild('zoomableImage') zoomableImage!: ElementRef<HTMLImageElement>;
-
   ngOnInit(): void {
     this.imageData = this.sharedService.getSelectedImage()!;
 
     this.route.queryParamMap.subscribe((params) => {
       const invoiceNumber = params.get('invoiceNumber');
-      // If needed, replace mocked invoice with actual service fetch.
       this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
         next: (res) => {
           this.invoiceData.set(res);
-          console.log(this.invoiceData());
         },
       });
       // this.invoiceData.set(this.invoiceStore.invoiceDataStore1());

@@ -36,13 +36,7 @@ import { GridComponent } from '../../../shared/component/grid/grid.component';
 @Component({
   selector: 'IOP-product-line',
   standalone: true,
-  imports: [
-    NgceComponentsModule,
-    HeaderComponent,
-    CurrencyPipe,
-    CommonModule,
-    GridComponent,
-  ],
+  imports: [NgceComponentsModule, CurrencyPipe, CommonModule, GridComponent],
   templateUrl: './product-line.component.html',
   styleUrl: './product-line.component.scss',
   providers: [CurrencyPipe, DatePipe],

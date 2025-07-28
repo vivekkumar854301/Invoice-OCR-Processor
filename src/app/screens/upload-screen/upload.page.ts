@@ -6,8 +6,8 @@ import {
 } from '@clarium/ngce-components';
 
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { FileManagementService } from '../service/file-management.service';
-import { LoadingComponent } from '../../../feature/component/loading/loading.component';
+import { FileManagementService } from '../../shared/service/file-management-service/file-management.service';
+import { LoadingComponent } from '../../feature/component/loading/loading.component';
 @Component({
   selector: 'IOP-upload',
   imports: [NgceComponentsModule, NgceIconModule, LoadingComponent],
@@ -33,7 +33,6 @@ export class UploadComponent {
   isLoading = false;
 
   OnFileSelect(event: File[]) {
-    console.log(event);
     this.files = event;
   }
 
@@ -55,7 +54,6 @@ export class UploadComponent {
 
     this.fileManagmentService.onUploadInvoice(formData).subscribe({
       next: (data) => {
-        console.log(data);
         this.isLoading = false;
         this.snackbarService.show('Extracted successfully', 'success', {
           vertical: 'top',
@@ -69,7 +67,6 @@ export class UploadComponent {
           vertical: 'top',
           horizontal: 'right',
         });
-        console.error('Upload failed:', err);
       },
     });
   }

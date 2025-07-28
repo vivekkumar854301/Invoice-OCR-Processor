@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable, retryWhen } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +23,3 @@ export class FileManagementService {
     });
   }
 }
-
-// for upload: 'http://10.3.0.49:8000/upload'
-// to get all invoies : 'http://10.3.0.49:8000/invoices'
-// to get particular invoice details: 'http://10.3.0.49:8000/invoices/number/${invoiceNumber}'

@@ -2,9 +2,9 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgceComponentsModule } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { FileManagementService } from '../upload-screen/service/file-management.service';
+import { FileManagementService } from '../../shared/service/file-management-service/file-management.service';
 import { CommonModule } from '@angular/common';
-import { SharedService } from '../../shared/service/shared.service';
+import { SharedService } from '../../shared/service/shared-service/shared.service';
 @Component({
   selector: 'IOP-invoices-display',
   imports: [NgceComponentsModule, NgceIconModule, CommonModule],
@@ -17,6 +17,7 @@ export class InvoicesDisplayComponent implements OnInit {
   private readonly sharedService = inject(SharedService);
   fileManangementService = inject(FileManagementService);
   apiResponse!: any;
+
   customStyles = {
     width: '10rem',
     height: '10rem',
@@ -27,13 +28,11 @@ export class InvoicesDisplayComponent implements OnInit {
     this.fileManangementService.getAllInvoices().subscribe({
       next: (data) => {
         this.apiResponse = data;
-        console.log(this.apiResponse);
       },
     });
   }
 
   onInvoiceClick(invoiceNumber: string, binaryData: string) {
-    console.log(invoiceNumber);
     this.sharedService.setSelectedImage(binaryData);
 
     this.router.navigate(['invoice-details'], {

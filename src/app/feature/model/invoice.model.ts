@@ -193,3 +193,11 @@ export interface IFormHeader {
   isExpansionNeed: boolean;
   isExpanded?: boolean;
 }
+
+export interface SectionField {
+  label: string;
+  controlName: string;
+  type: string;
+  groupName?: string;
+  fields?: SectionField[];
+}
