@@ -27,15 +27,12 @@ export class InvoicesDisplayComponent implements OnInit {
     this.fileManangementService.getAllInvoices().subscribe({
       next: (data) => {
         this.apiResponse = data;
-        console.log(this.apiResponse);
       },
     });
   }
 
   onInvoiceClick(invoiceNumber: string, binaryData: string) {
-    console.log(invoiceNumber);
     this.sharedService.setSelectedImage(binaryData);
-
     this.router.navigate(['invoice-details'], {
       queryParams: { invoiceNumber },
     });

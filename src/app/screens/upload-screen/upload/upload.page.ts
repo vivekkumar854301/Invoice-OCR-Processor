@@ -33,7 +33,6 @@ export class UploadComponent {
   isLoading = false;
 
   OnFileSelect(event: File[]) {
-    console.log(event);
     this.files = event;
   }
 
@@ -55,7 +54,6 @@ export class UploadComponent {
 
     this.fileManagmentService.onUploadInvoice(formData).subscribe({
       next: (data) => {
-        console.log(data);
         this.isLoading = false;
         this.snackbarService.show('Extracted successfully', 'success', {
           vertical: 'top',
@@ -75,7 +73,6 @@ export class UploadComponent {
           vertical: 'top',
           horizontal: 'right',
         });
-        console.error('Upload failed:', err);
       },
     });
   }

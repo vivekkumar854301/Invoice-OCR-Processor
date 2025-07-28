@@ -7,6 +7,7 @@ import {
   ViewChild,
   ElementRef,
   Renderer2,
+  effect,
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgceIconModule } from '@clarium/ngce-icon';
@@ -57,10 +58,17 @@ export class InvoiceComponent implements OnInit {
     this.invoiceStore.invoiceDataStore1()
   );
 
+  // invoiceData = signal<InvoiceInfo>(this.invoiceStore.initialInvoiceData);
+
   imageData!: string;
 
   @ViewChild('zoomableImage') zoomableImage!: ElementRef<HTMLImageElement>;
 
+  // constructor() {
+  //   effect(() => {
+  //     console.log(this.option());
+  //   });
+  // }
   ngOnInit(): void {
     this.imageData = this.sharedService.getSelectedImage()!;
 
@@ -70,11 +78,13 @@ export class InvoiceComponent implements OnInit {
       this.invoiceService.getInvoiceData(invoiceNumber!).subscribe({
         next: (res) => {
           this.invoiceData.set(res);
-          console.log(this.invoiceData());
+          console.log('invoice data', this.invoiceData());
         },
       });
+
       // this.invoiceData.set(this.invoiceStore.invoiceDataStore1());
     });
+    console.log('invoice data', this.invoiceData());
   }
 
   toggleImagePanel(): void {

@@ -65,22 +65,13 @@ export class ProductLineComponent implements OnInit {
   constructor() {
     effect(() => {
       const data = this.gridData();
-      console.log(this.gridData());
 
       if (data && data.product_details?.items) {
         this.productLineSignal.set(data.product_details.items);
-        console.log(this.productLineSignal());
       }
-      console.log(this.gridDataConfig());
-      console.log(this.productLineSignal());
-
-      console.log(this.flatProductLines());
 
       const raw = this.productLineSignal();
-      console.log('Raw product line:', raw);
-
       const flat = this.flatProductLines();
-      console.log('Flattened product line:', flat);
     });
   }
   ngOnInit(): void {
@@ -798,7 +789,6 @@ export class ProductLineComponent implements OnInit {
     };
   }
   onFormSubmit(event: any, isNew: boolean = true) {
-    console.log('Form submitted:', event.value);
     this.productLineSignal.set(event.value);
     const updatedList = this.productLineSignal().map((item) =>
       item.s_no === event.value.s_no ? { ...item, ...event.value } : item
@@ -824,15 +814,11 @@ export class ProductLineComponent implements OnInit {
     const row = this.selectedRowForDelete();
     if (!row) return;
 
-    console.log('Delete confirmed for row:', row);
-
     const updated = this.productLineSignal().filter(
       (item) => item.size !== row.size
     );
 
     this.productLineSignal.set(updated);
-    console.log('Row deleted:', row);
-
     this.dialogService.closeDialog();
     this.selectedRowForDelete.set(null);
   }
@@ -853,10 +839,7 @@ export class ProductLineComponent implements OnInit {
     this.dialogService.openDialog(dialogConfig);
     this.dialogService.afterOpen().subscribe({
       next: () => {
-        console.log(this.editSideDrawer().form);
-
         this.editSideDrawer().form.patchValue(row);
-        console.log('Edit form initialized with row data:', row);
       },
     });
   }
