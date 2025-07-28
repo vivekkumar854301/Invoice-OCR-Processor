@@ -30,7 +30,7 @@ import {
   customStyles_DIALOGBOX_STYLES,
 } from '../../../shared/common-css/common.style';
 import { GridConfig } from '../../../shared/models/shared.model';
-import { GridComponent } from '../../../shared/component/reusable-components/grid.component';
+import { GridComponent } from '../../../shared/component/reusable-components/grid/grid.component';
 
 @Component({
   selector: 'IOP-product-line',

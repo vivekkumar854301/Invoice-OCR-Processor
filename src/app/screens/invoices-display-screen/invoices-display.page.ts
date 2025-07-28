@@ -9,24 +9,20 @@ import { SharedService } from '../../shared/service/shared/shared.service';
   selector: 'IOP-invoices-display',
   imports: [NgceComponentsModule, NgceIconModule, CommonModule],
   providers: [FileManagementService],
-  templateUrl: './invoices-display.component.html',
-  styleUrl: './invoices-display.component.scss',
+  templateUrl: './invoices-display.page.html',
+  styleUrl: './invoices-display.page.scss',
 })
 export class InvoicesDisplayComponent implements OnInit {
   private readonly router = inject(Router);
   private readonly sharedService = inject(SharedService);
-  fileManangementService = inject(FileManagementService);
+  private readonly fileManangementService = inject(FileManagementService);
   apiResponse!: any;
-  customStyles = {
-    width: '10rem',
-    height: '10rem',
-    border: '1px solid grey',
-  };
 
   ngOnInit(): void {
     this.fileManangementService.getAllInvoices().subscribe({
       next: (data) => {
         this.apiResponse = data;
+        console.log(this.apiResponse);
       },
     });
   }
@@ -40,5 +36,19 @@ export class InvoicesDisplayComponent implements OnInit {
 
   onUpload() {
     this.router.navigate(['./upload']);
+  }
+
+  onInputChange(searchText: any) {
+    //to search in all fields of api resposne
+    // const filtered = this.apiResponse.filter((item: any) => Object.values(item).some(value=>
+    //   typeof value ==='string'  && value.toLowerCase().startsWith(searchText)
+    // ))
+
+    //to search particualr fields of api response
+    const filtered = this.apiResponse.filter((item: any) =>
+      ['invoices'].some((key) =>
+        item[key]?.toString().toLowerCase().startsWith(searchText)
+      )
+    );
   }
 }

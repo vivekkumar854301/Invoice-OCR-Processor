@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { UploadComponent } from './screens/upload-screen/upload/upload.page';
-import { InvoicesDisplayComponent } from './screens/invoices-display/invoices-display.component';
-import { InvoiceComponent } from './screens/invoice-details/invoice.page';
-import { LandingComponent } from './screens/landing-screen/landing.component';
+import { UploadComponent } from './screens/upload-screen/upload.page';
+import { InvoicesDisplayComponent } from './screens/invoices-display-screen/invoices-display.page';
+import { InvoiceComponent } from './screens/invoice-details-screen/invoice.page';
+import { LandingComponent } from './screens/landing-screen/landing.page';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

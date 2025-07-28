@@ -1,6 +1,6 @@
 <div class="main-container">
     <!-- Image Toggle Button -->
-    <div [ngClass]="showImagePanel? 'toggle-button': 'hide-image-btn'" (click)="toggleImagePanel()">
+    <div [class.toggle-button]="showImagePanel" [class.hide-image-btn]="!showImagePanel" (click)="toggleImagePanel()">
         @if(showImagePanel){
         <ngce-icon *ngIf="showImagePanel" name="right-4" size="20px" color="#0077b6"></ngce-icon>
         }@else {

@@ -2,7 +2,8 @@
   <div class="header-row">
     <h3 class="heading">Uploaded Invoice Images</h3>
     <div class="searchbar">
-      <ngce-text-input [suffix]="searchIcon" [inputSize]="'medium'" [placeholder]="'Search for invoice'">
+      <ngce-text-input [suffix]="searchIcon" [inputSize]="'medium'" [placeholder]="'Search for invoice'"
+        (valueChange)="onInputChange($event)">
       </ngce-text-input>
     </div>
   </div>

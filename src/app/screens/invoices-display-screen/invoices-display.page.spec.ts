@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InvoicesDisplayComponent } from './invoices-display.component';
+import { InvoicesDisplayComponent } from './invoices-display.page';
 
 describe('InvoicesDisplayComponent', () => {
   let component: InvoicesDisplayComponent;
@@ -8,9 +8,8 @@ describe('InvoicesDisplayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InvoicesDisplayComponent]
-    })
-    .compileComponents();
+      imports: [InvoicesDisplayComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(InvoicesDisplayComponent);
     component = fixture.componentInstance;

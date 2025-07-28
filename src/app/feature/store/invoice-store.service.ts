@@ -8,66 +8,6 @@ import { InvoiceData, InvoiceInfo } from '../../shared/models/invoice.model';
 })
 export class InvoiceStoreService {
   private readonly invoiceService = inject(InvoiceService); //
-  EMPTY_INVOICE_DATA: InvoiceData = {
-    invoice: {
-      invoice_number: '',
-      invoice_date: '',
-      irn_number: '',
-      acknowledgement_no: '',
-      acknowledgement_date: '',
-      e_way_bill_no: '',
-    },
-    supplier: {
-      supplier_name: '',
-      supplier_address: '',
-      supplier_gst_no: '',
-      msme_no: '',
-      pan_no: '',
-    },
-    purchase: {
-      order_no: '',
-      order_date: '',
-      transport_name: '',
-      agent_name: '',
-      LR_no: '',
-      LR_date: '',
-      merchandiser_name: '',
-    },
-    taxes: {
-      taxable_value: '',
-      CGST_amount: '',
-      SGST_amount: '',
-      IGST_amount: '',
-      total_tax_amount: '',
-    },
-    discount: {
-      discount_percentage: '',
-      discount_amount: '',
-    },
-    charges: {
-      other_deductions: '',
-      freight_charges: '',
-      other_charges: '',
-    },
-    amount: {
-      round_off_amount: '',
-      invoice_amount: '',
-      amount_in_words: '',
-    },
-    billing: {
-      billed_to: '',
-      bank_name: '',
-      bank_branch: '',
-      account_name: '',
-      account_no: '',
-      IFSC_code: '',
-    },
-    product_details: {
-      items: [],
-      total_quantity: 0,
-      total_net_Amount: 0,
-    },
-  };
 
   initialInvoiceData: InvoiceInfo = {
     invoice: {
@@ -169,21 +109,10 @@ export class InvoiceStoreService {
     image_binary_data: '',
   };
 
-  // readonly invoiceDataStore = toSignal(this.invoiceService.getInvoiceData(), {
-  //   initialValue: this.EMPTY_INVOICE_DATA,
-  // });
-
   readonly invoiceDataStore1 = toSignal(
     this.invoiceService.getInvoiceMockData(),
     {
       initialValue: this.initialInvoiceData,
     }
   );
-
-  // readonly invoiceDataStore1 = toSignal(
-  //   this.invoiceService.getInvoiceData(),
-  //   {
-  //     initialValue: this.initialInvoiceData,
-  //   }
-  // );
 }

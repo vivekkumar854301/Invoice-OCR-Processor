@@ -6,8 +6,8 @@ import {
 } from '@clarium/ngce-components';
 
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { FileManagementService } from '../../../shared/service/file-management/file-management.service';
-import { LoadingComponent } from '../../../shared/component/reusable-components/loading/loading.component';
+import { FileManagementService } from '../../shared/service/file-management/file-management.service';
+import { LoadingComponent } from '../../shared/component/reusable-components/loading/loading.component';
 @Component({
   selector: 'IOP-upload',
   imports: [NgceComponentsModule, NgceIconModule, LoadingComponent],
