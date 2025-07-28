@@ -6,7 +6,7 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { ThemeService, THEME_CONFIG } from '@clarium/ngce-components';
-import { InvoiceSystemHeaderComponent } from './feature/component/invoice-system-header/invoice-system-header.component';
+import { InvoiceSystemHeaderComponent } from './shared/component/reusable-components/invoice-system-header/invoice-system-header.component';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
 import { SharedService } from './shared/service/shared/shared.service';

@@ -19,7 +19,6 @@ import {
   DynamicFormTemplateComponent,
   SnackbarService,
 } from '@clarium/ngce-components';
-import { HeaderComponent } from '../../../shared/component/header/header.component';
 import {
   InvoiceData,
   InvoiceInfo,
@@ -29,9 +28,9 @@ import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
 import {
   DIALOGBOX_STYLES,
   customStyles_DIALOGBOX_STYLES,
-} from '../../../shared/commonCss/common.style';
+} from '../../../shared/common-css/common.style';
 import { GridConfig } from '../../../shared/models/shared.model';
-import { GridComponent } from '../../../shared/component/grid/grid.component';
+import { GridComponent } from '../../../shared/component/reusable-components/grid.component';
 
 @Component({
   selector: 'IOP-product-line',

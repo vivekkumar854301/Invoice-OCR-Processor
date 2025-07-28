@@ -1,6 +1,6 @@
 import { Component, computed, effect, input, output } from '@angular/core';
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { IFormHeader } from '../../../shared/models/invoice.model';
+import { IFormHeader } from '../../../models/invoice.model';
 @Component({
   selector: 'IOP-form-group-header',
   imports: [NgceIconModule],
