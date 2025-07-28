@@ -24,7 +24,7 @@ import {
   InvoiceData,
   InvoiceInfo,
   ProductItem,
-} from '../../model/invoice.model';
+} from '../../../shared/models/invoice.model';
 import { CommonModule, CurrencyPipe, DatePipe } from '@angular/common';
 import {
   DIALOGBOX_STYLES,

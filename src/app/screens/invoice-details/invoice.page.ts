@@ -15,7 +15,7 @@ import { NgceComponentsModule } from '@clarium/ngce-components';
 import { CommonModule } from '@angular/common';
 import { InvoiceInfoFormComponent } from '../../feature/component/invoice-info-form/invoice-info-form.component';
 import { InvoiceTabFormComponent } from '../../feature/component/invoice-tab-form/invoice-tab-form.component';
-import { InvoiceInfo } from '../../feature/model/invoice.model';
+import { InvoiceInfo } from '../../shared/models/invoice.model';
 import { InvoiceService } from '../../feature/service/invoice.service';
 import { InvoiceStoreService } from '../../feature/store/invoice-store.service';
 import { SharedService } from '../../shared/service/shared/shared.service';

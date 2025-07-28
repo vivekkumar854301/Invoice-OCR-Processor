@@ -12,7 +12,7 @@ import { NgceComponentsModule } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
 import { SharedService } from '../../../shared/service/shared/shared.service';
 import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
-import { IFormHeader, InvoiceInfo } from '../../model/invoice.model';
+import { IFormHeader, InvoiceInfo } from '../../../shared/models/invoice.model';
 import { FormGroupHeaderComponent } from '../form-group-header/form-group-header.component';
 import { InvoiceFormGroupComponent } from '../invoice-form-group/invoice-form-group.component';
 import { ProductLineComponent } from '../product-line/product-line.component';

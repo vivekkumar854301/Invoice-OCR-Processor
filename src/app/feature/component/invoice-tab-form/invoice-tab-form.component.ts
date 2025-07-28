@@ -8,7 +8,7 @@ import {
 } from '@angular/forms';
 import { NgceComponentsModule } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { InvoiceData } from '../../model/invoice.model';
+import { InvoiceData } from '../../../shared/models/invoice.model';
 import { ProductLineComponent } from '../product-line/product-line.component';
 
 @Component({

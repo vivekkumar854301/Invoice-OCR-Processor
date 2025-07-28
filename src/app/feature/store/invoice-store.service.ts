@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { InvoiceService } from '../service/invoice.service';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { InvoiceData, InvoiceInfo } from '../model/invoice.model';
+import { InvoiceData, InvoiceInfo } from '../../shared/models/invoice.model';
 
 @Injectable({
   providedIn: 'root',
