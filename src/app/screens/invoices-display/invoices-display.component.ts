@@ -2,9 +2,9 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgceComponentsModule } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { FileManagementService } from '../upload-screen/service/file-management.service';
+import { FileManagementService } from '../../shared/service/file-management/file-management.service';
 import { CommonModule } from '@angular/common';
-import { SharedService } from '../../shared/service/shared.service';
+import { SharedService } from '../../shared/service/shared/shared.service';
 @Component({
   selector: 'IOP-invoices-display',
   imports: [NgceComponentsModule, NgceIconModule, CommonModule],

@@ -18,8 +18,8 @@ import { InvoiceTabFormComponent } from '../../feature/component/invoice-tab-for
 import { InvoiceInfo } from '../../feature/model/invoice.model';
 import { InvoiceService } from '../../feature/service/invoice.service';
 import { InvoiceStoreService } from '../../feature/store/invoice-store.service';
-import { SharedService } from '../../shared/service/shared.service';
-import { FileManagementService } from '../upload-screen/service/file-management.service';
+import { SharedService } from '../../shared/service/shared/shared.service';
+import { FileManagementService } from '../../shared/service/file-management/file-management.service';
 
 @Component({
   selector: 'IOP-invoice',

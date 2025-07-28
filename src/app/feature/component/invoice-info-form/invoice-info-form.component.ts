@@ -10,7 +10,7 @@ import {
 import { RouterLink, RouterModule } from '@angular/router';
 import { NgceComponentsModule } from '@clarium/ngce-components';
 import { NgceIconModule } from '@clarium/ngce-icon';
-import { SharedService } from '../../../shared/service/shared.service';
+import { SharedService } from '../../../shared/service/shared/shared.service';
 import { AutoFragmentDirective } from '../../directives/auto-fragment.directive';
 import { IFormHeader, InvoiceInfo } from '../../model/invoice.model';
 import { FormGroupHeaderComponent } from '../form-group-header/form-group-header.component';
